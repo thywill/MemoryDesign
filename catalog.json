@@ -1,0 +1,8021 @@
+{
+  "generatedAt": "2026-09-28T18:13:37.230Z",
+  "albums": [
+    {
+      "genre": "Soul",
+      "artist": "Aretha Franklin",
+      "title": "I Never Loved a Man the Way I Love You",
+      "resolved": true,
+      "mbid": "4b43b2a7-2cab-4f87-9a7e-dfc0913c39ab",
+      "year": 1967,
+      "label": "Atlantic",
+      "cat": "SD 8139",
+      "front": "/covers/4b43b2a7-2cab-4f87-9a7e-dfc0913c39ab-front.jpg",
+      "back": "/covers/4b43b2a7-2cab-4f87-9a7e-dfc0913c39ab-back.jpg",
+      "sideA": [
+        {
+          "name": "Respect",
+          "time": "2:27"
+        },
+        {
+          "name": "Drown in My Own Tears",
+          "time": "4:06"
+        },
+        {
+          "name": "I Never Loved a Man (The Way I Love You)",
+          "time": "2:45"
+        },
+        {
+          "name": "Soul Serenade",
+          "time": "2:37"
+        },
+        {
+          "name": "Don’t Let Me Lose This Dream",
+          "time": "2:19"
+        },
+        {
+          "name": "Baby, Baby, Baby",
+          "time": "2:54"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Dr. Feelgood",
+          "time": "3:21"
+        },
+        {
+          "name": "Good Times",
+          "time": "2:08"
+        },
+        {
+          "name": "Do Right Woman – Do Right Man",
+          "time": "3:17"
+        },
+        {
+          "name": "Save Me",
+          "time": "2:19"
+        },
+        {
+          "name": "A Change Is Gonna Come",
+          "time": "4:17"
+        }
+      ]
+    },
+    {
+      "genre": "Soul",
+      "artist": "Otis Redding",
+      "title": "Otis Blue",
+      "resolved": true,
+      "mbid": "6035a2d7-6c64-3fec-a3df-63b95dd7b50b",
+      "year": 1991,
+      "label": "ATCO Records",
+      "cat": "7 80318-2",
+      "front": "/covers/6035a2d7-6c64-3fec-a3df-63b95dd7b50b-front.jpg",
+      "back": "/covers/6035a2d7-6c64-3fec-a3df-63b95dd7b50b-back.jpg",
+      "sideA": [
+        {
+          "name": "Ole Man Trouble",
+          "time": "2:40"
+        },
+        {
+          "name": "Respect",
+          "time": "2:10"
+        },
+        {
+          "name": "A Change Is Gonna Come",
+          "time": "4:21"
+        },
+        {
+          "name": "Down in the Valley",
+          "time": "3:00"
+        },
+        {
+          "name": "I've Been Loving You Too Long",
+          "time": "3:15"
+        },
+        {
+          "name": "Shake",
+          "time": "2:41"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "My Girl",
+          "time": "2:55"
+        },
+        {
+          "name": "Wonderful World",
+          "time": "3:08"
+        },
+        {
+          "name": "Rock Me Baby",
+          "time": "3:30"
+        },
+        {
+          "name": "Satisfaction",
+          "time": "2:47"
+        },
+        {
+          "name": "You Don't Miss Your Water",
+          "time": "2:46"
+        }
+      ]
+    },
+    {
+      "genre": "Soul",
+      "artist": "Sam Cooke",
+      "title": "Night Beat",
+      "resolved": true,
+      "mbid": "ea4da52d-c8c0-448e-8448-270b11ab16e8",
+      "year": 1995,
+      "label": "ABKCO",
+      "cat": "1124-2",
+      "front": "/covers/ea4da52d-c8c0-448e-8448-270b11ab16e8-front.jpg",
+      "back": "/covers/ea4da52d-c8c0-448e-8448-270b11ab16e8-back.jpg",
+      "sideA": [
+        {
+          "name": "Lost and Lookin’",
+          "time": "2:13"
+        },
+        {
+          "name": "Mean Old World",
+          "time": "3:48"
+        },
+        {
+          "name": "Nobody Knows the Trouble I’ve Seen",
+          "time": "3:26"
+        },
+        {
+          "name": "Please Don’t Drive Me Away",
+          "time": "2:14"
+        },
+        {
+          "name": "I Lost Everything",
+          "time": "3:25"
+        },
+        {
+          "name": "Get Yourself Another Fool",
+          "time": "4:06"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Little Red Rooster",
+          "time": "2:53"
+        },
+        {
+          "name": "Laughin’ and Clownin’",
+          "time": "3:37"
+        },
+        {
+          "name": "Trouble Blues",
+          "time": "3:22"
+        },
+        {
+          "name": "You Gotta Move",
+          "time": "2:39"
+        },
+        {
+          "name": "Fool’s Paradise",
+          "time": "2:34"
+        },
+        {
+          "name": "Shake Rattle and Roll",
+          "time": "3:17"
+        }
+      ]
+    },
+    {
+      "genre": "Soul",
+      "artist": "Al Green",
+      "title": "Let's Stay Together",
+      "resolved": true,
+      "mbid": "1535079b-be0c-4c09-977e-b6b72fec2550",
+      "year": 2003,
+      "label": "Hi Records",
+      "cat": "72435-42678-2-6",
+      "front": "/covers/1535079b-be0c-4c09-977e-b6b72fec2550-front.jpg",
+      "back": "/covers/1535079b-be0c-4c09-977e-b6b72fec2550-back.jpg",
+      "sideA": [
+        {
+          "name": "Let’s Stay Together",
+          "time": "3:19"
+        },
+        {
+          "name": "La-La for You",
+          "time": "3:30"
+        },
+        {
+          "name": "So You’re Leaving",
+          "time": "2:56"
+        },
+        {
+          "name": "What Is This Feeling",
+          "time": "3:43"
+        },
+        {
+          "name": "Old Time Lovin’",
+          "time": "3:19"
+        },
+        {
+          "name": "I’ve Never Found a Girl",
+          "time": "3:40"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "How Can You Mend a Broken Heart",
+          "time": "6:23"
+        },
+        {
+          "name": "Judy",
+          "time": "3:45"
+        },
+        {
+          "name": "It Ain’t No Fun to Me",
+          "time": "3:36"
+        },
+        {
+          "name": "Eli’s Game",
+          "time": "4:56"
+        },
+        {
+          "name": "Listen",
+          "time": "2:30"
+        }
+      ]
+    },
+    {
+      "genre": "Soul",
+      "artist": "Curtis Mayfield",
+      "title": "Super Fly",
+      "resolved": true,
+      "mbid": "66bc2892-7512-4ee3-a914-381475065247",
+      "year": 2022,
+      "label": "Curtom Records",
+      "cat": "081227881511",
+      "front": "/covers/66bc2892-7512-4ee3-a914-381475065247-front.jpg",
+      "back": "/covers/66bc2892-7512-4ee3-a914-381475065247-back.jpg",
+      "sideA": [
+        {
+          "name": "Little Child Runnin’ Wild",
+          "time": "5:28"
+        },
+        {
+          "name": "Pusherman",
+          "time": "5:07"
+        },
+        {
+          "name": "Freddie’s Dead",
+          "time": "5:28"
+        },
+        {
+          "name": "Junkie Chase",
+          "time": "1:42"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Give Me Your Love",
+          "time": "4:21"
+        },
+        {
+          "name": "Eddie You Should Know Better",
+          "time": "2:21"
+        },
+        {
+          "name": "No Thing On Me",
+          "time": "4:59"
+        },
+        {
+          "name": "Think",
+          "time": "3:49"
+        },
+        {
+          "name": "Superfly",
+          "time": "3:56"
+        },
+        {
+          "name": "Freddie’s Dead (single mix)",
+          "time": "3:21"
+        },
+        {
+          "name": "Superfly (single mix)",
+          "time": "3:12"
+        },
+        {
+          "name": "Ghetto Child (demo of \"Little Child Runnin’ Wild\")",
+          "time": "3:19"
+        },
+        {
+          "name": "Pusherman (Alt mix W/ Horns)",
+          "time": "6:12"
+        },
+        {
+          "name": "Freddie’s Dead (instrumental)",
+          "time": "4:50"
+        },
+        {
+          "name": "Junkie Chase (Full Length instrumental version)",
+          "time": "4:19"
+        },
+        {
+          "name": "No Thing on Me (instrumental/Score version)",
+          "time": "4:39"
+        },
+        {
+          "name": "Militant March",
+          "time": "0:55"
+        },
+        {
+          "name": "Eddie You Should Know Better (instrumental)",
+          "time": "2:17"
+        },
+        {
+          "name": "Radio Spot #1",
+          "time": "0:28"
+        },
+        {
+          "name": "The Underground (1970 demo)",
+          "time": "3:14"
+        },
+        {
+          "name": "Check Out Your Mind (instrumental)",
+          "time": "4:08"
+        },
+        {
+          "name": "Radio Spot #2",
+          "time": "0:24"
+        }
+      ]
+    },
+    {
+      "genre": "Funk",
+      "artist": "James Brown",
+      "title": "The Payback",
+      "resolved": true,
+      "mbid": "16991753-f0be-4bfc-bed0-f9b76b8f3c8f",
+      "year": 1973,
+      "label": "Polydor",
+      "cat": "PD-2-3007",
+      "front": "/covers/16991753-f0be-4bfc-bed0-f9b76b8f3c8f-front.jpg",
+      "back": "/covers/16991753-f0be-4bfc-bed0-f9b76b8f3c8f-back.jpg",
+      "sideA": [
+        {
+          "name": "The Payback",
+          "time": "7:40"
+        },
+        {
+          "name": "Doing the Best I Can",
+          "time": "7:42"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Take Some... Leave Some",
+          "time": "8:34"
+        },
+        {
+          "name": "Shoot Your Shot",
+          "time": "8:09"
+        },
+        {
+          "name": "Forever Suffering",
+          "time": "5:52"
+        },
+        {
+          "name": "Time Is Running Out Fast",
+          "time": "12:48"
+        },
+        {
+          "name": "Stone to the Bone",
+          "time": "10:14"
+        },
+        {
+          "name": "Mind Power",
+          "time": "12:05"
+        }
+      ]
+    },
+    {
+      "genre": "Funk",
+      "artist": "Sly & the Family Stone",
+      "title": "There's a Riot Goin' On",
+      "resolved": true,
+      "mbid": "75717ad0-80a8-31dc-8292-c0231625d2af",
+      "year": 2007,
+      "label": "Legacy",
+      "cat": "82876 75911 2",
+      "front": "/covers/75717ad0-80a8-31dc-8292-c0231625d2af-front.jpg",
+      "back": "/covers/75717ad0-80a8-31dc-8292-c0231625d2af-back.jpg",
+      "sideA": [
+        {
+          "name": "Luv n’ Haight",
+          "time": "4:04"
+        },
+        {
+          "name": "Just Like a Baby",
+          "time": "5:13"
+        },
+        {
+          "name": "Poet",
+          "time": "3:03"
+        },
+        {
+          "name": "Family Affair",
+          "time": "3:09"
+        },
+        {
+          "name": "Africa Talks to You “The Asphalt Jungle”",
+          "time": "8:45"
+        },
+        {
+          "name": "There’s a Riot Goin’ On",
+          "time": "0:04"
+        },
+        {
+          "name": "Brave & Strong",
+          "time": "3:32"
+        },
+        {
+          "name": "(You Caught Me) Smilin’",
+          "time": "2:56"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Time",
+          "time": "3:06"
+        },
+        {
+          "name": "Spaced Cowboy",
+          "time": "4:00"
+        },
+        {
+          "name": "Runnin’ Away",
+          "time": "2:58"
+        },
+        {
+          "name": "Thank You for Talkin’ to Me Africa",
+          "time": "7:18"
+        },
+        {
+          "name": "Runnin’ Away (single version)",
+          "time": "2:44"
+        },
+        {
+          "name": "My Gorilla Is My Butler",
+          "time": "3:12"
+        },
+        {
+          "name": "Do You Know What?",
+          "time": "7:16"
+        },
+        {
+          "name": "That’s Pretty Clean",
+          "time": "4:11"
+        }
+      ]
+    },
+    {
+      "genre": "Funk",
+      "artist": "Parliament",
+      "title": "Mothership Connection",
+      "resolved": true,
+      "mbid": "84bd98a9-017d-30eb-b557-d075957d802f",
+      "year": 1975,
+      "label": "Casablanca Records",
+      "cat": "NBLP 7022",
+      "front": "/covers/84bd98a9-017d-30eb-b557-d075957d802f-front.jpg",
+      "back": "/covers/84bd98a9-017d-30eb-b557-d075957d802f-back.jpg",
+      "sideA": [
+        {
+          "name": "P. Funk (Wants to Get Funked Up)",
+          "time": "7:41"
+        },
+        {
+          "name": "Mothership Connection (Star Child)",
+          "time": "6:13"
+        },
+        {
+          "name": "Unfunky UFO",
+          "time": "4:24"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Supergroovalisticprosifunkstication",
+          "time": "5:05"
+        },
+        {
+          "name": "Handcuffs",
+          "time": "4:04"
+        },
+        {
+          "name": "Give Up the Funk (Tear the Roof Off the Sucker)",
+          "time": "5:48"
+        },
+        {
+          "name": "Night of the Thumpasorus Peoples",
+          "time": "5:10"
+        }
+      ]
+    },
+    {
+      "genre": "Funk",
+      "artist": "Betty Davis",
+      "title": "Betty Davis",
+      "resolved": true,
+      "mbid": "28187ff5-12c1-45cf-bfdb-2f4ff91cf24b",
+      "year": 1973,
+      "label": "Just Sunshine Records",
+      "cat": "JSS-5",
+      "front": "/covers/28187ff5-12c1-45cf-bfdb-2f4ff91cf24b-front.jpg",
+      "back": "/covers/28187ff5-12c1-45cf-bfdb-2f4ff91cf24b-back.jpg",
+      "sideA": [
+        {
+          "name": "If I'm in Luck I Might Get Picked Up",
+          "time": "5:01"
+        },
+        {
+          "name": "Walking Up the Road",
+          "time": "2:55"
+        },
+        {
+          "name": "Anti Love Song",
+          "time": "4:32"
+        },
+        {
+          "name": "Your Man My Man",
+          "time": "3:39"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Ooh Yea",
+          "time": "3:09"
+        },
+        {
+          "name": "Steppin in Her I. Miller Shoes",
+          "time": "3:15"
+        },
+        {
+          "name": "Game Is My Middle Name",
+          "time": "5:12"
+        },
+        {
+          "name": "In the Meantime",
+          "time": "2:44"
+        }
+      ]
+    },
+    {
+      "genre": "Funk",
+      "artist": "Rufus",
+      "title": "Rufusized",
+      "resolved": true,
+      "mbid": "278ce211-1b2a-4623-bcfb-7ae87d438249",
+      "year": 1974,
+      "label": "ABC Records",
+      "cat": "ABCD-837",
+      "front": "/covers/278ce211-1b2a-4623-bcfb-7ae87d438249-front.jpg",
+      "back": "/covers/278ce211-1b2a-4623-bcfb-7ae87d438249-back.jpg",
+      "sideA": [
+        {
+          "name": "Once You Get Started",
+          "time": "4:31"
+        },
+        {
+          "name": "Somebody's Watching You",
+          "time": "3:12"
+        },
+        {
+          "name": "Pack'd My Bags",
+          "time": "5:06"
+        },
+        {
+          "name": "Your Smile",
+          "time": "3:24"
+        },
+        {
+          "name": "Rufusized",
+          "time": "3:13"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "I'm a Woman (I'm a Backbone)",
+          "time": "3:17"
+        },
+        {
+          "name": "Right Is Right",
+          "time": "3:14"
+        },
+        {
+          "name": "Half Moon",
+          "time": "3:18"
+        },
+        {
+          "name": "Please Pardon Me (You Remind Me of a Friend)",
+          "time": "3:04"
+        },
+        {
+          "name": "Stop on By",
+          "time": "4:54"
+        }
+      ]
+    },
+    {
+      "genre": "Reggae",
+      "artist": "Bob Marley & The Wailers",
+      "title": "Exodus",
+      "resolved": true,
+      "mbid": "6c31422a-dcc9-49a5-9f04-370be3944af5",
+      "year": 2017,
+      "label": "Island",
+      "cat": "602557546712",
+      "front": "/covers/6c31422a-dcc9-49a5-9f04-370be3944af5-front.jpg",
+      "back": "/covers/6c31422a-dcc9-49a5-9f04-370be3944af5-back.jpg",
+      "sideA": [
+        {
+          "name": "Natural Mystic",
+          "time": "3:28"
+        },
+        {
+          "name": "So Much Things to Say",
+          "time": "3:08"
+        },
+        {
+          "name": "Guiltiness",
+          "time": "3:19"
+        },
+        {
+          "name": "The Heathen",
+          "time": "2:32"
+        },
+        {
+          "name": "Exodus",
+          "time": "7:29"
+        },
+        {
+          "name": "Jammin’",
+          "time": "3:34"
+        },
+        {
+          "name": "Waiting in Vain",
+          "time": "4:09"
+        },
+        {
+          "name": "Turn Your Lights Down Low",
+          "time": "3:39"
+        },
+        {
+          "name": "Three Little Birds",
+          "time": "3:00"
+        },
+        {
+          "name": "One Love / People Get Ready",
+          "time": "2:55"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Exodus",
+          "time": "5:02"
+        },
+        {
+          "name": "Natural Mystic",
+          "time": "3:23"
+        },
+        {
+          "name": "The Heathen",
+          "time": "3:15"
+        },
+        {
+          "name": "Guiltiness",
+          "time": "3:38"
+        },
+        {
+          "name": "Jammin’",
+          "time": "3:31"
+        },
+        {
+          "name": "One Love / People Get Ready",
+          "time": "2:59"
+        },
+        {
+          "name": "Turn Your Lights Down Low",
+          "time": "4:05"
+        },
+        {
+          "name": "Waiting in Vain",
+          "time": "4:38"
+        },
+        {
+          "name": "Three Little Birds",
+          "time": "3:12"
+        },
+        {
+          "name": "So Much Things to Say",
+          "time": "3:12"
+        },
+        {
+          "name": "Natural Mystic",
+          "time": "5:12"
+        },
+        {
+          "name": "So Much Things to Say",
+          "time": "4:25"
+        },
+        {
+          "name": "Guiltiness",
+          "time": "7:24"
+        },
+        {
+          "name": "The Heathen",
+          "time": "6:43"
+        },
+        {
+          "name": "Burnin’ and Lootin’",
+          "time": "6:15"
+        },
+        {
+          "name": "Positive Vibration",
+          "time": "5:32"
+        },
+        {
+          "name": "Jammin’",
+          "time": "6:24"
+        },
+        {
+          "name": "Exodus",
+          "time": "11:36"
+        }
+      ]
+    },
+    {
+      "genre": "Reggae",
+      "artist": "Toots and the Maytals",
+      "title": "Funky Kingston",
+      "resolved": true,
+      "mbid": "00b2740b-1261-4f48-b663-1e9a2295a950",
+      "year": 1973,
+      "label": "Dragon",
+      "cat": "DRLS 5002",
+      "front": "/covers/00b2740b-1261-4f48-b663-1e9a2295a950-front.jpg",
+      "back": "/covers/00b2740b-1261-4f48-b663-1e9a2295a950-back.jpg",
+      "sideA": [
+        {
+          "name": "Sit Right Down",
+          "time": "4:44"
+        },
+        {
+          "name": "Pomp and Pride",
+          "time": "4:32"
+        },
+        {
+          "name": "Louie Louie",
+          "time": "5:49"
+        },
+        {
+          "name": "I Can't Believe",
+          "time": "3:32"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Redemption Song",
+          "time": "4:13"
+        },
+        {
+          "name": "Daddy's Home",
+          "time": "5:48"
+        },
+        {
+          "name": "Funky Kingston",
+          "time": "4:57"
+        },
+        {
+          "name": "It Was Written Down",
+          "time": "3:40"
+        }
+      ]
+    },
+    {
+      "genre": "Reggae",
+      "artist": "Burning Spear",
+      "title": "Marcus Garvey",
+      "resolved": true,
+      "mbid": "b083312a-23b6-43c3-ae59-8efe53b87a98",
+      "year": 1975,
+      "label": "Wolf",
+      "cat": "",
+      "front": "/covers/b083312a-23b6-43c3-ae59-8efe53b87a98-front.jpg",
+      "back": "/covers/b083312a-23b6-43c3-ae59-8efe53b87a98-back.jpg",
+      "sideA": [
+        {
+          "name": "Marcus Garvey",
+          "time": "3:27"
+        },
+        {
+          "name": "Slavery Days",
+          "time": "3:33"
+        },
+        {
+          "name": "The Invasion",
+          "time": "3:20"
+        },
+        {
+          "name": "Live Good",
+          "time": "3:13"
+        },
+        {
+          "name": "Give Me",
+          "time": "3:09"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Old Marcus Garvey",
+          "time": "4:01"
+        },
+        {
+          "name": "Tradition",
+          "time": "3:31"
+        },
+        {
+          "name": "Jordan River",
+          "time": "2:58"
+        },
+        {
+          "name": "Red, Gold and Green",
+          "time": "3:12"
+        }
+      ]
+    },
+    {
+      "genre": "Reggae",
+      "artist": "Gregory Isaacs",
+      "title": "Night Nurse",
+      "resolved": true,
+      "mbid": "b6e840bd-8de5-45bd-8950-44fed1b3e4a1",
+      "year": 1982,
+      "label": "Island",
+      "cat": "ILPS 9721",
+      "front": "/covers/b6e840bd-8de5-45bd-8950-44fed1b3e4a1-front.jpg",
+      "back": "/covers/b6e840bd-8de5-45bd-8950-44fed1b3e4a1-back.jpg",
+      "sideA": [
+        {
+          "name": "Night Nurse",
+          "time": "4:09"
+        },
+        {
+          "name": "Stranger in Town",
+          "time": "3:52"
+        },
+        {
+          "name": "Objection Overuled",
+          "time": "3:57"
+        },
+        {
+          "name": "Hot Stepper",
+          "time": "4:36"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Cool Down the Pace",
+          "time": "5:15"
+        },
+        {
+          "name": "Material Man",
+          "time": "3:36"
+        },
+        {
+          "name": "Not the Way",
+          "time": "3:50"
+        },
+        {
+          "name": "Sad to Know (You're Leaving)",
+          "time": "4:10"
+        }
+      ]
+    },
+    {
+      "genre": "Reggae",
+      "artist": "Desmond Dekker",
+      "title": "Intensified",
+      "resolved": true,
+      "mbid": "2d821168-81b0-493d-bcc7-6394531de453",
+      "year": 1968,
+      "label": "Beverley’s Records",
+      "cat": "LP-004",
+      "front": "/covers/2d821168-81b0-493d-bcc7-6394531de453-front.jpg",
+      "back": "/covers/2d821168-81b0-493d-bcc7-6394531de453-back.jpg",
+      "sideA": [
+        {
+          "name": "Ah It Mek",
+          "time": "2:23"
+        },
+        {
+          "name": "Too Much Too Soon",
+          "time": "2:29"
+        },
+        {
+          "name": "Coconut Water",
+          "time": "3:29"
+        },
+        {
+          "name": "Sweet Music",
+          "time": "2:30"
+        },
+        {
+          "name": "My Lonely World",
+          "time": "3:16"
+        },
+        {
+          "name": "Rude Boy Train",
+          "time": "2:18"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Poor Me Israelites",
+          "time": "2:47"
+        },
+        {
+          "name": "It Is Not Easy",
+          "time": "2:13"
+        },
+        {
+          "name": "Intensified",
+          "time": "2:45"
+        },
+        {
+          "name": "Nincompoop",
+          "time": "2:08"
+        },
+        {
+          "name": "Tips of My Fingers",
+          "time": "3:29"
+        },
+        {
+          "name": "Wiseman",
+          "time": "2:16"
+        }
+      ]
+    },
+    {
+      "genre": "Dub",
+      "artist": "Augustus Pablo",
+      "title": "King Tubbys Meets Rockers Uptown",
+      "resolved": true,
+      "mbid": "9c5e0c5f-5b24-4810-b218-eb8553b09b7d",
+      "year": 2010,
+      "label": "Get On Down",
+      "cat": "GET50758",
+      "front": "/covers/9c5e0c5f-5b24-4810-b218-eb8553b09b7d-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Keep On Dubbing",
+          "time": "3:06"
+        },
+        {
+          "name": "Stop Them Jah",
+          "time": "2:48"
+        },
+        {
+          "name": "Young Generation Dub",
+          "time": "2:29"
+        },
+        {
+          "name": "Each One Dub",
+          "time": "2:55"
+        },
+        {
+          "name": "555 Dub Street",
+          "time": "2:43"
+        },
+        {
+          "name": "Braces Tower Dub",
+          "time": "2:53"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "King Tubby Meets Rockers Uptown",
+          "time": "2:33"
+        },
+        {
+          "name": "Corner Crew Dub",
+          "time": "2:57"
+        },
+        {
+          "name": "Say So",
+          "time": "3:07"
+        },
+        {
+          "name": "Skanking Dub",
+          "time": "2:39"
+        },
+        {
+          "name": "Frozen Dub",
+          "time": "2:51"
+        },
+        {
+          "name": "Satta Dub",
+          "time": "4:18"
+        }
+      ]
+    },
+    {
+      "genre": "Dub",
+      "artist": "Lee \"Scratch\" Perry",
+      "title": "Super Ape",
+      "resolved": true,
+      "mbid": "6735d77b-fe45-4a35-8a11-16b75d2405db",
+      "year": 1998,
+      "label": "Jet Star",
+      "cat": "KPCRCD 67",
+      "front": "/covers/6735d77b-fe45-4a35-8a11-16b75d2405db-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Bag of Collie (Dillinger)",
+          "time": "4:05"
+        },
+        {
+          "name": "Down Here in Babylon Brent Dowe",
+          "time": "4:00"
+        },
+        {
+          "name": "Dyon",
+          "time": "3:33"
+        },
+        {
+          "name": "Return of the Super Ape",
+          "time": "3:40"
+        },
+        {
+          "name": "Tell Me Something Good",
+          "time": "3:25"
+        },
+        {
+          "name": "Bird in Hand",
+          "time": "3:26"
+        },
+        {
+          "name": "Crab Yars",
+          "time": "3:28"
+        },
+        {
+          "name": "Shoulder to the Wheel",
+          "time": "5:57"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Jah Jah Ah Natty Dread",
+          "time": "3:36"
+        },
+        {
+          "name": "Psyche & Trim",
+          "time": "3:49"
+        },
+        {
+          "name": "The Lion",
+          "time": "3:29"
+        },
+        {
+          "name": "Earth a Go Wheel (Flying Sensation)",
+          "time": "6:30"
+        },
+        {
+          "name": "Huzza a Hana",
+          "time": "3:26"
+        },
+        {
+          "name": "High Ranking Sammy",
+          "time": "3:28"
+        },
+        {
+          "name": "Weak Heart a Go Feel It",
+          "time": "6:24"
+        }
+      ]
+    },
+    {
+      "genre": "Dub",
+      "artist": "Scientist",
+      "title": "Scientist Rids the World of the Evil Curse of the Vampires",
+      "resolved": true,
+      "mbid": "dffd97f6-f8ab-3854-a054-b59485d055ca",
+      "year": 1990,
+      "label": "Greensleeves Records",
+      "cat": "GRELCD 025",
+      "front": "/covers/dffd97f6-f8ab-3854-a054-b59485d055ca-front.jpg",
+      "back": "/covers/dffd97f6-f8ab-3854-a054-b59485d055ca-back.jpg",
+      "sideA": [
+        {
+          "name": "The Voodoo Curse",
+          "time": "3:49"
+        },
+        {
+          "name": "Dance of the Vampires",
+          "time": "3:26"
+        },
+        {
+          "name": "Blood on His Lips",
+          "time": "3:00"
+        },
+        {
+          "name": "Cry of the Werewolf",
+          "time": "4:25"
+        },
+        {
+          "name": "The Mummy’s Shroud",
+          "time": "4:26"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "The Corpse Rises",
+          "time": "3:27"
+        },
+        {
+          "name": "Night of the Living Dead",
+          "time": "4:14"
+        },
+        {
+          "name": "Your Teeth in My Neck",
+          "time": "4:38"
+        },
+        {
+          "name": "Plague of Zombies",
+          "time": "2:49"
+        },
+        {
+          "name": "Ghost of Frankenstein",
+          "time": "3:21"
+        }
+      ]
+    },
+    {
+      "genre": "Dub",
+      "artist": "King Tubby",
+      "title": "Dub from the Roots",
+      "resolved": true,
+      "mbid": "d2fef83e-c846-43c7-a902-fffabd3c79f5",
+      "year": 1997,
+      "label": "Culture Press",
+      "cat": "CP 44 501-2",
+      "front": "/covers/d2fef83e-c846-43c7-a902-fffabd3c79f5-front.jpg",
+      "back": "/covers/d2fef83e-c846-43c7-a902-fffabd3c79f5-back.jpg",
+      "sideA": [
+        {
+          "name": "Dub From the Roots",
+          "time": "4:13"
+        },
+        {
+          "name": "Iyahta",
+          "time": "3:42"
+        },
+        {
+          "name": "Mine Field",
+          "time": "2:39"
+        },
+        {
+          "name": "Hijack the Barber",
+          "time": "3:22"
+        },
+        {
+          "name": "African Roots",
+          "time": "3:52"
+        },
+        {
+          "name": "Double Cross",
+          "time": "3:49"
+        },
+        {
+          "name": "East of (Arrows Hi Fi)",
+          "time": "2:12"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Invasion",
+          "time": "4:56"
+        },
+        {
+          "name": "Dub of a Woman",
+          "time": "3:53"
+        },
+        {
+          "name": "Dub on My Mind",
+          "time": "2:25"
+        },
+        {
+          "name": "Steeling",
+          "time": "2:47"
+        },
+        {
+          "name": "Dub Experience",
+          "time": "3:19"
+        },
+        {
+          "name": "Declaration of Dub",
+          "time": "3:40"
+        },
+        {
+          "name": "A Truthful Dub",
+          "time": "2:49"
+        }
+      ]
+    },
+    {
+      "genre": "Dub",
+      "artist": "Prince Far I",
+      "title": "Cry Tuff Dub Encounter Chapter 1",
+      "resolved": true,
+      "mbid": "a96a5f3e-6b6c-49b8-9be9-a0109c8e83df",
+      "year": 1978,
+      "label": "Hitrun Records",
+      "cat": "APLP 9002",
+      "front": "/covers/a96a5f3e-6b6c-49b8-9be9-a0109c8e83df-front.jpg",
+      "back": "/covers/a96a5f3e-6b6c-49b8-9be9-a0109c8e83df-back.jpg",
+      "sideA": [
+        {
+          "name": "A Message",
+          "time": "3:36"
+        },
+        {
+          "name": "The Visitor",
+          "time": "4:17"
+        },
+        {
+          "name": "The Right Way",
+          "time": "3:07"
+        },
+        {
+          "name": "Long Life",
+          "time": "5:11"
+        },
+        {
+          "name": "The Encounter",
+          "time": "3:00"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Ghardaia Dub",
+          "time": "3:40"
+        },
+        {
+          "name": "Mansion of the Almighty",
+          "time": "6:36"
+        },
+        {
+          "name": "Mozabites",
+          "time": "2:57"
+        },
+        {
+          "name": "Prince of Peace",
+          "time": "3:36"
+        },
+        {
+          "name": "Abderrahane",
+          "time": "2:42"
+        }
+      ]
+    },
+    {
+      "genre": "Hip hop",
+      "artist": "Nas",
+      "title": "Illmatic",
+      "resolved": true,
+      "mbid": "d9942007-f52f-47a7-b072-5b6ed22489ba",
+      "year": 1994,
+      "label": "Columbia",
+      "cat": "01-475959-20",
+      "front": "/covers/d9942007-f52f-47a7-b072-5b6ed22489ba-front.jpg",
+      "back": "/covers/d9942007-f52f-47a7-b072-5b6ed22489ba-back.jpg",
+      "sideA": [
+        {
+          "name": "The Genesis",
+          "time": "1:45"
+        },
+        {
+          "name": "N.Y. State of Mind",
+          "time": "4:53"
+        },
+        {
+          "name": "Life’s a Bitch",
+          "time": "3:29"
+        },
+        {
+          "name": "The World Is Yours",
+          "time": "4:50"
+        },
+        {
+          "name": "Halftime",
+          "time": "4:20"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Memory Lane (Sittin’ in da Park)",
+          "time": "4:07"
+        },
+        {
+          "name": "One Love",
+          "time": "5:24"
+        },
+        {
+          "name": "One Time 4 Your Mind",
+          "time": "3:18"
+        },
+        {
+          "name": "Represent",
+          "time": "4:13"
+        },
+        {
+          "name": "It Ain’t Hard to Tell",
+          "time": "3:22"
+        }
+      ]
+    },
+    {
+      "genre": "Hip hop",
+      "artist": "A Tribe Called Quest",
+      "title": "The Low End Theory",
+      "resolved": true,
+      "mbid": "ffc8dd55-3ab3-4d62-a181-c3371189c507",
+      "year": null,
+      "label": "Jive",
+      "cat": "01241-41418-1",
+      "front": "/covers/ffc8dd55-3ab3-4d62-a181-c3371189c507-front.jpg",
+      "back": "/covers/ffc8dd55-3ab3-4d62-a181-c3371189c507-back.jpg",
+      "sideA": [
+        {
+          "name": "Excursions",
+          "time": "3:53"
+        },
+        {
+          "name": "Buggin’ Out",
+          "time": "3:38"
+        },
+        {
+          "name": "Rap Promoter",
+          "time": "2:13"
+        },
+        {
+          "name": "Butter",
+          "time": "3:39"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Verses From the Abstract",
+          "time": "3:59"
+        },
+        {
+          "name": "Show Business",
+          "time": "3:53"
+        },
+        {
+          "name": "Vibes and Stuff",
+          "time": "4:18"
+        },
+        {
+          "name": "The Infamous Date Rape",
+          "time": "2:54"
+        },
+        {
+          "name": "Check the Rhime",
+          "time": "3:36"
+        },
+        {
+          "name": "Everything Is Fair",
+          "time": "2:59"
+        },
+        {
+          "name": "Jazz (We’ve Got)",
+          "time": "4:09"
+        },
+        {
+          "name": "Skypager",
+          "time": "2:13"
+        },
+        {
+          "name": "What?",
+          "time": "2:29"
+        },
+        {
+          "name": "Scenario",
+          "time": "4:10"
+        }
+      ]
+    },
+    {
+      "genre": "Hip hop",
+      "artist": "Wu-Tang Clan",
+      "title": "Enter the Wu-Tang (36 Chambers)",
+      "resolved": true,
+      "mbid": "c89915b3-d52c-4190-8008-05392a395801",
+      "year": 2021,
+      "label": "Legacy",
+      "cat": "19439893981",
+      "front": "/covers/c89915b3-d52c-4190-8008-05392a395801-front.jpg",
+      "back": "/covers/c89915b3-d52c-4190-8008-05392a395801-back.jpg",
+      "sideA": [
+        {
+          "name": "Bring Da Ruckus",
+          "time": "4:10"
+        },
+        {
+          "name": "Shame on a Nigga",
+          "time": "2:57"
+        },
+        {
+          "name": "Clan in Da Front",
+          "time": "4:33"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Wu‐Tang: 7th Chamber",
+          "time": "6:05"
+        },
+        {
+          "name": "Can It All Be So Simple",
+          "time": "4:46"
+        },
+        {
+          "name": "Intermission",
+          "time": "2:07"
+        },
+        {
+          "name": "Da Mystery of Chessboxin’",
+          "time": "4:48"
+        },
+        {
+          "name": "Wu‐Tang Clan Ain’t Nuthing Ta F’ Wit",
+          "time": "3:36"
+        },
+        {
+          "name": "C.R.E.A.M.",
+          "time": "4:12"
+        },
+        {
+          "name": "Method Man",
+          "time": "5:50"
+        },
+        {
+          "name": "Protect Ya Neck",
+          "time": "4:52"
+        },
+        {
+          "name": "Tearz",
+          "time": "4:17"
+        },
+        {
+          "name": "Wu‐Tang: 7th Chamber – Part II",
+          "time": "5:08"
+        },
+        {
+          "name": "Conclusion",
+          "time": "1:00"
+        }
+      ]
+    },
+    {
+      "genre": "Hip hop",
+      "artist": "Lauryn Hill",
+      "title": "The Miseducation of Lauryn Hill",
+      "resolved": true,
+      "mbid": "952d8e63-8afd-4049-a746-7f50aaeaa3e2",
+      "year": 1998,
+      "label": "Columbia",
+      "cat": "489843 2",
+      "front": "/covers/952d8e63-8afd-4049-a746-7f50aaeaa3e2-front.jpg",
+      "back": "/covers/952d8e63-8afd-4049-a746-7f50aaeaa3e2-back.jpg",
+      "sideA": [
+        {
+          "name": "Intro",
+          "time": "0:47"
+        },
+        {
+          "name": "Lost Ones",
+          "time": "5:34"
+        },
+        {
+          "name": "Ex-Factor",
+          "time": "5:27"
+        },
+        {
+          "name": "To Zion",
+          "time": "6:09"
+        },
+        {
+          "name": "Doo Wop (That Thing)",
+          "time": "5:20"
+        },
+        {
+          "name": "Superstar",
+          "time": "4:57"
+        },
+        {
+          "name": "Final Hour",
+          "time": "4:16"
+        },
+        {
+          "name": "When It Hurts So Bad",
+          "time": "5:42"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "I Used to Love Him",
+          "time": "5:40"
+        },
+        {
+          "name": "Forgive Them Father",
+          "time": "5:15"
+        },
+        {
+          "name": "Every Ghetto, Every City",
+          "time": "5:15"
+        },
+        {
+          "name": "Nothing Even Matters",
+          "time": "5:51"
+        },
+        {
+          "name": "Everything Is Everything",
+          "time": "4:53"
+        },
+        {
+          "name": "The Miseducation of Lauryn Hill",
+          "time": "4:17"
+        },
+        {
+          "name": "Can't Take My Eyes Off of You",
+          "time": "3:41"
+        },
+        {
+          "name": "Tell Him",
+          "time": "4:41"
+        }
+      ]
+    },
+    {
+      "genre": "Hip hop",
+      "artist": "OutKast",
+      "title": "Aquemini",
+      "resolved": true,
+      "mbid": "06438d71-3a7d-3f41-9338-3dc08351e19f",
+      "year": 1998,
+      "label": "LaFace Records",
+      "cat": "73008-26053-2",
+      "front": "/covers/06438d71-3a7d-3f41-9338-3dc08351e19f-front.jpg",
+      "back": "/covers/06438d71-3a7d-3f41-9338-3dc08351e19f-back.jpg",
+      "sideA": [
+        {
+          "name": "Hold On, Be Strong",
+          "time": "1:12"
+        },
+        {
+          "name": "Return of the “G”",
+          "time": "4:49"
+        },
+        {
+          "name": "Rosa Parks",
+          "time": "5:24"
+        },
+        {
+          "name": "Skew It on the Bar‐B",
+          "time": "3:15"
+        },
+        {
+          "name": "Aquemini",
+          "time": "5:19"
+        },
+        {
+          "name": "Synthesizer",
+          "time": "5:11"
+        },
+        {
+          "name": "Slump",
+          "time": "5:09"
+        },
+        {
+          "name": "West Savannah",
+          "time": "4:03"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Da Art of Storytellin’, Part 1",
+          "time": "3:42"
+        },
+        {
+          "name": "Da Art of Storytellin’, Part 2",
+          "time": "2:48"
+        },
+        {
+          "name": "Mamacita",
+          "time": "5:52"
+        },
+        {
+          "name": "SpottieOttieDopaliscious",
+          "time": "7:07"
+        },
+        {
+          "name": "Y’all Scared",
+          "time": "4:50"
+        },
+        {
+          "name": "Nathaniel",
+          "time": "1:10"
+        },
+        {
+          "name": "Liberation",
+          "time": "8:46"
+        },
+        {
+          "name": "Chonkyfire",
+          "time": "6:11"
+        }
+      ]
+    },
+    {
+      "genre": "Jazz",
+      "artist": "Miles Davis",
+      "title": "Kind of Blue",
+      "resolved": true,
+      "mbid": "9c56aa14-559f-4742-ae3c-34781cd83bcf",
+      "year": null,
+      "label": "CBS",
+      "cat": "32109",
+      "front": "/covers/9c56aa14-559f-4742-ae3c-34781cd83bcf-front.jpg",
+      "back": "/covers/9c56aa14-559f-4742-ae3c-34781cd83bcf-back.jpg",
+      "sideA": [
+        {
+          "name": "So What",
+          "time": "9:05"
+        },
+        {
+          "name": "Freddie Freeloader",
+          "time": "9:36"
+        },
+        {
+          "name": "Blue in Green",
+          "time": "5:29"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "All Blues",
+          "time": "11:34"
+        },
+        {
+          "name": "Flamenco Sketches",
+          "time": "9:25"
+        }
+      ]
+    },
+    {
+      "genre": "Jazz",
+      "artist": "John Coltrane",
+      "title": "A Love Supreme",
+      "resolved": true,
+      "mbid": "75a79676-af3d-4efa-a89d-ef613874f696",
+      "year": 2013,
+      "label": "impulse!",
+      "cat": "PROZ-4003",
+      "front": "/covers/75a79676-af3d-4efa-a89d-ef613874f696-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Part 1: Acknowledgement",
+          "time": "7:43"
+        },
+        {
+          "name": "Part 2: Resolution",
+          "time": "7:20"
+        },
+        {
+          "name": "Part 3: Pursuance",
+          "time": "10:42"
+        },
+        {
+          "name": "Part 4: Psalm",
+          "time": "7:05"
+        },
+        {
+          "name": "Introduction by André Francis",
+          "time": "1:13"
+        },
+        {
+          "name": "Part 1: Acknowledgment (live)",
+          "time": "6:12"
+        },
+        {
+          "name": "Part 2: Resolution (live)",
+          "time": "11:37"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Part 3: Pursuance (live)",
+          "time": "21:31"
+        },
+        {
+          "name": "Part 4: Psalm (live)",
+          "time": "8:49"
+        },
+        {
+          "name": "Part 2: Resolution (alternate take)",
+          "time": "7:24"
+        },
+        {
+          "name": "Part 2: Resolution (Breakdown)",
+          "time": "2:13"
+        },
+        {
+          "name": "Part 1: Acknowledgment (alternate take)",
+          "time": "9:10"
+        },
+        {
+          "name": "Part 1: Acknowledgment (alternate take)",
+          "time": "9:22"
+        }
+      ]
+    },
+    {
+      "genre": "Jazz",
+      "artist": "Billie Holiday",
+      "title": "Lady in Satin",
+      "resolved": true,
+      "mbid": "81ba2d95-94b0-40b0-900f-9b90a2c0eb70",
+      "year": 1984,
+      "label": "CBS",
+      "cat": "CBS 21100",
+      "front": "/covers/81ba2d95-94b0-40b0-900f-9b90a2c0eb70-front.jpg",
+      "back": "/covers/81ba2d95-94b0-40b0-900f-9b90a2c0eb70-back.jpg",
+      "sideA": [
+        {
+          "name": "I’m a Fool to Want You",
+          "time": "3:23"
+        },
+        {
+          "name": "For Heaven’s Sake",
+          "time": "3:26"
+        },
+        {
+          "name": "You Don’t Know What Love Is",
+          "time": "3:48"
+        },
+        {
+          "name": "I Get Along Without You Very Well",
+          "time": "2:59"
+        },
+        {
+          "name": "For All We Know",
+          "time": "2:53"
+        },
+        {
+          "name": "Violets for Your Furs",
+          "time": "3:24"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "You’ve Changed",
+          "time": "3:17"
+        },
+        {
+          "name": "It’s Easy to Remember",
+          "time": "4:01"
+        },
+        {
+          "name": "But Beautiful",
+          "time": "4:29"
+        },
+        {
+          "name": "Glad to Be Unhappy",
+          "time": "4:07"
+        },
+        {
+          "name": "I’ll Be Around",
+          "time": "3:23"
+        }
+      ]
+    },
+    {
+      "genre": "Jazz",
+      "artist": "Herbie Hancock",
+      "title": "Head Hunters",
+      "resolved": true,
+      "mbid": "52dda2f2-d7ee-4ec5-b00e-b1f4f86ebb95",
+      "year": 1973,
+      "label": "CBS/Sony",
+      "cat": "SOPL 238",
+      "front": "/covers/52dda2f2-d7ee-4ec5-b00e-b1f4f86ebb95-front.jpg",
+      "back": "/covers/52dda2f2-d7ee-4ec5-b00e-b1f4f86ebb95-back.jpg",
+      "sideA": [
+        {
+          "name": "Chameleon",
+          "time": "15:45"
+        },
+        {
+          "name": "Watermelon Man",
+          "time": "6:32"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Sly",
+          "time": "10:21"
+        },
+        {
+          "name": "Vein Melter",
+          "time": "9:10"
+        }
+      ]
+    },
+    {
+      "genre": "Jazz",
+      "artist": "Nina Simone",
+      "title": "I Put a Spell on You",
+      "resolved": true,
+      "mbid": "f47f86e9-7d68-4ecf-b4a2-2b2fd4d25e11",
+      "year": 1988,
+      "label": "Cédé International",
+      "cat": "CD 66067",
+      "front": "/covers/f47f86e9-7d68-4ecf-b4a2-2b2fd4d25e11-front.jpg",
+      "back": "/covers/f47f86e9-7d68-4ecf-b4a2-2b2fd4d25e11-back.jpg",
+      "sideA": [
+        {
+          "name": "I Put a Spell on You",
+          "time": "2:36"
+        },
+        {
+          "name": "Mississippi Goddam",
+          "time": "4:55"
+        },
+        {
+          "name": "Don’t Let Me Be Misunderstood",
+          "time": "2:48"
+        },
+        {
+          "name": "Trouble in Mind",
+          "time": "2:42"
+        },
+        {
+          "name": "The Laziest Gal in Town",
+          "time": "2:18"
+        },
+        {
+          "name": "I Love You Porgy",
+          "time": "2:33"
+        },
+        {
+          "name": "Ne me quitte pas",
+          "time": "3:36"
+        },
+        {
+          "name": "Gimme Some",
+          "time": "3:01"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Nobody Knows You When You’re Down and Out",
+          "time": "2:40"
+        },
+        {
+          "name": "Strange Fruit",
+          "time": "3:29"
+        },
+        {
+          "name": "Take Care of Business",
+          "time": "2:06"
+        },
+        {
+          "name": "Don’t Take All Night",
+          "time": "2:52"
+        },
+        {
+          "name": "Plain Gold Ring",
+          "time": "3:53"
+        },
+        {
+          "name": "He’s Got the Whole World in His Hands",
+          "time": "3:11"
+        },
+        {
+          "name": "For All We Know",
+          "time": "4:01"
+        },
+        {
+          "name": "Central Park Blues",
+          "time": "3:04"
+        }
+      ]
+    },
+    {
+      "genre": "Blues",
+      "artist": "Robert Johnson",
+      "title": "King of the Delta Blues Singers",
+      "resolved": true,
+      "mbid": "227191b9-3d00-419c-a261-34bf5ed80e48",
+      "year": 2017,
+      "label": "DOL",
+      "cat": "DOL933HG",
+      "front": "/covers/227191b9-3d00-419c-a261-34bf5ed80e48-front.jpg",
+      "back": "/covers/227191b9-3d00-419c-a261-34bf5ed80e48-back.jpg",
+      "sideA": [
+        {
+          "name": "Crossroads Blues",
+          "time": "2:34"
+        },
+        {
+          "name": "Terraplane Blues",
+          "time": "3:04"
+        },
+        {
+          "name": "Come On In My Kitchen",
+          "time": "2:55"
+        },
+        {
+          "name": "Walking Blues",
+          "time": "2:33"
+        },
+        {
+          "name": "Last Fair Deal Gone Down",
+          "time": "2:43"
+        },
+        {
+          "name": "32‐20 Blues",
+          "time": "2:56"
+        },
+        {
+          "name": "Kindhearted Woman Blues",
+          "time": "2:55"
+        },
+        {
+          "name": "If I Had Possession Over Judgment Day",
+          "time": "2:39"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Love in Vain Blues",
+          "time": "2:55"
+        },
+        {
+          "name": "When You Got a Good Friend",
+          "time": "2:41"
+        },
+        {
+          "name": "Rambling on My Mind",
+          "time": "2:54"
+        },
+        {
+          "name": "Stones in My Passway",
+          "time": "2:32"
+        },
+        {
+          "name": "Traveling Riverside Blues",
+          "time": "2:48"
+        },
+        {
+          "name": "Milkcow’s Calf Blues",
+          "time": "2:20"
+        },
+        {
+          "name": "Me and the Devil Blues",
+          "time": "2:36"
+        },
+        {
+          "name": "Hellhound on My Trail",
+          "time": "2:37"
+        },
+        {
+          "name": "Kindhearted Woman Blues (alternate take)",
+          "time": "2:33"
+        },
+        {
+          "name": "I Believe I’ll Dust My Broom",
+          "time": "2:58"
+        },
+        {
+          "name": "Sweet Home Chicago",
+          "time": "3:02"
+        },
+        {
+          "name": "Ramblin’ on My Mind (alternate take)",
+          "time": "2:23"
+        },
+        {
+          "name": "Phonograph Blues",
+          "time": "2:40"
+        },
+        {
+          "name": "They’re Red Hot",
+          "time": "2:59"
+        },
+        {
+          "name": "Dead Shrimp Blues",
+          "time": "2:32"
+        },
+        {
+          "name": "Preaching Blues",
+          "time": "2:52"
+        },
+        {
+          "name": "I’m a Steady Rollin’ Man",
+          "time": "2:37"
+        },
+        {
+          "name": "From Four Till Late",
+          "time": "2:25"
+        },
+        {
+          "name": "Little Queen of Spades",
+          "time": "2:14"
+        },
+        {
+          "name": "Malted Milk",
+          "time": "2:20"
+        },
+        {
+          "name": "Drunken Hearted Man",
+          "time": "2:27"
+        },
+        {
+          "name": "Stop Breakin’ Down Blues",
+          "time": "2:18"
+        },
+        {
+          "name": "Honeymoon Blues",
+          "time": "2:18"
+        },
+        {
+          "name": "Live in Vain Blues (alternate take)",
+          "time": "2:22"
+        }
+      ]
+    },
+    {
+      "genre": "Blues",
+      "artist": "B.B. King",
+      "title": "Live at the Regal",
+      "resolved": true,
+      "mbid": "4c884d96-8e0e-34cf-8f75-b6db47687d5f",
+      "year": 1965,
+      "label": "ABC Records",
+      "cat": "ABCS-509",
+      "front": "/covers/4c884d96-8e0e-34cf-8f75-b6db47687d5f-front.jpg",
+      "back": "/covers/4c884d96-8e0e-34cf-8f75-b6db47687d5f-back.jpg",
+      "sideA": [
+        {
+          "name": "Every Day I Have the Blues",
+          "time": "3:09"
+        },
+        {
+          "name": "Sweet Little Angel",
+          "time": "4:10"
+        },
+        {
+          "name": "It's My Own Fault",
+          "time": "3:09"
+        },
+        {
+          "name": "How Blue Can You Get?",
+          "time": "3:35"
+        },
+        {
+          "name": "Please Love Me",
+          "time": "3:02"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "You Upset Me Baby",
+          "time": "2:39"
+        },
+        {
+          "name": "Worry, Worry",
+          "time": "6:23"
+        },
+        {
+          "name": "Woke Up This Mornin'",
+          "time": "1:44"
+        },
+        {
+          "name": "You Done Lost Your Good Thing Now",
+          "time": "4:33"
+        },
+        {
+          "name": "Help the Poor",
+          "time": "2:38"
+        }
+      ]
+    },
+    {
+      "genre": "Blues",
+      "artist": "Howlin' Wolf",
+      "title": "Moanin' in the Moonlight",
+      "resolved": true,
+      "mbid": "0a50f525-004f-4025-950e-b6fdd84c0cfe",
+      "year": 1986,
+      "label": "Chess",
+      "cat": "GCH 8023",
+      "front": "/covers/0a50f525-004f-4025-950e-b6fdd84c0cfe-front.jpg",
+      "back": "/covers/0a50f525-004f-4025-950e-b6fdd84c0cfe-back.jpg",
+      "sideA": [
+        {
+          "name": "Moanin’ at Midnight",
+          "time": "2:58"
+        },
+        {
+          "name": "How Many More Years",
+          "time": "2:43"
+        },
+        {
+          "name": "Smokestack Lightnin’",
+          "time": "3:09"
+        },
+        {
+          "name": "Baby, How Long",
+          "time": "2:55"
+        },
+        {
+          "name": "No Place to Go",
+          "time": "2:59"
+        },
+        {
+          "name": "All Night Boogie",
+          "time": "2:29"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Evil",
+          "time": "2:53"
+        },
+        {
+          "name": "I’m Leavin’ You",
+          "time": "2:59"
+        },
+        {
+          "name": "Moanin’ for My Baby",
+          "time": "2:51"
+        },
+        {
+          "name": "I Asked for Water (She Gave Me Gasoline)",
+          "time": "2:51"
+        },
+        {
+          "name": "Forty‐Four",
+          "time": "2:50"
+        },
+        {
+          "name": "Somebody in My Home",
+          "time": "2:28"
+        }
+      ]
+    },
+    {
+      "genre": "Blues",
+      "artist": "Muddy Waters",
+      "title": "Hard Again",
+      "resolved": true,
+      "mbid": "fdd266f6-2263-4a3e-a504-ead90416ada5",
+      "year": 1977,
+      "label": "Blue Sky",
+      "cat": "SKY 32357",
+      "front": "/covers/fdd266f6-2263-4a3e-a504-ead90416ada5-front.jpg",
+      "back": "/covers/fdd266f6-2263-4a3e-a504-ead90416ada5-back.jpg",
+      "sideA": [
+        {
+          "name": "Mannish Boy",
+          "time": "5:24"
+        },
+        {
+          "name": "Bus Driver",
+          "time": "7:48"
+        },
+        {
+          "name": "I Want to Be Loved",
+          "time": "2:21"
+        },
+        {
+          "name": "Jealous Hearted Man",
+          "time": "4:25"
+        },
+        {
+          "name": "I Can’t Be Satisfied",
+          "time": "3:31"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "The Blues Had a Baby and They Named It Rock and Roll (#2)",
+          "time": "3:36"
+        },
+        {
+          "name": "Deep Down in Florida",
+          "time": "5:27"
+        },
+        {
+          "name": "Crosseyed Cat",
+          "time": "6:01"
+        },
+        {
+          "name": "Little Girl",
+          "time": "7:07"
+        }
+      ]
+    },
+    {
+      "genre": "Blues",
+      "artist": "Etta James",
+      "title": "At Last!",
+      "resolved": true,
+      "mbid": "43f1701a-4b20-4a5f-be3e-821a2aeca9d4",
+      "year": 1999,
+      "label": "MCA Records",
+      "cat": "CHD-12017",
+      "front": "/covers/43f1701a-4b20-4a5f-be3e-821a2aeca9d4-front.jpg",
+      "back": "/covers/43f1701a-4b20-4a5f-be3e-821a2aeca9d4-back.jpg",
+      "sideA": [
+        {
+          "name": "Anything to Say You’re Mine",
+          "time": "2:38"
+        },
+        {
+          "name": "My Dearest Darling",
+          "time": "3:05"
+        },
+        {
+          "name": "Trust in Me",
+          "time": "3:01"
+        },
+        {
+          "name": "A Sunday Kind of Love",
+          "time": "3:19"
+        },
+        {
+          "name": "Tough Mary",
+          "time": "2:28"
+        },
+        {
+          "name": "I Just Want to Make Love to You",
+          "time": "3:09"
+        },
+        {
+          "name": "At Last",
+          "time": "3:02"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "All I Could Do Was Cry",
+          "time": "2:58"
+        },
+        {
+          "name": "Stormy Weather",
+          "time": "3:10"
+        },
+        {
+          "name": "Girl of My Dreams (rendered as “Boy of My Dreams”)",
+          "time": "2:26"
+        },
+        {
+          "name": "My Heart Cries",
+          "time": "2:37"
+        },
+        {
+          "name": "Spoonful",
+          "time": "2:51"
+        },
+        {
+          "name": "It’s a Cryin’ Shame",
+          "time": "2:54"
+        },
+        {
+          "name": "If I Can’t Have You",
+          "time": "2:51"
+        }
+      ]
+    },
+    {
+      "genre": "Gospel",
+      "artist": "Aretha Franklin",
+      "title": "Amazing Grace",
+      "resolved": true,
+      "mbid": "9407256c-6c05-4720-9fbe-d6d9e6a10640",
+      "year": 1972,
+      "label": "Atlantic",
+      "cat": "SD 2-906",
+      "front": "/covers/9407256c-6c05-4720-9fbe-d6d9e6a10640-front.jpg",
+      "back": "/covers/9407256c-6c05-4720-9fbe-d6d9e6a10640-back.jpg",
+      "sideA": [
+        {
+          "name": "Mary Don’t You Weep",
+          "time": "7:29"
+        },
+        {
+          "name": "Medley: Precious Lord, Take My Hand / You’ve Got a Friend",
+          "time": "5:34"
+        },
+        {
+          "name": "Old Landmark",
+          "time": "3:40"
+        },
+        {
+          "name": "Give Yourself to Jesus",
+          "time": "5:16"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "How I Got Over",
+          "time": "4:22"
+        },
+        {
+          "name": "What a Friend We Have in Jesus",
+          "time": "6:03"
+        },
+        {
+          "name": "Amazing Grace",
+          "time": "10:45"
+        },
+        {
+          "name": "Precious Memories",
+          "time": "7:20"
+        },
+        {
+          "name": "Climbing Higher Mountains",
+          "time": "2:32"
+        },
+        {
+          "name": "Remarks by Reverend C.L. Franklin",
+          "time": "1:56"
+        },
+        {
+          "name": "God Will Take Care of You",
+          "time": "8:48"
+        },
+        {
+          "name": "Wholy Holy",
+          "time": "5:30"
+        },
+        {
+          "name": "You’ll Never Walk Alone",
+          "time": "6:31"
+        },
+        {
+          "name": "Never Grow Old",
+          "time": "9:57"
+        }
+      ]
+    },
+    {
+      "genre": "Gospel",
+      "artist": "Mahalia Jackson",
+      "title": "In the Upper Room",
+      "resolved": true,
+      "mbid": "023ab279-c11f-4ca0-81a0-ea490076d420",
+      "year": 1984,
+      "label": "Disques Vogue",
+      "cat": "VG 651 600061",
+      "front": "/covers/023ab279-c11f-4ca0-81a0-ea490076d420-front.jpg",
+      "back": "/covers/023ab279-c11f-4ca0-81a0-ea490076d420-back.jpg",
+      "sideA": [
+        {
+          "name": "In the Upper Room",
+          "time": "5:58"
+        },
+        {
+          "name": "Hands of God",
+          "time": "3:14"
+        },
+        {
+          "name": "Said He Would",
+          "time": "2:56"
+        },
+        {
+          "name": "Silent Night - Holy Night",
+          "time": "3:00"
+        },
+        {
+          "name": "I Bow on My Knees",
+          "time": "3:17"
+        },
+        {
+          "name": "Didn't It Rain",
+          "time": "1:53"
+        },
+        {
+          "name": "Walk With Me",
+          "time": "2:43"
+        },
+        {
+          "name": "What Then",
+          "time": "2:56"
+        },
+        {
+          "name": "It Is Not Secret",
+          "time": "2:59"
+        },
+        {
+          "name": "Jesus Is With Me",
+          "time": "3:04"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "How I Got Over It",
+          "time": "3:04"
+        },
+        {
+          "name": "I'm Glad Salvation Is Free",
+          "time": "2:49"
+        },
+        {
+          "name": "Go Tell It on the Mountain",
+          "time": "3:07"
+        },
+        {
+          "name": "He's My Light",
+          "time": "2:57"
+        },
+        {
+          "name": "It's Real",
+          "time": "3:07"
+        },
+        {
+          "name": "Get Away Jordan",
+          "time": "2:39"
+        },
+        {
+          "name": "Run All the Way",
+          "time": "2:21"
+        },
+        {
+          "name": "I Gave Up Everything to Follow Him",
+          "time": "3:15"
+        },
+        {
+          "name": "Nobody Knows",
+          "time": "2:40"
+        }
+      ]
+    },
+    {
+      "genre": "Gospel",
+      "artist": "The Staple Singers",
+      "title": "Be Altitude: Respect Yourself",
+      "resolved": true,
+      "mbid": "edcc972a-cd85-46cc-b346-e6dc26bfe799",
+      "year": 1972,
+      "label": "Stax",
+      "cat": "STS 3002",
+      "front": "/covers/edcc972a-cd85-46cc-b346-e6dc26bfe799-front.jpg",
+      "back": "/covers/edcc972a-cd85-46cc-b346-e6dc26bfe799-back.jpg",
+      "sideA": [
+        {
+          "name": "This World",
+          "time": "3:39"
+        },
+        {
+          "name": "Respect Yourself",
+          "time": "4:54"
+        },
+        {
+          "name": "Name the Missing Word",
+          "time": "4:03"
+        },
+        {
+          "name": "I’ll Take You There",
+          "time": "4:47"
+        },
+        {
+          "name": "This Old Town (People in This Town)",
+          "time": "4:42"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "We the People",
+          "time": "3:50"
+        },
+        {
+          "name": "Are You Sure",
+          "time": "4:27"
+        },
+        {
+          "name": "Who Do You Think You Are (Jesus Christ the Superstar)?",
+          "time": "4:10"
+        },
+        {
+          "name": "I’m Just Another Soldier",
+          "time": "3:50"
+        },
+        {
+          "name": "Who",
+          "time": "3:18"
+        }
+      ]
+    },
+    {
+      "genre": "Gospel",
+      "artist": "Sister Rosetta Tharpe",
+      "title": "Gospel Train",
+      "resolved": true,
+      "mbid": "18caac0a-0109-417f-823c-07fc7da12b7d",
+      "year": 1958,
+      "label": "Decca Records",
+      "cat": "DL 8782",
+      "front": "/covers/18caac0a-0109-417f-823c-07fc7da12b7d-front.jpg",
+      "back": "/covers/18caac0a-0109-417f-823c-07fc7da12b7d-back.jpg",
+      "sideA": [
+        {
+          "name": "Don't Take Everybody To Be Your Friend",
+          "time": "2:29"
+        },
+        {
+          "name": "Jonah",
+          "time": "3:02"
+        },
+        {
+          "name": "Jesus Is Here Today",
+          "time": "2:53"
+        },
+        {
+          "name": "My Journey To The Sky",
+          "time": "3:13"
+        },
+        {
+          "name": "Down By The River Side",
+          "time": "2:31"
+        },
+        {
+          "name": "Up Above My Head, I Hear Music In The Air",
+          "time": "2:33"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Strange Things Happening Every Day",
+          "time": "2:53"
+        },
+        {
+          "name": "How Far From God",
+          "time": "2:58"
+        },
+        {
+          "name": "This Train",
+          "time": "2:51"
+        },
+        {
+          "name": "Were You There When They Crucified My Lord?",
+          "time": "3:16"
+        },
+        {
+          "name": "When I Move To The Sky",
+          "time": "2:54"
+        },
+        {
+          "name": "Didn't It Rain?",
+          "time": "2:39"
+        }
+      ]
+    },
+    {
+      "genre": "Gospel",
+      "artist": "The Edwin Hawkins Singers",
+      "title": "Let Us Go into the House of the Lord",
+      "resolved": true,
+      "mbid": "ee6ec1da-2897-496f-9965-f9925deca972",
+      "year": 1969,
+      "label": "Pavilion",
+      "cat": "BPS 10001",
+      "front": "/covers/ee6ec1da-2897-496f-9965-f9925deca972-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Let Us Go Into the House of the Lord",
+          "time": "2:20"
+        },
+        {
+          "name": "Jesus, Lover of My Soul",
+          "time": "4:06"
+        },
+        {
+          "name": "To My Father’s House",
+          "time": "5:40"
+        },
+        {
+          "name": "I’m Going Through",
+          "time": "5:01"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Oh Happy Day",
+          "time": "4:59"
+        },
+        {
+          "name": "I Heard the Voice of Jesus",
+          "time": "6:09"
+        },
+        {
+          "name": "Early in the Morning",
+          "time": "3:05"
+        },
+        {
+          "name": "Joy, Joy",
+          "time": "6:31"
+        }
+      ]
+    },
+    {
+      "genre": "Disco",
+      "artist": "Donna Summer",
+      "title": "Bad Girls",
+      "resolved": true,
+      "mbid": "ccc73b94-e531-4807-b9e0-885dbb82c621",
+      "year": 1979,
+      "label": "Casablanca Records",
+      "cat": "NBLP-2-7150",
+      "front": "/covers/ccc73b94-e531-4807-b9e0-885dbb82c621-front.jpg",
+      "back": "/covers/ccc73b94-e531-4807-b9e0-885dbb82c621-back.jpg",
+      "sideA": [
+        {
+          "name": "Hot Stuff",
+          "time": "5:13"
+        },
+        {
+          "name": "Bad Girls",
+          "time": "4:57"
+        },
+        {
+          "name": "Love Will Always Find You",
+          "time": "4:01"
+        },
+        {
+          "name": "Walk Away",
+          "time": "4:17"
+        },
+        {
+          "name": "Dim All the Lights",
+          "time": "4:40"
+        },
+        {
+          "name": "Journey to the Centre of Your Heart",
+          "time": "4:37"
+        },
+        {
+          "name": "One Night in a Lifetime",
+          "time": "4:13"
+        },
+        {
+          "name": "Can't Get to Sleep at Night",
+          "time": "4:45"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "On My Honor",
+          "time": "3:32"
+        },
+        {
+          "name": "There Will Always Be a You",
+          "time": "4:58"
+        },
+        {
+          "name": "All Through the Night",
+          "time": "5:54"
+        },
+        {
+          "name": "My Baby Understands",
+          "time": "3:56"
+        },
+        {
+          "name": "Our Love",
+          "time": "4:54"
+        },
+        {
+          "name": "Lucky",
+          "time": "4:37"
+        },
+        {
+          "name": "Sunset People",
+          "time": "6:28"
+        }
+      ]
+    },
+    {
+      "genre": "Disco",
+      "artist": "Chic",
+      "title": "C'est Chic",
+      "resolved": true,
+      "mbid": "738ed2db-9b4a-4035-a9e1-465b636a44e8",
+      "year": 1978,
+      "label": "Atlantic",
+      "cat": "ATL 50 549",
+      "front": "/covers/738ed2db-9b4a-4035-a9e1-465b636a44e8-front.jpg",
+      "back": "/covers/738ed2db-9b4a-4035-a9e1-465b636a44e8-back.jpg",
+      "sideA": [
+        {
+          "name": "Chic Cheer",
+          "time": "4:45"
+        },
+        {
+          "name": "Le Freak",
+          "time": "5:31"
+        },
+        {
+          "name": "Savoir Faire",
+          "time": "5:05"
+        },
+        {
+          "name": "Happy Man",
+          "time": "4:27"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "I Want Your Love",
+          "time": "6:58"
+        },
+        {
+          "name": "At Last I Am Free",
+          "time": "7:12"
+        },
+        {
+          "name": "Sometimes You Win",
+          "time": "4:29"
+        },
+        {
+          "name": "(Funny) Bone",
+          "time": "3:42"
+        }
+      ]
+    },
+    {
+      "genre": "Disco",
+      "artist": "Sylvester",
+      "title": "Step II",
+      "resolved": true,
+      "mbid": "21332e10-48a3-44f6-955b-834c82f69336",
+      "year": 1978,
+      "label": "Fantasy",
+      "cat": "F-9556",
+      "front": "/covers/21332e10-48a3-44f6-955b-834c82f69336-front.jpg",
+      "back": "/covers/21332e10-48a3-44f6-955b-834c82f69336-back.jpg",
+      "sideA": [
+        {
+          "name": "You Make Me Feel (Mighty Real)",
+          "time": "6:30"
+        },
+        {
+          "name": "Dance (Disco Heat)",
+          "time": "5:50"
+        },
+        {
+          "name": "You Make Me Feel (Mighty Real) (Epilogue)",
+          "time": "3:19"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Grateful",
+          "time": "3:27"
+        },
+        {
+          "name": "I Took My Strength From You",
+          "time": "7:16"
+        },
+        {
+          "name": "Was It Something That I Said",
+          "time": "4:15"
+        },
+        {
+          "name": "Just You and Me Forever",
+          "time": "4:31"
+        }
+      ]
+    },
+    {
+      "genre": "Disco",
+      "artist": "Gloria Gaynor",
+      "title": "Love Tracks",
+      "resolved": true,
+      "mbid": "2716d091-9a43-46b8-ad05-78a786f0147c",
+      "year": 1978,
+      "label": "Polydor",
+      "cat": "PD-1-6184",
+      "front": "/covers/2716d091-9a43-46b8-ad05-78a786f0147c-front.jpg",
+      "back": "/covers/2716d091-9a43-46b8-ad05-78a786f0147c-back.jpg",
+      "sideA": [
+        {
+          "name": "Stoplight",
+          "time": "3:41"
+        },
+        {
+          "name": "Anybody Wanna Party?",
+          "time": "5:14"
+        },
+        {
+          "name": "Please, Be There",
+          "time": "4:30"
+        },
+        {
+          "name": "Goin’ Out of My Head",
+          "time": "5:35"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "I Will Survive",
+          "time": "8:02"
+        },
+        {
+          "name": "You Can Exit",
+          "time": "5:16"
+        },
+        {
+          "name": "I Said Yes",
+          "time": "3:59"
+        },
+        {
+          "name": "Substitute",
+          "time": "3:15"
+        }
+      ]
+    },
+    {
+      "genre": "Disco",
+      "artist": "KC and the Sunshine Band",
+      "title": "KC and the Sunshine Band",
+      "resolved": true,
+      "mbid": "81170b31-2ba2-4784-999f-35ff2e2b240d",
+      "year": 1975,
+      "label": "T.K. Records",
+      "cat": "TK-603",
+      "front": "/covers/81170b31-2ba2-4784-999f-35ff2e2b240d-front.jpg",
+      "back": "/covers/81170b31-2ba2-4784-999f-35ff2e2b240d-back.jpg",
+      "sideA": [
+        {
+          "name": "Let It Go, Part One",
+          "time": "2:59"
+        },
+        {
+          "name": "That’s the Way (I Like It)",
+          "time": "5:07"
+        },
+        {
+          "name": "Get Down Tonight",
+          "time": "5:16"
+        },
+        {
+          "name": "Boogie Shoes",
+          "time": "2:19"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Ain’t Nothin’ Wrong",
+          "time": "3:08"
+        },
+        {
+          "name": "I’m So Crazy (’Bout You)",
+          "time": "3:08"
+        },
+        {
+          "name": "What Makes You Happy",
+          "time": "2:53"
+        },
+        {
+          "name": "I Get Lifted",
+          "time": "3:05"
+        },
+        {
+          "name": "Let It Go, Part Two",
+          "time": "2:03"
+        }
+      ]
+    },
+    {
+      "genre": "Punk",
+      "artist": "Ramones",
+      "title": "Ramones",
+      "resolved": true,
+      "mbid": "06bf2bf2-c8a4-403c-b0e7-78dec51abfbd",
+      "year": 2016,
+      "label": "Ramones Productions Inc.",
+      "cat": "081227945176",
+      "front": "/covers/06bf2bf2-c8a4-403c-b0e7-78dec51abfbd-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Blitzkrieg Bop",
+          "time": "2:14"
+        },
+        {
+          "name": "Beat on the Brat",
+          "time": "2:32"
+        },
+        {
+          "name": "Judy Is a Punk",
+          "time": "1:32"
+        },
+        {
+          "name": "I Wanna Be Your Boyfriend",
+          "time": "2:24"
+        },
+        {
+          "name": "Chain Saw",
+          "time": "1:56"
+        },
+        {
+          "name": "Now I Wanna Sniff Some Glue",
+          "time": "1:36"
+        },
+        {
+          "name": "I Don’t Wanna Go Down to the Basement",
+          "time": "2:38"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Loudmouth",
+          "time": "2:15"
+        },
+        {
+          "name": "Havana Affair",
+          "time": "1:57"
+        },
+        {
+          "name": "Listen to My Heart",
+          "time": "1:58"
+        },
+        {
+          "name": "53rd & 3rd",
+          "time": "2:21"
+        },
+        {
+          "name": "Let’s Dance",
+          "time": "1:52"
+        },
+        {
+          "name": "I Don’t Wanna Walk Around With You",
+          "time": "1:42"
+        },
+        {
+          "name": "Today Your Love, Tomorrow the World",
+          "time": "2:11"
+        }
+      ]
+    },
+    {
+      "genre": "Punk",
+      "artist": "The Clash",
+      "title": "London Calling",
+      "resolved": true,
+      "mbid": "7dd14334-c701-42e7-8c55-5e858be73f6a",
+      "year": 2004,
+      "label": "Epic",
+      "cat": "E3K 92923",
+      "front": "/covers/7dd14334-c701-42e7-8c55-5e858be73f6a-front.jpg",
+      "back": "/covers/7dd14334-c701-42e7-8c55-5e858be73f6a-back.jpg",
+      "sideA": [
+        {
+          "name": "London Calling",
+          "time": "3:24"
+        },
+        {
+          "name": "Brand New Cadillac",
+          "time": "2:10"
+        },
+        {
+          "name": "Jimmy Jazz",
+          "time": "3:57"
+        },
+        {
+          "name": "Hateful",
+          "time": "2:46"
+        },
+        {
+          "name": "Rudie Can’t Fail",
+          "time": "3:32"
+        },
+        {
+          "name": "Spanish Bombs",
+          "time": "3:21"
+        },
+        {
+          "name": "The Right Profile",
+          "time": "3:58"
+        },
+        {
+          "name": "Lost in the Supermarket",
+          "time": "3:50"
+        },
+        {
+          "name": "Clampdown",
+          "time": "3:52"
+        },
+        {
+          "name": "The Guns of Brixton",
+          "time": "3:14"
+        },
+        {
+          "name": "Wrong ’Em Boyo",
+          "time": "3:13"
+        },
+        {
+          "name": "Death or Glory",
+          "time": "3:57"
+        },
+        {
+          "name": "Koka Kola",
+          "time": "1:50"
+        },
+        {
+          "name": "The Card Cheat",
+          "time": "3:53"
+        },
+        {
+          "name": "Lover’s Rock",
+          "time": "4:06"
+        },
+        {
+          "name": "Four Horsemen",
+          "time": "2:58"
+        },
+        {
+          "name": "I’m Not Down",
+          "time": "3:08"
+        },
+        {
+          "name": "Revolution Rock",
+          "time": "5:37"
+        },
+        {
+          "name": "Train in Vain",
+          "time": "3:12"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Hateful (Previously unheard rehearsal session)",
+          "time": "3:24"
+        },
+        {
+          "name": "Rudie Can’t Fail (Previously unheard rehearsal session)",
+          "time": "3:09"
+        },
+        {
+          "name": "Paul’s Tune (Previously unheard rehearsal session)",
+          "time": "2:33"
+        },
+        {
+          "name": "I’m Not Down (Previously unheard rehearsal session)",
+          "time": "3:34"
+        },
+        {
+          "name": "4 Horsemen (Previously unheard rehearsal session)",
+          "time": "2:45"
+        },
+        {
+          "name": "Koka Kola, Advertising & Cocaine (Previously unheard rehearsal session)",
+          "time": "1:58"
+        },
+        {
+          "name": "Death or Glory (Previously unheard rehearsal session)",
+          "time": "3:48"
+        },
+        {
+          "name": "Lover’s Rock (Previously unheard rehearsal session)",
+          "time": "3:46"
+        },
+        {
+          "name": "Lonesome Me",
+          "time": "2:09"
+        },
+        {
+          "name": "The Police Walked in 4 Jazz (Previously unheard rehearsal session)",
+          "time": "2:19"
+        },
+        {
+          "name": "Lost in the Supermarket (Previously unheard rehearsal session)",
+          "time": "3:52"
+        },
+        {
+          "name": "Up-Toon (instrumental) (Previously unheard rehearsal session)",
+          "time": "1:57"
+        },
+        {
+          "name": "Walking the Slidewalk",
+          "time": "2:35"
+        },
+        {
+          "name": "Where You Gonna Go (Soweto)",
+          "time": "4:05"
+        },
+        {
+          "name": "The Man in Me",
+          "time": "3:57"
+        },
+        {
+          "name": "Remote Control (Previously unheard rehearsal session)",
+          "time": "2:40"
+        },
+        {
+          "name": "Working and Waiting (Previously unheard rehearsal session)",
+          "time": "4:11"
+        },
+        {
+          "name": "Heart & Mind",
+          "time": "4:28"
+        },
+        {
+          "name": "Brand New Cadillac (Previously unheard rehearsal session)",
+          "time": "2:08"
+        },
+        {
+          "name": "London Calling (Previously unheard rehearsal session)",
+          "time": "4:27"
+        },
+        {
+          "name": "Revolution Rock (Previously unheard rehearsal session)",
+          "time": "3:52"
+        },
+        {
+          "name": "The Last Testament: The Making of London Calling (documentary)",
+          "time": "32:25"
+        },
+        {
+          "name": "London Calling",
+          "time": "3:17"
+        },
+        {
+          "name": "Train In Vain",
+          "time": "3:48"
+        },
+        {
+          "name": "Clampdown",
+          "time": "4:29"
+        },
+        {
+          "name": "London Calling in Wessex Studios (home video footage)",
+          "time": "13:54"
+        }
+      ]
+    },
+    {
+      "genre": "Punk",
+      "artist": "Sex Pistols",
+      "title": "Never Mind the Bollocks, Here's the Sex Pistols",
+      "resolved": true,
+      "mbid": "9c58da21-9819-41bf-9830-75b0a34a3642",
+      "year": 1988,
+      "label": "Warner Bros. Records",
+      "cat": "3147-2",
+      "front": "/covers/9c58da21-9819-41bf-9830-75b0a34a3642-front.jpg",
+      "back": "/covers/9c58da21-9819-41bf-9830-75b0a34a3642-back.jpg",
+      "sideA": [
+        {
+          "name": "Holidays in the Sun",
+          "time": "3:22"
+        },
+        {
+          "name": "Bodies",
+          "time": "3:03"
+        },
+        {
+          "name": "No Feelings",
+          "time": "2:51"
+        },
+        {
+          "name": "Liar",
+          "time": "2:41"
+        },
+        {
+          "name": "Problems",
+          "time": "4:11"
+        },
+        {
+          "name": "God Save the Queen",
+          "time": "3:20"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Seventeen",
+          "time": "2:03"
+        },
+        {
+          "name": "Anarchy in the U.K.",
+          "time": "3:32"
+        },
+        {
+          "name": "Submission",
+          "time": "4:13"
+        },
+        {
+          "name": "Pretty Vacant",
+          "time": "3:17"
+        },
+        {
+          "name": "New York",
+          "time": "3:06"
+        },
+        {
+          "name": "EMI",
+          "time": "3:09"
+        }
+      ]
+    },
+    {
+      "genre": "Punk",
+      "artist": "Dead Kennedys",
+      "title": "Fresh Fruit for Rotting Vegetables",
+      "resolved": true,
+      "mbid": "ce36032e-3e83-4d93-bf29-a465791eee24",
+      "year": 1987,
+      "label": "Polton",
+      "cat": "LPP-034",
+      "front": "/covers/ce36032e-3e83-4d93-bf29-a465791eee24-front.jpg",
+      "back": "/covers/ce36032e-3e83-4d93-bf29-a465791eee24-back.jpg",
+      "sideA": [
+        {
+          "name": "Kill the Poor",
+          "time": "3:05"
+        },
+        {
+          "name": "Forward to Death",
+          "time": "1:24"
+        },
+        {
+          "name": "When Ya Get Drafted",
+          "time": "1:24"
+        },
+        {
+          "name": "Let’s Lynch the Landlord",
+          "time": "2:13"
+        },
+        {
+          "name": "Drug Me",
+          "time": "1:57"
+        },
+        {
+          "name": "Your Emotions",
+          "time": "1:21"
+        },
+        {
+          "name": "Chemical Warfare",
+          "time": "2:56"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "California über alles",
+          "time": "3:02"
+        },
+        {
+          "name": "I Kill Children",
+          "time": "2:04"
+        },
+        {
+          "name": "Stealing People’s Mail",
+          "time": "1:35"
+        },
+        {
+          "name": "Funland at the Beach",
+          "time": "1:50"
+        },
+        {
+          "name": "Ill in the Head",
+          "time": "2:46"
+        },
+        {
+          "name": "Holiday in Cambodia",
+          "time": "4:35"
+        },
+        {
+          "name": "Viva Las Vegas",
+          "time": "2:37"
+        }
+      ]
+    },
+    {
+      "genre": "Punk",
+      "artist": "X-Ray Spex",
+      "title": "Germfree Adolescents",
+      "resolved": true,
+      "mbid": "c1ceccb6-4485-404c-a0cc-6835bebea67f",
+      "year": 1991,
+      "label": "Virgin",
+      "cat": "CDVM 9001",
+      "front": "/covers/c1ceccb6-4485-404c-a0cc-6835bebea67f-front.jpg",
+      "back": "/covers/c1ceccb6-4485-404c-a0cc-6835bebea67f-back.jpg",
+      "sideA": [
+        {
+          "name": "The Day the World Turned Dayglo",
+          "time": "2:50"
+        },
+        {
+          "name": "Obsessed With You",
+          "time": "2:27"
+        },
+        {
+          "name": "Genetic Engineering",
+          "time": "2:46"
+        },
+        {
+          "name": "Identity",
+          "time": "2:22"
+        },
+        {
+          "name": "I Live Off You",
+          "time": "2:06"
+        },
+        {
+          "name": "Germfree Adolescents",
+          "time": "3:11"
+        },
+        {
+          "name": "Art‐I‐Ficial",
+          "time": "3:22"
+        },
+        {
+          "name": "Let’s Submerge",
+          "time": "3:24"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Warrior in Woolworths",
+          "time": "3:04"
+        },
+        {
+          "name": "I Am a Poseur",
+          "time": "2:31"
+        },
+        {
+          "name": "I Can’t Do Anything",
+          "time": "2:56"
+        },
+        {
+          "name": "Highly Inflammable",
+          "time": "2:33"
+        },
+        {
+          "name": "Age",
+          "time": "2:37"
+        },
+        {
+          "name": "Plastic Bag",
+          "time": "4:52"
+        },
+        {
+          "name": "I Am a Cliche",
+          "time": "1:53"
+        },
+        {
+          "name": "Oh Bondage Up Yours!",
+          "time": "2:48"
+        }
+      ]
+    },
+    {
+      "genre": "Post-punk",
+      "artist": "Joy Division",
+      "title": "Unknown Pleasures",
+      "resolved": true,
+      "mbid": "4b96bf5f-a90c-46ab-abcf-7589a3e86b4e",
+      "year": 1984,
+      "label": "Factory",
+      "cat": "70 163",
+      "front": "/covers/4b96bf5f-a90c-46ab-abcf-7589a3e86b4e-front.jpg",
+      "back": "/covers/4b96bf5f-a90c-46ab-abcf-7589a3e86b4e-back.jpg",
+      "sideA": [
+        {
+          "name": "Disorder",
+          "time": "3:31"
+        },
+        {
+          "name": "Day of the Lords",
+          "time": "4:47"
+        },
+        {
+          "name": "Candidate",
+          "time": "3:04"
+        },
+        {
+          "name": "Insight",
+          "time": "4:28"
+        },
+        {
+          "name": "New Dawn Fades",
+          "time": "4:47"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "She’s Lost Control",
+          "time": "3:57"
+        },
+        {
+          "name": "Shadowplay",
+          "time": "3:56"
+        },
+        {
+          "name": "Wilderness",
+          "time": "2:38"
+        },
+        {
+          "name": "Interzone",
+          "time": "2:16"
+        },
+        {
+          "name": "I Remember Nothing",
+          "time": "5:47"
+        }
+      ]
+    },
+    {
+      "genre": "Post-punk",
+      "artist": "Talking Heads",
+      "title": "Remain in Light",
+      "resolved": true,
+      "mbid": "6d9db0cb-c7e5-31d0-ac93-0db4d4b6d829",
+      "year": 1980,
+      "label": "Sire Records",
+      "cat": "SRK 6095",
+      "front": "/covers/6d9db0cb-c7e5-31d0-ac93-0db4d4b6d829-front.jpg",
+      "back": "/covers/6d9db0cb-c7e5-31d0-ac93-0db4d4b6d829-back.jpg",
+      "sideA": [
+        {
+          "name": "Born Under Punches (The Heat Goes On)",
+          "time": "5:49"
+        },
+        {
+          "name": "Crosseyed and Painless",
+          "time": "4:48"
+        },
+        {
+          "name": "The Great Curve",
+          "time": "6:28"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Once in a Lifetime",
+          "time": "4:23"
+        },
+        {
+          "name": "Houses in Motion",
+          "time": "4:33"
+        },
+        {
+          "name": "Seen and Not Seen",
+          "time": "3:25"
+        },
+        {
+          "name": "Listening Wind",
+          "time": "4:43"
+        },
+        {
+          "name": "The Overload",
+          "time": "6:01"
+        }
+      ]
+    },
+    {
+      "genre": "Post-punk",
+      "artist": "Siouxsie and the Banshees",
+      "title": "Juju",
+      "resolved": true,
+      "mbid": "1a53aaee-7c38-4531-94f0-5b40fb99562a",
+      "year": 1981,
+      "label": "PVC Records",
+      "cat": "PVC 8903",
+      "front": "/covers/1a53aaee-7c38-4531-94f0-5b40fb99562a-front.jpg",
+      "back": "/covers/1a53aaee-7c38-4531-94f0-5b40fb99562a-back.jpg",
+      "sideA": [
+        {
+          "name": "Spellbound",
+          "time": "3:19"
+        },
+        {
+          "name": "Into the Light",
+          "time": "4:14"
+        },
+        {
+          "name": "Arabian Knights",
+          "time": "3:06"
+        },
+        {
+          "name": "Halloween",
+          "time": "3:42"
+        },
+        {
+          "name": "Monitor",
+          "time": "5:36"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Night Shift",
+          "time": "6:06"
+        },
+        {
+          "name": "Sin in My Heart",
+          "time": "3:39"
+        },
+        {
+          "name": "Head Cut",
+          "time": "4:24"
+        },
+        {
+          "name": "Voodoo Dolly",
+          "time": "7:03"
+        }
+      ]
+    },
+    {
+      "genre": "Post-punk",
+      "artist": "Gang of Four",
+      "title": "Entertainment!",
+      "resolved": true,
+      "mbid": "ca391616-a063-45b6-aba8-525e36042c18",
+      "year": 1979,
+      "label": "Warner Bros. Records",
+      "cat": "BSK 3446",
+      "front": "/covers/ca391616-a063-45b6-aba8-525e36042c18-front.jpg",
+      "back": "/covers/ca391616-a063-45b6-aba8-525e36042c18-back.jpg",
+      "sideA": [
+        {
+          "name": "Ether",
+          "time": "3:48"
+        },
+        {
+          "name": "Natural’s Not in It",
+          "time": "3:05"
+        },
+        {
+          "name": "Not Great Men",
+          "time": "3:04"
+        },
+        {
+          "name": "Damaged Goods",
+          "time": "3:25"
+        },
+        {
+          "name": "Return the Gift",
+          "time": "3:04"
+        },
+        {
+          "name": "Guns Before Butter",
+          "time": "3:43"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "I Found That Essence Rare",
+          "time": "3:05"
+        },
+        {
+          "name": "Glass",
+          "time": "2:27"
+        },
+        {
+          "name": "Contract",
+          "time": "2:39"
+        },
+        {
+          "name": "At Home He’s a Tourist",
+          "time": "3:29"
+        },
+        {
+          "name": "5.45",
+          "time": "3:40"
+        },
+        {
+          "name": "Anthrax",
+          "time": "4:18"
+        }
+      ]
+    },
+    {
+      "genre": "Post-punk",
+      "artist": "Public Image Ltd",
+      "title": "Metal Box",
+      "resolved": true,
+      "mbid": "fbfb1529-74b8-4ffa-aa1a-3c2d6d4a0fe5",
+      "year": 2016,
+      "label": "Virgin",
+      "cat": "570 149-1",
+      "front": "/covers/fbfb1529-74b8-4ffa-aa1a-3c2d6d4a0fe5-front.jpg",
+      "back": "/covers/fbfb1529-74b8-4ffa-aa1a-3c2d6d4a0fe5-back.jpg",
+      "sideA": [
+        {
+          "name": "Albatross",
+          "time": "10:35"
+        },
+        {
+          "name": "Memories",
+          "time": "5:05"
+        },
+        {
+          "name": "Swan Lake",
+          "time": "4:12"
+        },
+        {
+          "name": "Poptones",
+          "time": "7:46"
+        },
+        {
+          "name": "Careering",
+          "time": "4:32"
+        },
+        {
+          "name": "No Birds",
+          "time": "4:42"
+        },
+        {
+          "name": "Graveyard",
+          "time": "3:08"
+        },
+        {
+          "name": "The Suit",
+          "time": "3:30"
+        },
+        {
+          "name": "Bad Baby",
+          "time": "4:30"
+        },
+        {
+          "name": "Socialist",
+          "time": "3:10"
+        },
+        {
+          "name": "Chant",
+          "time": "5:00"
+        },
+        {
+          "name": "Radio 4",
+          "time": "4:28"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Death Disco (7″ edit)",
+          "time": "4:18"
+        },
+        {
+          "name": "Death Disco (12″)",
+          "time": "6:45"
+        },
+        {
+          "name": "Half Mix / Megga Mix",
+          "time": "6:54"
+        },
+        {
+          "name": "Death Disco (BBC TV, Top of the Pops, July 12/7/72)",
+          "time": "2:29"
+        },
+        {
+          "name": "Memories (7/12″)",
+          "time": "4:54"
+        },
+        {
+          "name": "Another",
+          "time": "3:52"
+        },
+        {
+          "name": "Poptones (BBC Radio 1, John Peel session 17/12/79)",
+          "time": "4:33"
+        },
+        {
+          "name": "Careering (BBC Radio 1, John Peel session 17/12/79)",
+          "time": "7:34"
+        },
+        {
+          "name": "Chant (BBC Radio 1, John Peel session 17/12/79)",
+          "time": "5:17"
+        },
+        {
+          "name": "Poptones (BBC TV, Old Grey Whistle Test 5/2/80)",
+          "time": "3:46"
+        },
+        {
+          "name": "Careering (BBC TV, Old Grey Whistle Test 5/2/80)",
+          "time": "5:05"
+        },
+        {
+          "name": "Pied Piper",
+          "time": "1:53"
+        },
+        {
+          "name": "Poptones (version 3)",
+          "time": "6:38"
+        },
+        {
+          "name": "Swan Lake (monitor mix)",
+          "time": "9:25"
+        },
+        {
+          "name": "Albatross (monitor mix)",
+          "time": "10:26"
+        },
+        {
+          "name": "Swan Lake (“master”)",
+          "time": "7:44"
+        },
+        {
+          "name": "Unknown Instrumental Jam 1 (“Chant”)",
+          "time": "6:32"
+        },
+        {
+          "name": "Unknown Jam 2 (“Megachant”)",
+          "time": "5:03"
+        },
+        {
+          "name": "Music From an Oven (AKA Memories)",
+          "time": "4:44"
+        },
+        {
+          "name": "Radio 4 (“Symphony Suite”)",
+          "time": "7:21"
+        },
+        {
+          "name": "Home Is Where the Heart Is (original mix)",
+          "time": "6:41"
+        },
+        {
+          "name": "Unknown Instrumental 2",
+          "time": "5:54"
+        },
+        {
+          "name": "Chant",
+          "time": "7:51"
+        },
+        {
+          "name": "Swan Lake (AKA Death Disco)",
+          "time": "7:39"
+        },
+        {
+          "name": "Memories",
+          "time": "7:55"
+        },
+        {
+          "name": "Public Image",
+          "time": "8:47"
+        },
+        {
+          "name": "Annalisa",
+          "time": "5:49"
+        },
+        {
+          "name": "No Birds (Do Sing)",
+          "time": "6:52"
+        }
+      ]
+    },
+    {
+      "genre": "Folk",
+      "artist": "Joni Mitchell",
+      "title": "Blue",
+      "resolved": true,
+      "mbid": "743ce1a1-3ba4-4058-bd77-9c5187a01789",
+      "year": 2009,
+      "label": "Reprise Records",
+      "cat": "74842",
+      "front": "/covers/743ce1a1-3ba4-4058-bd77-9c5187a01789-front.jpg",
+      "back": "/covers/743ce1a1-3ba4-4058-bd77-9c5187a01789-back.jpg",
+      "sideA": [
+        {
+          "name": "All I Want",
+          "time": "3:32"
+        },
+        {
+          "name": "My Old Man",
+          "time": "3:33"
+        },
+        {
+          "name": "Little Green",
+          "time": "3:25"
+        },
+        {
+          "name": "Carey",
+          "time": "3:00"
+        },
+        {
+          "name": "Blue",
+          "time": "3:00"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "California",
+          "time": "3:48"
+        },
+        {
+          "name": "This Flight Tonight",
+          "time": "2:50"
+        },
+        {
+          "name": "River",
+          "time": "4:00"
+        },
+        {
+          "name": "A Case of You",
+          "time": "4:20"
+        },
+        {
+          "name": "The Last Time I Saw Richard",
+          "time": "4:13"
+        }
+      ]
+    },
+    {
+      "genre": "Folk",
+      "artist": "Nick Drake",
+      "title": "Pink Moon",
+      "resolved": true,
+      "mbid": "723214d0-369b-4c20-85cd-af49068da3c6",
+      "year": 2000,
+      "label": "Simply Vinyl",
+      "cat": "SVLP 172",
+      "front": "/covers/723214d0-369b-4c20-85cd-af49068da3c6-front.jpg",
+      "back": "/covers/723214d0-369b-4c20-85cd-af49068da3c6-back.jpg",
+      "sideA": [
+        {
+          "name": "Pink Moon",
+          "time": "2:07"
+        },
+        {
+          "name": "Place to Be",
+          "time": "2:43"
+        },
+        {
+          "name": "Road",
+          "time": "2:02"
+        },
+        {
+          "name": "Which Will",
+          "time": "2:58"
+        },
+        {
+          "name": "Horn",
+          "time": "1:24"
+        },
+        {
+          "name": "Things Behind the Sun",
+          "time": "3:57"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Know",
+          "time": "2:26"
+        },
+        {
+          "name": "Parasite",
+          "time": "3:36"
+        },
+        {
+          "name": "Free Ride",
+          "time": "3:07"
+        },
+        {
+          "name": "Harvest Breed",
+          "time": "1:37"
+        },
+        {
+          "name": "From the Morning",
+          "time": "2:32"
+        }
+      ]
+    },
+    {
+      "genre": "Folk",
+      "artist": "Bob Dylan",
+      "title": "The Freewheelin' Bob Dylan",
+      "resolved": true,
+      "mbid": "b14ceb58-79c6-35bb-a87a-7504864f2c7d",
+      "year": 2003,
+      "label": "Columbia",
+      "cat": "CH 90321",
+      "front": "/covers/b14ceb58-79c6-35bb-a87a-7504864f2c7d-front.jpg",
+      "back": "/covers/b14ceb58-79c6-35bb-a87a-7504864f2c7d-back.jpg",
+      "sideA": [
+        {
+          "name": "Blowin’ in the Wind",
+          "time": "2:49"
+        },
+        {
+          "name": "Girl From the North Country",
+          "time": "3:23"
+        },
+        {
+          "name": "Masters of War",
+          "time": "4:38"
+        },
+        {
+          "name": "Down the Highway",
+          "time": "3:32"
+        },
+        {
+          "name": "Bob Dylan’s Blues",
+          "time": "2:29"
+        },
+        {
+          "name": "A Hard Rain’s A‐Gonna Fall",
+          "time": "6:53"
+        },
+        {
+          "name": "Don’t Think Twice, It’s All Right",
+          "time": "3:41"
+        },
+        {
+          "name": "Bob Dylan’s Dream",
+          "time": "5:03"
+        },
+        {
+          "name": "Oxford Town",
+          "time": "1:50"
+        },
+        {
+          "name": "Talkin’ World War III Blues",
+          "time": "6:28"
+        },
+        {
+          "name": "Corrina, Corrina",
+          "time": "2:44"
+        },
+        {
+          "name": "Honey, Just Allow Me One More Chance",
+          "time": "2:01"
+        },
+        {
+          "name": "I Shall Be Free",
+          "time": "4:47"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Blowin’ in the Wind",
+          "time": "2:51"
+        },
+        {
+          "name": "Girl From the North Country",
+          "time": "3:23"
+        },
+        {
+          "name": "Masters of War",
+          "time": "4:38"
+        },
+        {
+          "name": "Down the Highway",
+          "time": "3:32"
+        },
+        {
+          "name": "Bob Dylan’s Blues",
+          "time": "2:29"
+        },
+        {
+          "name": "A Hard Rain’s A‐Gonna Fall",
+          "time": "6:53"
+        },
+        {
+          "name": "Don’t Think Twice, It’s All Right",
+          "time": "3:41"
+        },
+        {
+          "name": "Bob Dylan’s Dream",
+          "time": "5:03"
+        },
+        {
+          "name": "Oxford Town",
+          "time": "1:50"
+        },
+        {
+          "name": "Talkin’ World War III Blues",
+          "time": "6:27"
+        },
+        {
+          "name": "Corrina, Corrina",
+          "time": "2:44"
+        },
+        {
+          "name": "Honey, Just Allow Me One More Chance",
+          "time": "2:01"
+        },
+        {
+          "name": "I Shall Be Free",
+          "time": "4:47"
+        }
+      ]
+    },
+    {
+      "genre": "Folk",
+      "artist": "Fairport Convention",
+      "title": "Liege & Lief",
+      "resolved": true,
+      "mbid": "6e059669-9416-3290-b975-b632912851ba",
+      "year": 1969,
+      "label": "Island",
+      "cat": "ILPS 9115",
+      "front": "/covers/6e059669-9416-3290-b975-b632912851ba-front.jpg",
+      "back": "/covers/6e059669-9416-3290-b975-b632912851ba-back.jpg",
+      "sideA": [
+        {
+          "name": "Come All Ye",
+          "time": "4:55"
+        },
+        {
+          "name": "Reynardine",
+          "time": "4:33"
+        },
+        {
+          "name": "Matty Groves",
+          "time": "8:08"
+        },
+        {
+          "name": "Farewell, Farewell",
+          "time": "2:38"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "The Deserter",
+          "time": "4:10"
+        },
+        {
+          "name": "Medley: The Lark in the Morning / Rakish Paddy / Foxhunter’s Jig / Toss the Feathers",
+          "time": "4:00"
+        },
+        {
+          "name": "Tam Lin",
+          "time": "7:20"
+        },
+        {
+          "name": "Crazy Man Michael",
+          "time": "4:35"
+        }
+      ]
+    },
+    {
+      "genre": "Folk",
+      "artist": "Vashti Bunyan",
+      "title": "Just Another Diamond Day",
+      "resolved": true,
+      "mbid": "48c31312-50da-3d1a-bb05-a6c9af7821cb",
+      "year": 2000,
+      "label": "Spinney",
+      "cat": "SPINNEY001CD",
+      "front": "/covers/48c31312-50da-3d1a-bb05-a6c9af7821cb-front.jpg",
+      "back": "/covers/48c31312-50da-3d1a-bb05-a6c9af7821cb-back.jpg",
+      "sideA": [
+        {
+          "name": "Diamond Day",
+          "time": "1:47"
+        },
+        {
+          "name": "Glow Worms",
+          "time": "2:16"
+        },
+        {
+          "name": "Lily Pond",
+          "time": "1:24"
+        },
+        {
+          "name": "Timothy Grub",
+          "time": "3:16"
+        },
+        {
+          "name": "Where I Like to Stand",
+          "time": "2:22"
+        },
+        {
+          "name": "Swallow Song",
+          "time": "2:16"
+        },
+        {
+          "name": "Window Over the Bay",
+          "time": "1:47"
+        },
+        {
+          "name": "Rose Hip November",
+          "time": "2:28"
+        },
+        {
+          "name": "Come Wind Come Rain",
+          "time": "2:07"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Hebridean Sun",
+          "time": "1:14"
+        },
+        {
+          "name": "Rainbow River",
+          "time": "3:23"
+        },
+        {
+          "name": "Trawlerman’s Song",
+          "time": "1:57"
+        },
+        {
+          "name": "Jog Along Bess",
+          "time": "3:36"
+        },
+        {
+          "name": "Iris’s Song for Us",
+          "time": "1:34"
+        },
+        {
+          "name": "Love Song",
+          "time": "1:59"
+        },
+        {
+          "name": "I’d Like to Walk Around in Your Mind",
+          "time": "2:15"
+        },
+        {
+          "name": "Winter Is Blue",
+          "time": "1:48"
+        },
+        {
+          "name": "Iris’s Song (version two)",
+          "time": "2:31"
+        }
+      ]
+    },
+    {
+      "genre": "Country",
+      "artist": "Willie Nelson",
+      "title": "Red Headed Stranger",
+      "resolved": true,
+      "mbid": "d9812a80-e57b-4028-8df2-05d0e5d5a1dd",
+      "year": 1975,
+      "label": "Columbia",
+      "cat": "KC 33482",
+      "front": "/covers/d9812a80-e57b-4028-8df2-05d0e5d5a1dd-front.jpg",
+      "back": "/covers/d9812a80-e57b-4028-8df2-05d0e5d5a1dd-back.jpg",
+      "sideA": [
+        {
+          "name": "Time of the Preacher",
+          "time": "2:26"
+        },
+        {
+          "name": "I Couldn’t Believe It Was True",
+          "time": "1:32"
+        },
+        {
+          "name": "Time of the Preacher Theme",
+          "time": "1:13"
+        },
+        {
+          "name": "Medley: Blue Rock Montana / Red Headed Stranger",
+          "time": "1:36"
+        },
+        {
+          "name": "Blue Eyes Crying in the Rain",
+          "time": "2:21"
+        },
+        {
+          "name": "Red Headed Stranger",
+          "time": "4:01"
+        },
+        {
+          "name": "Time of the Preacher Theme",
+          "time": "0:27"
+        },
+        {
+          "name": "Just as I Am",
+          "time": "1:47"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Denver",
+          "time": "0:53"
+        },
+        {
+          "name": "O’er the Waves",
+          "time": "0:47"
+        },
+        {
+          "name": "Down Yonder",
+          "time": "1:56"
+        },
+        {
+          "name": "Can I Sleep in Your Arms?",
+          "time": "5:24"
+        },
+        {
+          "name": "Remember Me",
+          "time": "2:53"
+        },
+        {
+          "name": "Hands on the Wheel",
+          "time": "4:23"
+        },
+        {
+          "name": "Bandera",
+          "time": "2:14"
+        }
+      ]
+    },
+    {
+      "genre": "Country",
+      "artist": "Dolly Parton",
+      "title": "Coat of Many Colors",
+      "resolved": true,
+      "mbid": "ac41eb4d-dd46-4032-9e08-9d2715919345",
+      "year": 1999,
+      "label": "BMG",
+      "cat": "74321 70903 2",
+      "front": "/covers/ac41eb4d-dd46-4032-9e08-9d2715919345-front.jpg",
+      "back": "/covers/ac41eb4d-dd46-4032-9e08-9d2715919345-back.jpg",
+      "sideA": [
+        {
+          "name": "Coat of Many Colors",
+          "time": "3:05"
+        },
+        {
+          "name": "Traveling Man",
+          "time": "2:40"
+        },
+        {
+          "name": "My Blue Tears",
+          "time": "2:17"
+        },
+        {
+          "name": "If I Lose My Mind",
+          "time": "2:29"
+        },
+        {
+          "name": "The Mystery of the Mystery",
+          "time": "2:28"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "She Never Met a Man (She Didn't Like)",
+          "time": "2:42"
+        },
+        {
+          "name": "Early Morning Breeze",
+          "time": "2:55"
+        },
+        {
+          "name": "The Way I See You",
+          "time": "2:47"
+        },
+        {
+          "name": "Here I Am",
+          "time": "3:19"
+        },
+        {
+          "name": "A Better Place to Live",
+          "time": "2:40"
+        }
+      ]
+    },
+    {
+      "genre": "Country",
+      "artist": "Johnny Cash",
+      "title": "At Folsom Prison",
+      "resolved": true,
+      "mbid": "757c8c92-bf78-4340-ae6c-d5af8ed89e8d",
+      "year": 2002,
+      "label": "Columbia",
+      "cat": "CS 65955",
+      "front": "/covers/757c8c92-bf78-4340-ae6c-d5af8ed89e8d-front.jpg",
+      "back": "/covers/757c8c92-bf78-4340-ae6c-d5af8ed89e8d-back.jpg",
+      "sideA": [
+        {
+          "name": "Folsom Prison Blues",
+          "time": "2:42"
+        },
+        {
+          "name": "Busted",
+          "time": "1:25"
+        },
+        {
+          "name": "Dark as the Dungeon",
+          "time": "3:05"
+        },
+        {
+          "name": "I Still Miss Someone",
+          "time": "1:38"
+        },
+        {
+          "name": "Cocaine Blues",
+          "time": "3:01"
+        },
+        {
+          "name": "25 Minutes to Go",
+          "time": "3:31"
+        },
+        {
+          "name": "Orange Blossom Special",
+          "time": "3:01"
+        },
+        {
+          "name": "The Long Black Veil",
+          "time": "3:58"
+        },
+        {
+          "name": "Send a Picture of Mother",
+          "time": "2:11"
+        },
+        {
+          "name": "The Wall",
+          "time": "1:37"
+        },
+        {
+          "name": "Dirty Old Egg-Suckin’ Dog",
+          "time": "1:30"
+        },
+        {
+          "name": "Flushed From the Bathroom of Your Heart",
+          "time": "2:17"
+        },
+        {
+          "name": "Joe Bean",
+          "time": "2:25"
+        },
+        {
+          "name": "Jackson",
+          "time": "3:12"
+        },
+        {
+          "name": "Give My Love to Rose",
+          "time": "2:41"
+        },
+        {
+          "name": "I Got Stripes",
+          "time": "1:57"
+        },
+        {
+          "name": "The Legend of John Henry’s Hammer",
+          "time": "7:08"
+        },
+        {
+          "name": "Green, Green Grass of Home",
+          "time": "2:30"
+        },
+        {
+          "name": "Greystone Chapel",
+          "time": "6:02"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Folsom Prison Blues (5.1 mix)",
+          "time": "2:42"
+        },
+        {
+          "name": "Busted (5.1 mix)",
+          "time": "1:25"
+        },
+        {
+          "name": "Dark as the Dungeon (5.1 mix)",
+          "time": "3:05"
+        },
+        {
+          "name": "I Still Miss Someone (5.1 mix)",
+          "time": "1:38"
+        },
+        {
+          "name": "Cocaine Blues (5.1 mix)",
+          "time": "3:01"
+        },
+        {
+          "name": "25 Minutes to Go (5.1 mix)",
+          "time": "3:31"
+        },
+        {
+          "name": "Orange Blossom Special (5.1 mix)",
+          "time": "3:01"
+        },
+        {
+          "name": "The Long Black Veil (5.1 mix)",
+          "time": "3:58"
+        },
+        {
+          "name": "Send a Picture of Mother (5.1 mix)",
+          "time": "2:11"
+        },
+        {
+          "name": "The Wall (5.1 mix)",
+          "time": "1:37"
+        },
+        {
+          "name": "Dirty Old Egg-Suckin’ Dog (5.1 mix)",
+          "time": "1:30"
+        },
+        {
+          "name": "Flushed From the Bathroom of Your Heart (5.1 mix)",
+          "time": "2:17"
+        },
+        {
+          "name": "Joe Bean (5.1 mix)",
+          "time": "2:25"
+        },
+        {
+          "name": "Jackson (5.1 mix)",
+          "time": "3:12"
+        },
+        {
+          "name": "Give My Love to Rose (5.1 mix)",
+          "time": "2:41"
+        },
+        {
+          "name": "I Got Stripes (5.1 mix)",
+          "time": "1:57"
+        },
+        {
+          "name": "The Legend of John Henry’s Hammer (5.1 mix)",
+          "time": "7:08"
+        },
+        {
+          "name": "Green, Green Grass of Home (5.1 mix)",
+          "time": "2:30"
+        },
+        {
+          "name": "Greystone Chapel (5.1 mix)",
+          "time": "6:02"
+        }
+      ]
+    },
+    {
+      "genre": "Country",
+      "artist": "Patsy Cline",
+      "title": "Showcase",
+      "resolved": true,
+      "mbid": "b6c5f3bf-ec81-4d1b-a851-f07ce9bd74b5",
+      "year": 1988,
+      "label": "MCA Records",
+      "cat": "MCAD-87",
+      "front": "/covers/b6c5f3bf-ec81-4d1b-a851-f07ce9bd74b5-front.jpg",
+      "back": "/covers/b6c5f3bf-ec81-4d1b-a851-f07ce9bd74b5-back.jpg",
+      "sideA": [
+        {
+          "name": "I Fall to Pieces",
+          "time": "2:51"
+        },
+        {
+          "name": "Foolin’ ’round",
+          "time": "2:13"
+        },
+        {
+          "name": "The Wayward Wind",
+          "time": "3:21"
+        },
+        {
+          "name": "South of the Border (Down Mexico Way)",
+          "time": "2:27"
+        },
+        {
+          "name": "I Love You So Much It Hurts",
+          "time": "2:15"
+        },
+        {
+          "name": "Seven Lonely Days",
+          "time": "2:13"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Crazy",
+          "time": "2:44"
+        },
+        {
+          "name": "San Antonio Rose",
+          "time": "2:21"
+        },
+        {
+          "name": "True Love",
+          "time": "2:09"
+        },
+        {
+          "name": "Walkin’ After Midnight",
+          "time": "2:01"
+        },
+        {
+          "name": "A Poor Man’s Roses (or a Rich Man’s Gold)",
+          "time": "2:37"
+        },
+        {
+          "name": "Have You Ever Been Lonely (Have You Ever Been Blue)",
+          "time": "2:11"
+        }
+      ]
+    },
+    {
+      "genre": "Country",
+      "artist": "Hank Williams",
+      "title": "Moanin' the Blues",
+      "resolved": true,
+      "mbid": "c72ac804-36f1-4fd7-8930-bf7491746795",
+      "year": 1952,
+      "label": "MGM Records",
+      "cat": "E 168",
+      "front": "/covers/c72ac804-36f1-4fd7-8930-bf7491746795-front.jpg",
+      "back": "/covers/c72ac804-36f1-4fd7-8930-bf7491746795-back.jpg",
+      "sideA": [
+        {
+          "name": "Lovesick Blues",
+          "time": "2:45"
+        },
+        {
+          "name": "Moanin' the Blues",
+          "time": "2:25"
+        },
+        {
+          "name": "The Blues Come Around",
+          "time": "2:43"
+        },
+        {
+          "name": "I'm So Lonesome I Could Cry",
+          "time": "2:48"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "I'm a Long Gone Daddy",
+          "time": "2:52"
+        },
+        {
+          "name": "My Sweet Love Ain't Around",
+          "time": "2:44"
+        },
+        {
+          "name": "Long Gone Lonesome Blues",
+          "time": "2:38"
+        },
+        {
+          "name": "Honky Tonk Blues",
+          "time": "2:41"
+        }
+      ]
+    },
+    {
+      "genre": "Afrobeat",
+      "artist": "Fela Kuti",
+      "title": "Zombie",
+      "resolved": true,
+      "mbid": "4efe3dd8-70fa-4db9-83d5-56f45285ce85",
+      "year": 1977,
+      "label": "Mercury Records",
+      "cat": "SRM-1-3709",
+      "front": "/covers/4efe3dd8-70fa-4db9-83d5-56f45285ce85-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Zombie",
+          "time": "12:29"
+        },
+        {
+          "name": "Monkey Banana",
+          "time": "11:37"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Everything Scatter",
+          "time": "10:34"
+        }
+      ]
+    },
+    {
+      "genre": "Afrobeat",
+      "artist": "Fela Kuti",
+      "title": "Expensive Shit",
+      "resolved": true,
+      "mbid": "8ec131d1-3996-4077-adce-2481df9daf24",
+      "year": 2010,
+      "label": "Partisan Records",
+      "cat": "",
+      "front": "/covers/8ec131d1-3996-4077-adce-2481df9daf24-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Expensive Shit",
+          "time": "13:15"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Water No Get Enemy",
+          "time": "11:01"
+        }
+      ]
+    },
+    {
+      "genre": "Afrobeat",
+      "artist": "Fela Kuti",
+      "title": "Gentleman",
+      "resolved": true,
+      "mbid": "34100061-65b6-4309-ba80-2e61944d6f0c",
+      "year": 2013,
+      "label": "Knitting Factory Records",
+      "cat": "",
+      "front": "/covers/34100061-65b6-4309-ba80-2e61944d6f0c-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Gentleman",
+          "time": "14:41"
+        },
+        {
+          "name": "Fefe Naa Efe",
+          "time": "8:12"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Igbe",
+          "time": "8:07"
+        }
+      ]
+    },
+    {
+      "genre": "Afrobeat",
+      "artist": "Tony Allen",
+      "title": "Progress",
+      "resolved": true,
+      "mbid": "24299aec-45c1-4e0c-addd-a2efe391fb3b",
+      "year": 1977,
+      "label": "Coconut",
+      "cat": "PMLP 1004",
+      "front": "/covers/24299aec-45c1-4e0c-addd-a2efe391fb3b-front.jpg",
+      "back": "/covers/24299aec-45c1-4e0c-addd-a2efe391fb3b-back.jpg",
+      "sideA": [
+        {
+          "name": "Progress",
+          "time": "9:40"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Afro Disco Beat",
+          "time": "11:56"
+        }
+      ]
+    },
+    {
+      "genre": "Afrobeat",
+      "artist": "Ebo Taylor",
+      "title": "Ebo Taylor",
+      "resolved": true,
+      "mbid": "6556d87c-361d-4558-99cd-83f93d61ef64",
+      "year": 1977,
+      "label": "Essiebons",
+      "cat": "EBLS 6166",
+      "front": "/covers/6556d87c-361d-4558-99cd-83f93d61ef64-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Saana",
+          "time": "5:45"
+        },
+        {
+          "name": "Ntsir A",
+          "time": "6:05"
+        },
+        {
+          "name": "Bra",
+          "time": "4:16"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Ohye Atar Gyan",
+          "time": "6:05"
+        },
+        {
+          "name": "Heaven",
+          "time": "6:04"
+        },
+        {
+          "name": "Amponsah",
+          "time": "6:21"
+        }
+      ]
+    },
+    {
+      "genre": "Highlife",
+      "artist": "E.T. Mensah",
+      "title": "All for You",
+      "resolved": true,
+      "mbid": "889871fa-5724-4bfc-9a5b-e99b42d01123",
+      "year": 1990,
+      "label": "RetroAfric",
+      "cat": "RETRO1CD",
+      "front": "/covers/889871fa-5724-4bfc-9a5b-e99b42d01123-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "All for You",
+          "time": "2:48"
+        },
+        {
+          "name": "Nkebo Baaya",
+          "time": "2:39"
+        },
+        {
+          "name": "Wiadzi",
+          "time": "2:38"
+        },
+        {
+          "name": "Munsuro",
+          "time": "2:53"
+        },
+        {
+          "name": "Nkatie",
+          "time": "2:53"
+        },
+        {
+          "name": "Odofo",
+          "time": "2:49"
+        },
+        {
+          "name": "Agriculture",
+          "time": "2:43"
+        },
+        {
+          "name": "Sunday Mirror",
+          "time": "2:57"
+        },
+        {
+          "name": "Inflation Calypso",
+          "time": "2:38"
+        },
+        {
+          "name": "John B. Calypso",
+          "time": "2:47"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "St Peter's Calypso",
+          "time": "2:39"
+        },
+        {
+          "name": "Donkey Calypso",
+          "time": "2:39"
+        },
+        {
+          "name": "Tea Samba",
+          "time": "2:50"
+        },
+        {
+          "name": "Fom Fom",
+          "time": "2:50"
+        },
+        {
+          "name": "Asembon Tie M'Ansem",
+          "time": "2:34"
+        },
+        {
+          "name": "Essie Nana",
+          "time": "2:41"
+        },
+        {
+          "name": "Don't Mind Your Wife",
+          "time": "2:46"
+        },
+        {
+          "name": "Adainkua",
+          "time": "2:47"
+        },
+        {
+          "name": "Bus Conductor",
+          "time": "2:44"
+        },
+        {
+          "name": "Afi Fro Fro",
+          "time": "2:34"
+        }
+      ]
+    },
+    {
+      "genre": "Highlife",
+      "artist": "King Sunny Adé",
+      "title": "Juju Music",
+      "resolved": true,
+      "mbid": "ee94f715-a1cc-43d9-a30e-fb30be7648a1",
+      "year": 1990,
+      "label": "Mango Records",
+      "cat": "CCD 9712",
+      "front": "/covers/ee94f715-a1cc-43d9-a30e-fb30be7648a1-front.jpg",
+      "back": "/covers/ee94f715-a1cc-43d9-a30e-fb30be7648a1-back.jpg",
+      "sideA": [
+        {
+          "name": "Ja Funmi",
+          "time": "7:11"
+        },
+        {
+          "name": "Eje Nlo Gba Ara Mi",
+          "time": "7:16"
+        },
+        {
+          "name": "Mo Beru Agba",
+          "time": "3:29"
+        },
+        {
+          "name": "Sunny Ti De Ariya",
+          "time": "3:48"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Ma Jaiye Oni",
+          "time": "5:10"
+        },
+        {
+          "name": "365 Is My Number / The Message",
+          "time": "8:19"
+        },
+        {
+          "name": "Samba / E Falaba Lewe",
+          "time": "8:07"
+        }
+      ]
+    },
+    {
+      "genre": "Highlife",
+      "artist": "Prince Nico Mbarga",
+      "title": "Aki Special",
+      "resolved": true,
+      "mbid": "b2b8d1e5-be35-488e-844e-ea1ae98ece34",
+      "year": 1987,
+      "label": "Rounder",
+      "cat": "CD 11545",
+      "front": "/covers/b2b8d1e5-be35-488e-844e-ea1ae98ece34-front.jpg",
+      "back": "/covers/b2b8d1e5-be35-488e-844e-ea1ae98ece34-back.jpg",
+      "sideA": [
+        {
+          "name": "Aki Special",
+          "time": "9:07"
+        },
+        {
+          "name": "Christiana",
+          "time": "9:11"
+        },
+        {
+          "name": "Sweet Mother",
+          "time": "9:56"
+        },
+        {
+          "name": "Wayo Inlaw",
+          "time": "7:55"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Free Education in Nigeria",
+          "time": "10:45"
+        },
+        {
+          "name": "Onye Ori Ori",
+          "time": "8:06"
+        },
+        {
+          "name": "Nature",
+          "time": "8:58"
+        }
+      ]
+    },
+    {
+      "genre": "Highlife",
+      "artist": "Chief Stephen Osita Osadebe",
+      "title": "Kedu America",
+      "resolved": true,
+      "mbid": "ac3b2e28-a30c-486c-a86c-94bb3cc5cc5b",
+      "year": 1994,
+      "label": "Xenophile",
+      "cat": "4044",
+      "front": "/covers/ac3b2e28-a30c-486c-a86c-94bb3cc5cc5b-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Onuigbo",
+          "time": "8:03"
+        },
+        {
+          "name": "Ka-Anyi Jikota",
+          "time": "5:06"
+        },
+        {
+          "name": "Aye Mama",
+          "time": "6:19"
+        },
+        {
+          "name": "Merenge Sposa",
+          "time": "4:03"
+        },
+        {
+          "name": "Nyem Obi Gi",
+          "time": "5:50"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Agbalu a.k.a. Na Azo Ani",
+          "time": "8:51"
+        },
+        {
+          "name": "Osondi Owendi",
+          "time": "7:51"
+        },
+        {
+          "name": "Nwanem Ebezina",
+          "time": "7:30"
+        },
+        {
+          "name": "Kedu America",
+          "time": "16:00"
+        }
+      ]
+    },
+    {
+      "genre": "Highlife",
+      "artist": "Sir Victor Uwaifo",
+      "title": "Sir Victor Uwaifo: Guitar Boy Superstar 1970-76",
+      "resolved": true,
+      "mbid": "22cc6062-1b01-4345-93ef-a8b42167859f",
+      "year": 2008,
+      "label": "Soundway",
+      "cat": "SNDWD012",
+      "front": "/covers/22cc6062-1b01-4345-93ef-a8b42167859f-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Kirikisi (Ekassa 24)",
+          "time": "3:53"
+        },
+        {
+          "name": "Igboroho (Ekassa 5)",
+          "time": "2:58"
+        },
+        {
+          "name": "Idogo (Ekassa 42)",
+          "time": "7:15"
+        },
+        {
+          "name": "Egbe Natete",
+          "time": "3:33"
+        },
+        {
+          "name": "Edenederio (Ekassa 40)",
+          "time": "5:17"
+        },
+        {
+          "name": "Obodo Eyo (Ekassa 12)",
+          "time": "3:23"
+        },
+        {
+          "name": "Talking Instruments (Ekassa 8)",
+          "time": "3:09"
+        },
+        {
+          "name": "Agho",
+          "time": "3:31"
+        },
+        {
+          "name": "Iye Iye",
+          "time": "3:05"
+        },
+        {
+          "name": "Mother Witch - Shuhusuhu",
+          "time": "3:30"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Atete (Ekassa 38)",
+          "time": "3:54"
+        },
+        {
+          "name": "Ebibi (Ekassa 28)",
+          "time": "5:10"
+        },
+        {
+          "name": "Osaluba Rekpama",
+          "time": "3:20"
+        },
+        {
+          "name": "Do Lelezi (Ekassa 22)",
+          "time": "5:55"
+        },
+        {
+          "name": "Akuyan (Ekassa 56)",
+          "time": "3:10"
+        },
+        {
+          "name": "Dododo (Ekassa 1)",
+          "time": "5:19"
+        },
+        {
+          "name": "Madaka",
+          "time": "2:58"
+        },
+        {
+          "name": "Happy Day From Me to You",
+          "time": "2:49"
+        },
+        {
+          "name": "West African Safari",
+          "time": "2:56"
+        }
+      ]
+    },
+    {
+      "genre": "Bossa nova",
+      "artist": "João Gilberto",
+      "title": "Chega de Saudade",
+      "resolved": true,
+      "mbid": "835940cc-3a91-4c5a-910a-ff5306ae6287",
+      "year": 1959,
+      "label": "Odeon",
+      "cat": "MOFB 3073",
+      "front": "/covers/835940cc-3a91-4c5a-910a-ff5306ae6287-front.jpg",
+      "back": "/covers/835940cc-3a91-4c5a-910a-ff5306ae6287-back.jpg",
+      "sideA": [
+        {
+          "name": "Chega de saudade",
+          "time": "2:02"
+        },
+        {
+          "name": "Lobo bobo",
+          "time": "1:20"
+        },
+        {
+          "name": "Brigas nunca mais",
+          "time": "2:05"
+        },
+        {
+          "name": "Hô-Ba-La-lá",
+          "time": "2:16"
+        },
+        {
+          "name": "Saudade fez um samba",
+          "time": "1:48"
+        },
+        {
+          "name": "Maria ninguém",
+          "time": "2:22"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Desafinado",
+          "time": "1:58"
+        },
+        {
+          "name": "Rosa morena",
+          "time": "2:04"
+        },
+        {
+          "name": "Morena boca de ouro",
+          "time": "1:59"
+        },
+        {
+          "name": "Aos pés da cruz",
+          "time": "1:33"
+        },
+        {
+          "name": "Bim bom",
+          "time": "1:15"
+        },
+        {
+          "name": "É luxo só",
+          "time": "1:55"
+        }
+      ]
+    },
+    {
+      "genre": "Bossa nova",
+      "artist": "Stan Getz",
+      "title": "Getz/Gilberto",
+      "resolved": true,
+      "mbid": "1cb544a7-f1d6-4159-9661-8645cbaf257c",
+      "year": 2011,
+      "label": "Verve",
+      "cat": "",
+      "front": "/covers/1cb544a7-f1d6-4159-9661-8645cbaf257c-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "The Girl From Ipanema",
+          "time": "5:18"
+        },
+        {
+          "name": "Doralice",
+          "time": "2:48"
+        },
+        {
+          "name": "Para machuchar meu coração",
+          "time": "5:08"
+        },
+        {
+          "name": "Desafinado",
+          "time": "4:08"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Corcovado (Quiet Nights of Quiet Stars)",
+          "time": "4:20"
+        },
+        {
+          "name": "Só danço samba",
+          "time": "3:35"
+        },
+        {
+          "name": "O grande amor",
+          "time": "5:30"
+        },
+        {
+          "name": "Vivo sónhando",
+          "time": "2:55"
+        }
+      ]
+    },
+    {
+      "genre": "Bossa nova",
+      "artist": "Antônio Carlos Jobim",
+      "title": "Wave",
+      "resolved": true,
+      "mbid": "8a70ca33-60a8-445e-a760-7f06f2e0c990",
+      "year": 1967,
+      "label": "A&M Records",
+      "cat": "SP-3002",
+      "front": "/covers/8a70ca33-60a8-445e-a760-7f06f2e0c990-front.jpg",
+      "back": "/covers/8a70ca33-60a8-445e-a760-7f06f2e0c990-back.jpg",
+      "sideA": [
+        {
+          "name": "Wave",
+          "time": "2:57"
+        },
+        {
+          "name": "The Red Blouse",
+          "time": "5:09"
+        },
+        {
+          "name": "Look to the Sky",
+          "time": "2:20"
+        },
+        {
+          "name": "Batidinha",
+          "time": "3:18"
+        },
+        {
+          "name": "Triste",
+          "time": "2:09"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Mojave",
+          "time": "2:27"
+        },
+        {
+          "name": "Dialogo",
+          "time": "2:56"
+        },
+        {
+          "name": "Lamento",
+          "time": "2:46"
+        },
+        {
+          "name": "Antigua",
+          "time": "3:11"
+        },
+        {
+          "name": "Captain Bacardi",
+          "time": "4:29"
+        }
+      ]
+    },
+    {
+      "genre": "Bossa nova",
+      "artist": "Elis Regina",
+      "title": "Elis & Tom",
+      "resolved": true,
+      "mbid": "5d8ea99c-d32b-366c-992b-ecbc3b3ec350",
+      "year": 2004,
+      "label": "Trama",
+      "cat": "874-5",
+      "front": "/covers/5d8ea99c-d32b-366c-992b-ecbc3b3ec350-front.jpg",
+      "back": "/covers/5d8ea99c-d32b-366c-992b-ecbc3b3ec350-back.jpg",
+      "sideA": [
+        {
+          "name": "Águas de Março",
+          "time": "3:41"
+        },
+        {
+          "name": "Pois É",
+          "time": "1:49"
+        },
+        {
+          "name": "Só Tinha de Ser com Você",
+          "time": "4:27"
+        },
+        {
+          "name": "Modinha",
+          "time": "2:15"
+        },
+        {
+          "name": "Triste",
+          "time": "3:15"
+        },
+        {
+          "name": "Corcovado",
+          "time": "4:11"
+        },
+        {
+          "name": "O que Tinha de Ser",
+          "time": "1:47"
+        },
+        {
+          "name": "Retrato em Branco e Preto",
+          "time": "3:06"
+        },
+        {
+          "name": "Brigas, Nunca Mais",
+          "time": "2:10"
+        },
+        {
+          "name": "Por Toda a Minha Vida",
+          "time": "2:08"
+        },
+        {
+          "name": "Fotografia",
+          "time": "3:23"
+        },
+        {
+          "name": "Soneto de Separação",
+          "time": "2:25"
+        },
+        {
+          "name": "Chovendo na Roseira",
+          "time": "3:30"
+        },
+        {
+          "name": "Inútil Paisagem",
+          "time": "3:39"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Águas de Março (5.1 mix)",
+          "time": "3:42"
+        },
+        {
+          "name": "Pois É (5.1 mix)",
+          "time": "1:52"
+        },
+        {
+          "name": "Só Tinha de Ser com Você (5.1 mix)",
+          "time": "4:10"
+        },
+        {
+          "name": "Modinha (5.1 mix)",
+          "time": "2:17"
+        },
+        {
+          "name": "Triste (5.1 mix)",
+          "time": "3:20"
+        },
+        {
+          "name": "Corcovado (5.1 mix)",
+          "time": "4:04"
+        },
+        {
+          "name": "O que Tinha de Ser (5.1 mix)",
+          "time": "1:51"
+        },
+        {
+          "name": "Retrato em Branco e Preto (5.1 mix)",
+          "time": "3:07"
+        },
+        {
+          "name": "Brigas, Nunca Mais (5.1 mix)",
+          "time": "2:12"
+        },
+        {
+          "name": "Por Toda a Minha Vida (5.1 mix)",
+          "time": "2:10"
+        },
+        {
+          "name": "Fotografia (5.1 mix)",
+          "time": "3:32"
+        },
+        {
+          "name": "Soneto de Separação (5.1 mix)",
+          "time": "2:27"
+        },
+        {
+          "name": "Chovendo na Roseira (5.1 mix)",
+          "time": "3:48"
+        },
+        {
+          "name": "Inútil Paisagem (5.1 mix)",
+          "time": "3:42"
+        },
+        {
+          "name": "Fotografia (versão alternativa) (5.1 mix)",
+          "time": "4:36"
+        },
+        {
+          "name": "Bonita (5.1 mix)",
+          "time": "3:06"
+        },
+        {
+          "name": "Águas de Março (stereo mix)",
+          "time": "3:40"
+        },
+        {
+          "name": "Pois É (stereo mix)",
+          "time": "1:49"
+        },
+        {
+          "name": "Só Tinha de Ser Com Você (stereo mix)",
+          "time": "4:27"
+        },
+        {
+          "name": "Modinha (stereo mix)",
+          "time": "2:15"
+        },
+        {
+          "name": "Triste (stereo mix)",
+          "time": "3:15"
+        },
+        {
+          "name": "Corcovado (stereo mix)",
+          "time": "4:11"
+        },
+        {
+          "name": "O que Tinha de Ser (stereo mix)",
+          "time": "1:47"
+        },
+        {
+          "name": "Retrato Em Branco e Preto (stereo mix)",
+          "time": "3:06"
+        },
+        {
+          "name": "Brigas, Nunca Mais (stereo mix)",
+          "time": "2:10"
+        },
+        {
+          "name": "Por Toda a Minha Vida (stereo mix)",
+          "time": "2:08"
+        },
+        {
+          "name": "Fotografia (stereo mix)",
+          "time": "3:23"
+        },
+        {
+          "name": "Soneto de Separação (stereo mix)",
+          "time": "2:25"
+        },
+        {
+          "name": "Chovendo Na Roseira (stereo mix)",
+          "time": "3:30"
+        },
+        {
+          "name": "Inútil Paisagem (stereo mix)",
+          "time": "3:39"
+        },
+        {
+          "name": "Fotografia (versão alternativa) (stereo mix)",
+          "time": "4:31"
+        },
+        {
+          "name": "Bonita (stereo mix)",
+          "time": "3:02"
+        }
+      ]
+    },
+    {
+      "genre": "Bossa nova",
+      "artist": "Astrud Gilberto",
+      "title": "The Astrud Gilberto Album",
+      "resolved": true,
+      "mbid": "2abb6a5f-fe2a-408f-90b8-a92ea2220faa",
+      "year": 2010,
+      "label": "Verve",
+      "cat": "042282 300911",
+      "front": "/covers/2abb6a5f-fe2a-408f-90b8-a92ea2220faa-front.jpg",
+      "back": "/covers/2abb6a5f-fe2a-408f-90b8-a92ea2220faa-back.jpg",
+      "sideA": [
+        {
+          "name": "Once I Loved",
+          "time": "2:10"
+        },
+        {
+          "name": "Água de beber",
+          "time": "2:16"
+        },
+        {
+          "name": "Meditation",
+          "time": "2:42"
+        },
+        {
+          "name": "And Roses and Roses",
+          "time": "2:39"
+        },
+        {
+          "name": "O morro (não tem vez)",
+          "time": "2:30"
+        },
+        {
+          "name": "How Insensitive",
+          "time": "2:55"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Dindi",
+          "time": "2:45"
+        },
+        {
+          "name": "Photograph",
+          "time": "2:10"
+        },
+        {
+          "name": "Dreamer",
+          "time": "2:00"
+        },
+        {
+          "name": "Só tinha de ser com você",
+          "time": "2:15"
+        },
+        {
+          "name": "All That's Left Is to Say Goodbye",
+          "time": "3:09"
+        }
+      ]
+    },
+    {
+      "genre": "Soundtracks",
+      "artist": "Isaac Hayes",
+      "title": "Shaft",
+      "resolved": true,
+      "mbid": "ae0be512-25cc-41e2-8b31-a579a789b504",
+      "year": 1971,
+      "label": "Enterprise Records",
+      "cat": "ENS 2-5002",
+      "front": "/covers/ae0be512-25cc-41e2-8b31-a579a789b504-front.jpg",
+      "back": "/covers/ae0be512-25cc-41e2-8b31-a579a789b504-back.jpg",
+      "sideA": [
+        {
+          "name": "Theme From Shaft (vocal)",
+          "time": "4:37"
+        },
+        {
+          "name": "Bumpy’s Lament",
+          "time": "1:49"
+        },
+        {
+          "name": "Walk From Regio’s",
+          "time": "2:22"
+        },
+        {
+          "name": "Ellie’s Love Theme",
+          "time": "3:15"
+        },
+        {
+          "name": "Shaft’s Cab Ride",
+          "time": "1:07"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Cafe Regio’s",
+          "time": "6:09"
+        },
+        {
+          "name": "Early Sunday Morning",
+          "time": "3:47"
+        },
+        {
+          "name": "Be Yourself",
+          "time": "4:27"
+        },
+        {
+          "name": "A Friend’s Place",
+          "time": "3:21"
+        },
+        {
+          "name": "Soulsville (vocal)",
+          "time": "3:47"
+        },
+        {
+          "name": "No Name Bar",
+          "time": "6:09"
+        },
+        {
+          "name": "Bumpy’s Blues",
+          "time": "4:01"
+        },
+        {
+          "name": "Shaft Strikes Again",
+          "time": "3:04"
+        },
+        {
+          "name": "Do Your Thing (vocal)",
+          "time": "19:38"
+        },
+        {
+          "name": "The End Theme",
+          "time": "1:56"
+        }
+      ]
+    },
+    {
+      "genre": "Soundtracks",
+      "artist": "Ennio Morricone",
+      "title": "The Good, the Bad and the Ugly",
+      "resolved": true,
+      "mbid": "56c0ebbd-217a-3a36-974e-81cf45dbf4a1",
+      "year": 1968,
+      "label": "United Artists",
+      "cat": "ULP 1197",
+      "front": "/covers/56c0ebbd-217a-3a36-974e-81cf45dbf4a1-front.jpg",
+      "back": "/covers/56c0ebbd-217a-3a36-974e-81cf45dbf4a1-back.jpg",
+      "sideA": [
+        {
+          "name": "The Good, the Bad and the Ugly (Main Title)",
+          "time": "2:43"
+        },
+        {
+          "name": "The Sundown",
+          "time": "1:20"
+        },
+        {
+          "name": "The Strong",
+          "time": "2:25"
+        },
+        {
+          "name": "The Desert",
+          "time": "5:19"
+        },
+        {
+          "name": "The Carriage of the Spirits",
+          "time": "2:11"
+        },
+        {
+          "name": "Marcia",
+          "time": "2:54"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "The Story of a Soldier",
+          "time": "3:57"
+        },
+        {
+          "name": "Marcia Without Hope",
+          "time": "1:44"
+        },
+        {
+          "name": "The Death of a Soldier",
+          "time": "3:11"
+        },
+        {
+          "name": "The Ecstasy of Gold",
+          "time": "3:26"
+        },
+        {
+          "name": "The Trio (Main Title)",
+          "time": "5:02"
+        }
+      ]
+    },
+    {
+      "genre": "Soundtracks",
+      "artist": "Vangelis",
+      "title": "Blade Runner",
+      "resolved": true,
+      "mbid": "77a0751e-ed2e-4ec8-943a-2193543de094",
+      "year": 2007,
+      "label": "UMe",
+      "cat": "B0010558-02",
+      "front": "/covers/77a0751e-ed2e-4ec8-943a-2193543de094-front.jpg",
+      "back": "/covers/77a0751e-ed2e-4ec8-943a-2193543de094-back.jpg",
+      "sideA": [
+        {
+          "name": "Main Titles",
+          "time": "3:42"
+        },
+        {
+          "name": "Blush Response",
+          "time": "5:47"
+        },
+        {
+          "name": "Wait for Me",
+          "time": "5:28"
+        },
+        {
+          "name": "Rachel’s Song",
+          "time": "4:47"
+        },
+        {
+          "name": "Love Theme",
+          "time": "4:57"
+        },
+        {
+          "name": "One More Kiss, Dear",
+          "time": "3:58"
+        },
+        {
+          "name": "Blade Runner Blues",
+          "time": "8:54"
+        },
+        {
+          "name": "Memories of Green",
+          "time": "5:05"
+        },
+        {
+          "name": "Tales of the Future",
+          "time": "4:47"
+        },
+        {
+          "name": "Damask Rose",
+          "time": "2:33"
+        },
+        {
+          "name": "Blade Runner (end titles)",
+          "time": "4:39"
+        },
+        {
+          "name": "Tears in Rain",
+          "time": "3:01"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Longing",
+          "time": "1:58"
+        },
+        {
+          "name": "Unveiled Twinkling Space",
+          "time": "1:59"
+        },
+        {
+          "name": "Dr. Tyrell’s Owl",
+          "time": "2:40"
+        },
+        {
+          "name": "At Mr. Chew’s",
+          "time": "4:47"
+        },
+        {
+          "name": "Leo’s Room",
+          "time": "2:21"
+        },
+        {
+          "name": "One Alone",
+          "time": "2:23"
+        },
+        {
+          "name": "Deckard and Roy’s Duel",
+          "time": "6:16"
+        },
+        {
+          "name": "Dr. Tyrell’s Death",
+          "time": "3:11"
+        },
+        {
+          "name": "Desolation Path",
+          "time": "5:45"
+        },
+        {
+          "name": "Empty Streets",
+          "time": "6:16"
+        },
+        {
+          "name": "Mechanical Dolls",
+          "time": "2:52"
+        },
+        {
+          "name": "Fading Away",
+          "time": "3:32"
+        },
+        {
+          "name": "Launch Approval",
+          "time": "1:53"
+        },
+        {
+          "name": "Up and Running",
+          "time": "3:09"
+        },
+        {
+          "name": "Mail From India",
+          "time": "3:27"
+        },
+        {
+          "name": "BR Downtown",
+          "time": "2:27"
+        },
+        {
+          "name": "Dimitri’s Bar",
+          "time": "3:52"
+        },
+        {
+          "name": "Sweet Solitude",
+          "time": "6:56"
+        },
+        {
+          "name": "No Expectation Boulevard",
+          "time": "6:44"
+        },
+        {
+          "name": "Vadavarot",
+          "time": "4:14"
+        },
+        {
+          "name": "Perfume Exotico",
+          "time": "5:19"
+        },
+        {
+          "name": "Spotkanie z matką",
+          "time": "5:09"
+        },
+        {
+          "name": "Piano in an Empty Room",
+          "time": "3:37"
+        },
+        {
+          "name": "Keep Asking",
+          "time": "1:29"
+        }
+      ]
+    },
+    {
+      "genre": "Soundtracks",
+      "artist": "Prince",
+      "title": "Purple Rain",
+      "resolved": true,
+      "mbid": "7a13b006-81ef-4145-b499-34779f344c7a",
+      "year": 1984,
+      "label": "Warner Bros. Records",
+      "cat": "25110-2",
+      "front": "/covers/7a13b006-81ef-4145-b499-34779f344c7a-front.jpg",
+      "back": "/covers/7a13b006-81ef-4145-b499-34779f344c7a-back.jpg",
+      "sideA": [
+        {
+          "name": "Let’s Go Crazy",
+          "time": "4:40"
+        },
+        {
+          "name": "Take Me With U",
+          "time": "3:54"
+        },
+        {
+          "name": "The Beautiful Ones",
+          "time": "5:14"
+        },
+        {
+          "name": "Computer Blue",
+          "time": "3:59"
+        },
+        {
+          "name": "Darling Nikki",
+          "time": "4:15"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "When Doves Cry",
+          "time": "5:54"
+        },
+        {
+          "name": "I Would Die 4 U",
+          "time": "2:49"
+        },
+        {
+          "name": "Baby I’m a Star",
+          "time": "4:25"
+        },
+        {
+          "name": "Purple Rain",
+          "time": "8:41"
+        }
+      ]
+    },
+    {
+      "genre": "Soundtracks",
+      "artist": "John Williams",
+      "title": "Star Wars",
+      "resolved": true,
+      "mbid": "9f5606e1-0c55-4f6e-8d64-1b2c02aa44eb",
+      "year": 1977,
+      "label": "20th Century Records",
+      "cat": "2209-541",
+      "front": "/covers/9f5606e1-0c55-4f6e-8d64-1b2c02aa44eb-front.jpg",
+      "back": "/covers/9f5606e1-0c55-4f6e-8d64-1b2c02aa44eb-back.jpg",
+      "sideA": [
+        {
+          "name": "Main Title",
+          "time": "5:20"
+        },
+        {
+          "name": "Imperial Attack",
+          "time": "6:10"
+        },
+        {
+          "name": "Princess Leia’s Theme",
+          "time": "4:18"
+        },
+        {
+          "name": "The Desert / The Robot Auction",
+          "time": "2:51"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Ben’s Death / TIE Fighter Attack",
+          "time": "3:46"
+        },
+        {
+          "name": "The Little People Work",
+          "time": "4:02"
+        },
+        {
+          "name": "Rescue of the Princess",
+          "time": "4:46"
+        },
+        {
+          "name": "Inner City",
+          "time": "4:12"
+        },
+        {
+          "name": "Cantina Band",
+          "time": "2:44"
+        },
+        {
+          "name": "The Land of the Sandpeople",
+          "time": "2:50"
+        },
+        {
+          "name": "Mouse Robot / Blasting Off",
+          "time": "4:01"
+        },
+        {
+          "name": "The Return Home",
+          "time": "2:46"
+        },
+        {
+          "name": "The Walls Converge",
+          "time": "4:31"
+        },
+        {
+          "name": "The Princess Appears",
+          "time": "4:04"
+        },
+        {
+          "name": "The Last Battle",
+          "time": "12:05"
+        },
+        {
+          "name": "The Throne Room / End Title",
+          "time": "5:28"
+        }
+      ]
+    },
+    {
+      "genre": "Electronic",
+      "artist": "Kraftwerk",
+      "title": "The Man-Machine",
+      "resolved": true,
+      "mbid": "8cb01654-34b5-409c-9217-33e1782bd433",
+      "year": 1978,
+      "label": "Capitol Records",
+      "cat": "E-ST 11728",
+      "front": "/covers/8cb01654-34b5-409c-9217-33e1782bd433-front.jpg",
+      "back": "/covers/8cb01654-34b5-409c-9217-33e1782bd433-back.jpg",
+      "sideA": [
+        {
+          "name": "The Robots",
+          "time": "6:12"
+        },
+        {
+          "name": "Spacelab",
+          "time": "5:55"
+        },
+        {
+          "name": "Metropolis",
+          "time": "6:01"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "The Model",
+          "time": "3:44"
+        },
+        {
+          "name": "Neon Lights",
+          "time": "8:54"
+        },
+        {
+          "name": "The Man·Machine",
+          "time": "5:32"
+        }
+      ]
+    },
+    {
+      "genre": "Electronic",
+      "artist": "Daft Punk",
+      "title": "Discovery",
+      "resolved": true,
+      "mbid": "5125fa48-f5dc-4fe4-9e4e-8c0cb719ce03",
+      "year": 2023,
+      "label": "Alternative Distribution Alliance",
+      "cat": "0190296617164",
+      "front": "/covers/5125fa48-f5dc-4fe4-9e4e-8c0cb719ce03-front.jpg",
+      "back": "/covers/5125fa48-f5dc-4fe4-9e4e-8c0cb719ce03-back.jpg",
+      "sideA": [
+        {
+          "name": "One More Time",
+          "time": "5:21"
+        },
+        {
+          "name": "Aerodynamic",
+          "time": "3:28"
+        },
+        {
+          "name": "Digital Love",
+          "time": "4:58"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Harder, Better, Faster, Stronger",
+          "time": "3:44"
+        },
+        {
+          "name": "Crescendolls",
+          "time": "3:32"
+        },
+        {
+          "name": "Nightvision",
+          "time": "1:44"
+        },
+        {
+          "name": "Superheroes",
+          "time": "3:58"
+        },
+        {
+          "name": "High Life",
+          "time": "3:22"
+        },
+        {
+          "name": "Something About Us",
+          "time": "3:51"
+        },
+        {
+          "name": "Voyager",
+          "time": "3:48"
+        },
+        {
+          "name": "Veridis Quo",
+          "time": "5:45"
+        },
+        {
+          "name": "Short Circuit",
+          "time": "3:27"
+        },
+        {
+          "name": "Face to Face",
+          "time": "4:00"
+        },
+        {
+          "name": "Too Long",
+          "time": "10:00"
+        }
+      ]
+    },
+    {
+      "genre": "Electronic",
+      "artist": "Giorgio Moroder",
+      "title": "From Here to Eternity",
+      "resolved": true,
+      "mbid": "dffcbca7-7be5-4562-96ac-84c6fb7606ce",
+      "year": 1977,
+      "label": "Oasis",
+      "cat": "25 087 OT",
+      "front": "/covers/dffcbca7-7be5-4562-96ac-84c6fb7606ce-front.jpg",
+      "back": "/covers/dffcbca7-7be5-4562-96ac-84c6fb7606ce-back.jpg",
+      "sideA": [
+        {
+          "name": "From Here to Eternity",
+          "time": "5:51"
+        },
+        {
+          "name": "Faster Than the Speed of Love",
+          "time": "1:57"
+        },
+        {
+          "name": "Lost Angeles",
+          "time": "2:45"
+        },
+        {
+          "name": "Utopia - Me Giorgio",
+          "time": "3:23"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "From Here to Eternity (reprise)",
+          "time": "1:45"
+        },
+        {
+          "name": "First Hand Experience in Second Hand Love",
+          "time": "5:02"
+        },
+        {
+          "name": "I'm Left, You're Right, She's Gone",
+          "time": "5:06"
+        },
+        {
+          "name": "Too Hot to Handle",
+          "time": "4:49"
+        }
+      ]
+    },
+    {
+      "genre": "Electronic",
+      "artist": "New Order",
+      "title": "Power, Corruption & Lies",
+      "resolved": true,
+      "mbid": "5fc810b6-0865-402a-a8a8-2f8a931d418b",
+      "year": 1986,
+      "label": "Factory",
+      "cat": "FACD 75",
+      "front": "/covers/5fc810b6-0865-402a-a8a8-2f8a931d418b-front.jpg",
+      "back": "/covers/5fc810b6-0865-402a-a8a8-2f8a931d418b-back.jpg",
+      "sideA": [
+        {
+          "name": "Age of Consent",
+          "time": "5:16"
+        },
+        {
+          "name": "We All Stand",
+          "time": "5:15"
+        },
+        {
+          "name": "The Village",
+          "time": "4:37"
+        },
+        {
+          "name": "586",
+          "time": "7:31"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Your Silent Face",
+          "time": "6:00"
+        },
+        {
+          "name": "Ultraviolence",
+          "time": "4:52"
+        },
+        {
+          "name": "Ecstasy",
+          "time": "4:26"
+        },
+        {
+          "name": "Leave Me Alone",
+          "time": "4:39"
+        }
+      ]
+    },
+    {
+      "genre": "Electronic",
+      "artist": "Boards of Canada",
+      "title": "Music Has the Right to Children",
+      "resolved": true,
+      "mbid": "fb7bc777-d86c-4d4b-bd83-2615b5fdb443",
+      "year": 2004,
+      "label": "Skam",
+      "cat": "skalp 1",
+      "front": "/covers/fb7bc777-d86c-4d4b-bd83-2615b5fdb443-front.jpg",
+      "back": "/covers/fb7bc777-d86c-4d4b-bd83-2615b5fdb443-back.jpg",
+      "sideA": [
+        {
+          "name": "Wildlife Analysis",
+          "time": "1:17"
+        },
+        {
+          "name": "An Eagle in Your Mind",
+          "time": "6:23"
+        },
+        {
+          "name": "The Color of the Fire",
+          "time": "1:45"
+        },
+        {
+          "name": "Telephasic Workshop",
+          "time": "6:35"
+        },
+        {
+          "name": "Triangles and Rhombuses",
+          "time": "1:50"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Sixtyten",
+          "time": "5:48"
+        },
+        {
+          "name": "Turquoise Hexagon Sun",
+          "time": "5:07"
+        },
+        {
+          "name": "Kaini Industries",
+          "time": "0:59"
+        },
+        {
+          "name": "Bocuma",
+          "time": "1:35"
+        },
+        {
+          "name": "Roygbiv",
+          "time": "2:31"
+        },
+        {
+          "name": "Rue the Whirl",
+          "time": "6:39"
+        },
+        {
+          "name": "Aquarius",
+          "time": "5:58"
+        },
+        {
+          "name": "Olson",
+          "time": "1:31"
+        },
+        {
+          "name": "Pete Standing Alone",
+          "time": "6:07"
+        },
+        {
+          "name": "Smokes Quantity",
+          "time": "3:07"
+        },
+        {
+          "name": "Open the Light",
+          "time": "4:25"
+        },
+        {
+          "name": "One Very Important Thought",
+          "time": "1:14"
+        }
+      ]
+    },
+    {
+      "genre": "Ambient",
+      "artist": "Brian Eno",
+      "title": "Ambient 1: Music for Airports",
+      "resolved": true,
+      "mbid": "c52fda08-edf6-3949-8405-074ea605262d",
+      "year": 2004,
+      "label": "Virgin",
+      "cat": "66495",
+      "front": "/covers/c52fda08-edf6-3949-8405-074ea605262d-front.jpg",
+      "back": "/covers/c52fda08-edf6-3949-8405-074ea605262d-back.jpg",
+      "sideA": [
+        {
+          "name": "1/1",
+          "time": "17:25"
+        },
+        {
+          "name": "2/1",
+          "time": "8:54"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "1/2",
+          "time": "12:06"
+        },
+        {
+          "name": "2/2",
+          "time": "10:09"
+        }
+      ]
+    },
+    {
+      "genre": "Ambient",
+      "artist": "Brian Eno",
+      "title": "Apollo: Atmospheres and Soundtracks",
+      "resolved": true,
+      "mbid": "4eb3c757-cdd7-4e05-928b-3da135aaf40a",
+      "year": 1983,
+      "label": "E’G",
+      "cat": "EGLP 53",
+      "front": "/covers/4eb3c757-cdd7-4e05-928b-3da135aaf40a-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Under Stars",
+          "time": "4:30"
+        },
+        {
+          "name": "The Secret Place",
+          "time": "3:30"
+        },
+        {
+          "name": "Matta",
+          "time": "4:19"
+        },
+        {
+          "name": "Signals",
+          "time": "2:47"
+        },
+        {
+          "name": "An Ending (Ascent)",
+          "time": "4:26"
+        },
+        {
+          "name": "Under Stars II",
+          "time": "3:23"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Drift",
+          "time": "3:08"
+        },
+        {
+          "name": "Silver Morning",
+          "time": "2:39"
+        },
+        {
+          "name": "Deep Blue Day",
+          "time": "3:59"
+        },
+        {
+          "name": "Weightless",
+          "time": "4:36"
+        },
+        {
+          "name": "Always Returning",
+          "time": "4:04"
+        },
+        {
+          "name": "Stars",
+          "time": "7:57"
+        }
+      ]
+    },
+    {
+      "genre": "Ambient",
+      "artist": "Aphex Twin",
+      "title": "Selected Ambient Works Volume II",
+      "resolved": true,
+      "mbid": "ead065b1-b582-4ac1-9041-f0c09b0ac67a",
+      "year": 1994,
+      "label": "Rough Trade",
+      "cat": "RTD 126.1670.2",
+      "front": "/covers/ead065b1-b582-4ac1-9041-f0c09b0ac67a-front.jpg",
+      "back": "/covers/ead065b1-b582-4ac1-9041-f0c09b0ac67a-back.jpg",
+      "sideA": [
+        {
+          "name": "[Cliffs]",
+          "time": "7:28"
+        },
+        {
+          "name": "[Radiator]",
+          "time": "6:34"
+        },
+        {
+          "name": "[Rhubarb]",
+          "time": "7:44"
+        },
+        {
+          "name": "[Hankie]",
+          "time": "4:40"
+        },
+        {
+          "name": "[Grass]",
+          "time": "8:55"
+        },
+        {
+          "name": "[Mold]",
+          "time": "3:31"
+        },
+        {
+          "name": "[Curtains]",
+          "time": "8:51"
+        },
+        {
+          "name": "[Blur]",
+          "time": "5:08"
+        },
+        {
+          "name": "[Weathered Stone]",
+          "time": "6:55"
+        },
+        {
+          "name": "[Tree]",
+          "time": "9:58"
+        },
+        {
+          "name": "[Domino]",
+          "time": "7:18"
+        },
+        {
+          "name": "[White Blur 1]",
+          "time": "2:40"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Blue Calx",
+          "time": "7:20"
+        },
+        {
+          "name": "[Parallel Stripes]",
+          "time": "8:01"
+        },
+        {
+          "name": "[Shiny Metal Rods]",
+          "time": "5:34"
+        },
+        {
+          "name": "[Grey Stripe]",
+          "time": "4:46"
+        },
+        {
+          "name": "[Z Twig]",
+          "time": "2:05"
+        },
+        {
+          "name": "[Windowsill]",
+          "time": "7:17"
+        },
+        {
+          "name": "[Hexagon]",
+          "time": "5:58"
+        },
+        {
+          "name": "[Lichen]",
+          "time": "4:15"
+        },
+        {
+          "name": "[Spots]",
+          "time": "7:10"
+        },
+        {
+          "name": "[Tassels]",
+          "time": "7:30"
+        },
+        {
+          "name": "[White Blur 2]",
+          "time": "11:27"
+        },
+        {
+          "name": "[Matchsticks]",
+          "time": "5:39"
+        }
+      ]
+    },
+    {
+      "genre": "Ambient",
+      "artist": "The KLF",
+      "title": "Chill Out",
+      "resolved": true,
+      "mbid": "953e31cd-dc03-3a05-a11e-160405c4c78f",
+      "year": 1994,
+      "label": "TVT Records",
+      "cat": "TVT 7155-2",
+      "front": "/covers/953e31cd-dc03-3a05-a11e-160405c4c78f-front.jpg",
+      "back": "/covers/953e31cd-dc03-3a05-a11e-160405c4c78f-back.jpg",
+      "sideA": [
+        {
+          "name": "Brownsville Turnaround on the Tex-Mex Border",
+          "time": "1:47"
+        },
+        {
+          "name": "Pulling Out of Ricardo and the Dusk Is Falling Fast",
+          "time": "1:29"
+        },
+        {
+          "name": "Six Hours to Louisiana, Black Coffee Going Cold",
+          "time": "3:01"
+        },
+        {
+          "name": "Dream Time in Lake Jackson",
+          "time": "2:35"
+        },
+        {
+          "name": "Madrugada Eterna",
+          "time": "7:41"
+        },
+        {
+          "name": "Justified and Ancient Seems a Long Time Ago",
+          "time": "1:09"
+        },
+        {
+          "name": "Elvis on the Radio, Steel Guitar in My Soul",
+          "time": "3:01"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "3AM Somewhere Out of Beaumont",
+          "time": "9:25"
+        },
+        {
+          "name": "Wichita Lineman Was a Song I Once Heard",
+          "time": "5:56"
+        },
+        {
+          "name": "Trancentral Lost in My Mind",
+          "time": "1:16"
+        },
+        {
+          "name": "The Lights of Baton Rouge Pass By",
+          "time": "3:34"
+        },
+        {
+          "name": "A Melody From a Past Life Keeps Pulling Me Back",
+          "time": "1:41"
+        },
+        {
+          "name": "Rock Radio Into the Nineties and Beyond",
+          "time": "1:27"
+        },
+        {
+          "name": "Alone Again With the Dawn Coming Up",
+          "time": "0:17"
+        }
+      ]
+    },
+    {
+      "genre": "Ambient",
+      "artist": "Harold Budd",
+      "title": "The Pearl",
+      "resolved": true,
+      "mbid": "d30f0aa9-27ab-4a33-909a-f1dd763f55c9",
+      "year": 1984,
+      "label": "Editions EG",
+      "cat": "EGED 37",
+      "front": "/covers/d30f0aa9-27ab-4a33-909a-f1dd763f55c9-front.jpg",
+      "back": "/covers/d30f0aa9-27ab-4a33-909a-f1dd763f55c9-back.jpg",
+      "sideA": [
+        {
+          "name": "Late October",
+          "time": "4:42"
+        },
+        {
+          "name": "A Stream With Bright Fish",
+          "time": "3:55"
+        },
+        {
+          "name": "The Silver Ball",
+          "time": "3:23"
+        },
+        {
+          "name": "Against the Sky",
+          "time": "4:46"
+        },
+        {
+          "name": "Lost in the Humming Air",
+          "time": "4:02"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Dark‐Eyed Sister",
+          "time": "4:39"
+        },
+        {
+          "name": "Their Memories",
+          "time": "3:52"
+        },
+        {
+          "name": "The Pearl",
+          "time": "3:08"
+        },
+        {
+          "name": "Foreshadowed",
+          "time": "3:47"
+        },
+        {
+          "name": "An Echo of Night",
+          "time": "2:26"
+        },
+        {
+          "name": "Still Return",
+          "time": "4:19"
+        }
+      ]
+    },
+    {
+      "genre": "Rockabilly",
+      "artist": "Elvis Presley",
+      "title": "Elvis Presley",
+      "resolved": true,
+      "mbid": "a511fc89-91ff-4b4e-8ecc-cfcbc39d2ad6",
+      "year": 1956,
+      "label": "RCA Victor",
+      "cat": "LPM-1254",
+      "front": "/covers/a511fc89-91ff-4b4e-8ecc-cfcbc39d2ad6-front.jpg",
+      "back": "/covers/a511fc89-91ff-4b4e-8ecc-cfcbc39d2ad6-back.jpg",
+      "sideA": [
+        {
+          "name": "Blue Suede Shoes",
+          "time": "2:01"
+        },
+        {
+          "name": "I’m Counting on You",
+          "time": "2:24"
+        },
+        {
+          "name": "I Got a Woman",
+          "time": "2:26"
+        },
+        {
+          "name": "One‐Sided Love Affair",
+          "time": "2:11"
+        },
+        {
+          "name": "I Love You Because",
+          "time": "2:44"
+        },
+        {
+          "name": "Just Because",
+          "time": "2:34"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Tutti Frutti",
+          "time": "1:59"
+        },
+        {
+          "name": "Tryin’ to Get to You",
+          "time": "2:34"
+        },
+        {
+          "name": "I’m Gonna Sit Right Down and Cry (Over You)",
+          "time": "2:01"
+        },
+        {
+          "name": "I’ll Never Let You Go (Little Darlin’)",
+          "time": "2:24"
+        },
+        {
+          "name": "Blue Moon",
+          "time": "2:41"
+        },
+        {
+          "name": "Money Honey",
+          "time": "2:33"
+        }
+      ]
+    },
+    {
+      "genre": "Rockabilly",
+      "artist": "Gene Vincent",
+      "title": "Bluejean Bop!",
+      "resolved": true,
+      "mbid": "1ea4beba-47fd-4efa-bd09-9d728e5d4881",
+      "year": 1956,
+      "label": "Capitol Records",
+      "cat": "T 764",
+      "front": "/covers/1ea4beba-47fd-4efa-bd09-9d728e5d4881-front.jpg",
+      "back": "/covers/1ea4beba-47fd-4efa-bd09-9d728e5d4881-back.jpg",
+      "sideA": [
+        {
+          "name": "Bluejean Bop",
+          "time": "2:21"
+        },
+        {
+          "name": "Jezebel",
+          "time": "2:24"
+        },
+        {
+          "name": "Who Slapped John?",
+          "time": "2:02"
+        },
+        {
+          "name": "Ain’t She Sweet",
+          "time": "2:28"
+        },
+        {
+          "name": "I Flipped",
+          "time": "2:29"
+        },
+        {
+          "name": "Waltz of the Wind",
+          "time": "2:41"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Jump Back, Honey, Jump Back",
+          "time": "1:59"
+        },
+        {
+          "name": "Wedding Bells (Are Breaking Up That Old Gang of Mine)",
+          "time": "2:30"
+        },
+        {
+          "name": "Jumps, Giggles & Shouts",
+          "time": "2:49"
+        },
+        {
+          "name": "Lazy River",
+          "time": "2:22"
+        },
+        {
+          "name": "Bop Street",
+          "time": "2:23"
+        },
+        {
+          "name": "Peg o’ My Heart",
+          "time": "2:35"
+        }
+      ]
+    },
+    {
+      "genre": "Rockabilly",
+      "artist": "Wanda Jackson",
+      "title": "Rockin' with Wanda",
+      "resolved": true,
+      "mbid": "da0edd15-85b1-41c4-93a1-1c16af73938b",
+      "year": 2012,
+      "label": "WaxTime",
+      "cat": "771825",
+      "front": "/covers/da0edd15-85b1-41c4-93a1-1c16af73938b-front.jpg",
+      "back": "/covers/da0edd15-85b1-41c4-93a1-1c16af73938b-back.jpg",
+      "sideA": [
+        {
+          "name": "Rock Your Baby",
+          "time": "1:48"
+        },
+        {
+          "name": "Fujiyama Mama",
+          "time": "2:15"
+        },
+        {
+          "name": "You’re the One for Me",
+          "time": "2:01"
+        },
+        {
+          "name": "Did You Miss Me?",
+          "time": "2:19"
+        },
+        {
+          "name": "Cool Love",
+          "time": "2:18"
+        },
+        {
+          "name": "Honey Bop",
+          "time": "2:16"
+        },
+        {
+          "name": "Funnel of Love",
+          "time": "2:10"
+        },
+        {
+          "name": "(Let’s Have a) Party",
+          "time": "2:08"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Hot Dog! That Made Him Mad",
+          "time": "2:41"
+        },
+        {
+          "name": "Baby Loves Him",
+          "time": "2:03"
+        },
+        {
+          "name": "Mean Mean Man",
+          "time": "2:14"
+        },
+        {
+          "name": "You’ve Turned to a Stranger",
+          "time": "2:44"
+        },
+        {
+          "name": "Don’a Wan’a",
+          "time": "2:15"
+        },
+        {
+          "name": "I Gotta Know",
+          "time": "2:31"
+        },
+        {
+          "name": "Riot in Cell Block #9",
+          "time": "2:31"
+        },
+        {
+          "name": "Slippin’ and Slidin’",
+          "time": "2:09"
+        }
+      ]
+    },
+    {
+      "genre": "Rockabilly",
+      "artist": "Carl Perkins",
+      "title": "Dance Album",
+      "resolved": true,
+      "mbid": "ff94c984-4dec-4c85-a1eb-c8b250a9e29c",
+      "year": 1957,
+      "label": "Sun Record Company",
+      "cat": "LP-1225",
+      "front": "/covers/ff94c984-4dec-4c85-a1eb-c8b250a9e29c-front.jpg",
+      "back": "/covers/ff94c984-4dec-4c85-a1eb-c8b250a9e29c-back.jpg",
+      "sideA": [
+        {
+          "name": "Blue Suede Shoes",
+          "time": "2:12"
+        },
+        {
+          "name": "Movie Magg",
+          "time": "2:06"
+        },
+        {
+          "name": "Sure to Fall",
+          "time": "2:29"
+        },
+        {
+          "name": "Gone Gone Gone",
+          "time": "2:34"
+        },
+        {
+          "name": "Honey Don’t",
+          "time": "2:46"
+        },
+        {
+          "name": "Only You",
+          "time": "3:17"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Tennessee",
+          "time": "3:00"
+        },
+        {
+          "name": "Wrong Yo Yo",
+          "time": "2:32"
+        },
+        {
+          "name": "Everybody’s Trying to Be My Baby",
+          "time": "2:10"
+        },
+        {
+          "name": "Matchbox",
+          "time": "2:05"
+        },
+        {
+          "name": "Your True Love",
+          "time": "2:41"
+        },
+        {
+          "name": "Boppin’ the Blues",
+          "time": "2:46"
+        }
+      ]
+    },
+    {
+      "genre": "Rockabilly",
+      "artist": "Johnny Burnette",
+      "title": "Johnny Burnette and the Rock 'n Roll Trio",
+      "resolved": true,
+      "mbid": "128126fe-4fe5-4aa5-bda7-3aadfbb2e2e2",
+      "year": 1989,
+      "label": "Official",
+      "cat": "812 016",
+      "front": "/covers/128126fe-4fe5-4aa5-bda7-3aadfbb2e2e2-front.jpg",
+      "back": "/covers/128126fe-4fe5-4aa5-bda7-3aadfbb2e2e2-back.jpg",
+      "sideA": [
+        {
+          "name": "Tear It Up",
+          "time": "1:58"
+        },
+        {
+          "name": "You’re Undecided",
+          "time": "2:02"
+        },
+        {
+          "name": "Oh Baby Babe",
+          "time": "2:26"
+        },
+        {
+          "name": "Midnight Train",
+          "time": "2:15"
+        },
+        {
+          "name": "Shattered Dreams",
+          "time": "2:32"
+        },
+        {
+          "name": "The Train Kept A Rollin’",
+          "time": "2:19"
+        },
+        {
+          "name": "Blues Stay Away From Me",
+          "time": "2:17"
+        },
+        {
+          "name": "All by Myself",
+          "time": "2:04"
+        },
+        {
+          "name": "Drinkin’ Wine Spo‐Dee‐O‐Dee",
+          "time": "2:16"
+        },
+        {
+          "name": "Chains of Love",
+          "time": "2:39"
+        },
+        {
+          "name": "Honey Hush",
+          "time": "2:04"
+        },
+        {
+          "name": "Lonesome Tears in My Eyes",
+          "time": "2:04"
+        },
+        {
+          "name": "I Just Found Out",
+          "time": "2:23"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Please Don’t Leave Me",
+          "time": "2:20"
+        },
+        {
+          "name": "Rock Therapy",
+          "time": "2:19"
+        },
+        {
+          "name": "Rockabilly Boogie",
+          "time": "2:36"
+        },
+        {
+          "name": "Lonesome Train (on a Lonesome Track)",
+          "time": "2:06"
+        },
+        {
+          "name": "Sweet Love on My Mind",
+          "time": "2:26"
+        },
+        {
+          "name": "My Love You’re a Stranger",
+          "time": "2:44"
+        },
+        {
+          "name": "I Love You So",
+          "time": "2:19"
+        },
+        {
+          "name": "Your Baby Blue Eyes",
+          "time": "2:10"
+        },
+        {
+          "name": "Touch Me",
+          "time": "2:27"
+        },
+        {
+          "name": "If You Want It Enough",
+          "time": "2:11"
+        },
+        {
+          "name": "Butter Fingers",
+          "time": "2:16"
+        },
+        {
+          "name": "Eager Beaver Baby",
+          "time": "2:04"
+        },
+        {
+          "name": "Oh Babe Baby",
+          "time": "2:20"
+        }
+      ]
+    },
+    {
+      "genre": "Surf",
+      "artist": "Dick Dale",
+      "title": "Surfers' Choice",
+      "resolved": true,
+      "mbid": "8ac74cbb-51d8-4af4-bd10-cf81f739f11d",
+      "year": 2017,
+      "label": "DOL",
+      "cat": "DOL939HG",
+      "front": "/covers/8ac74cbb-51d8-4af4-bd10-cf81f739f11d-front.jpg",
+      "back": "/covers/8ac74cbb-51d8-4af4-bd10-cf81f739f11d-back.jpg",
+      "sideA": [
+        {
+          "name": "Surf Beat",
+          "time": "2:38"
+        },
+        {
+          "name": "Sloop John B",
+          "time": "2:17"
+        },
+        {
+          "name": "Take It Off",
+          "time": "2:08"
+        },
+        {
+          "name": "Night Owl",
+          "time": "2:36"
+        },
+        {
+          "name": "Fanny Mae",
+          "time": "2:45"
+        },
+        {
+          "name": "Misirlou Twist",
+          "time": "4:00"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Peppermint Man",
+          "time": "2:12"
+        },
+        {
+          "name": "Surfing Drums",
+          "time": "4:50"
+        },
+        {
+          "name": "Shake N’ Stomp",
+          "time": "2:08"
+        },
+        {
+          "name": "Lovey Dovey",
+          "time": "3:34"
+        },
+        {
+          "name": "Death of a Gremmie",
+          "time": "2:45"
+        },
+        {
+          "name": "Let’s Go Trippin’",
+          "time": "2:12"
+        }
+      ]
+    },
+    {
+      "genre": "Surf",
+      "artist": "The Ventures",
+      "title": "Walk, Don't Run",
+      "resolved": true,
+      "mbid": "4a02afcc-23d7-4710-a19c-8d98b2cf3489",
+      "year": 1960,
+      "label": "Dolton",
+      "cat": "BLP 2003",
+      "front": "/covers/4a02afcc-23d7-4710-a19c-8d98b2cf3489-front.jpg",
+      "back": "/covers/4a02afcc-23d7-4710-a19c-8d98b2cf3489-back.jpg",
+      "sideA": [
+        {
+          "name": "Morgen",
+          "time": "2:07"
+        },
+        {
+          "name": "Raunchy",
+          "time": "2:15"
+        },
+        {
+          "name": "Home",
+          "time": "2:02"
+        },
+        {
+          "name": "My Own True Love (Tara’s Theme)",
+          "time": "2:14"
+        },
+        {
+          "name": "The Switch",
+          "time": "1:56"
+        },
+        {
+          "name": "Walk, Don’t Run",
+          "time": "2:04"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Night Train",
+          "time": "2:50"
+        },
+        {
+          "name": "No Trespassing",
+          "time": "2:04"
+        },
+        {
+          "name": "Caravan",
+          "time": "2:09"
+        },
+        {
+          "name": "Sleep Walk",
+          "time": "2:02"
+        },
+        {
+          "name": "The McCoy",
+          "time": "2:05"
+        },
+        {
+          "name": "Honky Tonk",
+          "time": "2:45"
+        }
+      ]
+    },
+    {
+      "genre": "Surf",
+      "artist": "The Beach Boys",
+      "title": "Surfin' Safari",
+      "resolved": true,
+      "mbid": "9ed6a147-d0b3-464e-bfea-38e8a6a634f5",
+      "year": 1962,
+      "label": "Capitol Records",
+      "cat": "T 1808",
+      "front": "/covers/9ed6a147-d0b3-464e-bfea-38e8a6a634f5-front.jpg",
+      "back": "/covers/9ed6a147-d0b3-464e-bfea-38e8a6a634f5-back.jpg",
+      "sideA": [
+        {
+          "name": "Surfin’ Safari",
+          "time": "2:05"
+        },
+        {
+          "name": "County Fair",
+          "time": "2:15"
+        },
+        {
+          "name": "Ten Little Indians",
+          "time": "1:30"
+        },
+        {
+          "name": "Chug-a-Lug",
+          "time": "2:00"
+        },
+        {
+          "name": "Little Girl (You’re My Miss America)",
+          "time": "2:05"
+        },
+        {
+          "name": "409",
+          "time": "1:58"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Surfin’",
+          "time": "2:10"
+        },
+        {
+          "name": "Heads You Win – Tails I Lose",
+          "time": "2:18"
+        },
+        {
+          "name": "Summertime Blues",
+          "time": "2:10"
+        },
+        {
+          "name": "Cuckoo Clock",
+          "time": "2:08"
+        },
+        {
+          "name": "Moon Dawg",
+          "time": "2:00"
+        },
+        {
+          "name": "The Shift",
+          "time": "1:54"
+        }
+      ]
+    },
+    {
+      "genre": "Surf",
+      "artist": "The Surfaris",
+      "title": "Wipe Out",
+      "resolved": true,
+      "mbid": "cbf207b9-863e-464e-97e7-0542ec1a8741",
+      "year": 1963,
+      "label": "Dot Records",
+      "cat": "DLP 3535",
+      "front": "/covers/cbf207b9-863e-464e-97e7-0542ec1a8741-front.jpg",
+      "back": "/covers/cbf207b9-863e-464e-97e7-0542ec1a8741-back.jpg",
+      "sideA": [
+        {
+          "name": "Wipe Out",
+          "time": "2:12"
+        },
+        {
+          "name": "Wiggle Wobble",
+          "time": "2:40"
+        },
+        {
+          "name": "Torquay",
+          "time": "2:27"
+        },
+        {
+          "name": "You Can't Sit Down",
+          "time": "4:15"
+        },
+        {
+          "name": "Green Onions",
+          "time": "2:45"
+        },
+        {
+          "name": "Tequila",
+          "time": "2:05"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Wild Weekend",
+          "time": "2:33"
+        },
+        {
+          "name": "Teen Beat",
+          "time": "3:10"
+        },
+        {
+          "name": "Yep",
+          "time": "2:45"
+        },
+        {
+          "name": "Memphis",
+          "time": "2:52"
+        },
+        {
+          "name": "Surfer Joe",
+          "time": "2:20"
+        },
+        {
+          "name": "Walk, Don't Run",
+          "time": "2:09"
+        }
+      ]
+    },
+    {
+      "genre": "Surf",
+      "artist": "Jan & Dean",
+      "title": "Drag City",
+      "resolved": true,
+      "mbid": "1a443448-513f-4718-844d-d5e392efde6b",
+      "year": 1963,
+      "label": "Liberty",
+      "cat": "LRP 3339",
+      "front": "/covers/1a443448-513f-4718-844d-d5e392efde6b-front.jpg",
+      "back": "/covers/1a443448-513f-4718-844d-d5e392efde6b-back.jpg",
+      "sideA": [
+        {
+          "name": "Drag City",
+          "time": "2:20"
+        },
+        {
+          "name": "I Gotta Drive",
+          "time": "2:38"
+        },
+        {
+          "name": "Drag Strip Girl",
+          "time": "2:35"
+        },
+        {
+          "name": "Surfin’ Hearse",
+          "time": "2:37"
+        },
+        {
+          "name": "Dead Man’s Curve",
+          "time": "2:46"
+        },
+        {
+          "name": "Schlock Rod, Part 1",
+          "time": "2:39"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Schlock Rod, Part 2",
+          "time": "2:58"
+        },
+        {
+          "name": "Popsicle",
+          "time": "2:32"
+        },
+        {
+          "name": "Surf Route 101",
+          "time": "2:01"
+        },
+        {
+          "name": "Sting Ray",
+          "time": "2:14"
+        },
+        {
+          "name": "Little Deuce Coupe",
+          "time": "2:00"
+        },
+        {
+          "name": "Hot Stocker",
+          "time": "2:41"
+        }
+      ]
+    },
+    {
+      "genre": "Krautrock",
+      "artist": "Can",
+      "title": "Tago Mago",
+      "resolved": true,
+      "mbid": "d0154297-5df3-4885-9a26-9d337b27218d",
+      "year": 2011,
+      "label": "Spoon Records",
+      "cat": "40SPOON6/7",
+      "front": "/covers/d0154297-5df3-4885-9a26-9d337b27218d-front.jpg",
+      "back": "/covers/d0154297-5df3-4885-9a26-9d337b27218d-back.jpg",
+      "sideA": [
+        {
+          "name": "Paperhouse",
+          "time": "7:29"
+        },
+        {
+          "name": "Mushroom",
+          "time": "4:04"
+        },
+        {
+          "name": "Oh Yeah",
+          "time": "7:23"
+        },
+        {
+          "name": "Halleluwah",
+          "time": "18:33"
+        },
+        {
+          "name": "Aumgn",
+          "time": "17:37"
+        },
+        {
+          "name": "Peking O",
+          "time": "11:38"
+        },
+        {
+          "name": "Bring Me Coffee or Tea",
+          "time": "6:47"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Mushroom (live, 1972)",
+          "time": "8:43"
+        },
+        {
+          "name": "Spoon (live, 1972)",
+          "time": "29:56"
+        },
+        {
+          "name": "Halleluwah (live, 1972)",
+          "time": "9:12"
+        }
+      ]
+    },
+    {
+      "genre": "Krautrock",
+      "artist": "Neu!",
+      "title": "Neu!",
+      "resolved": true,
+      "mbid": "853f3eb9-36df-4234-9341-6bf010d54edd",
+      "year": 1972,
+      "label": "Billingsgate",
+      "cat": "BG 1001",
+      "front": "/covers/853f3eb9-36df-4234-9341-6bf010d54edd-front.jpg",
+      "back": "/covers/853f3eb9-36df-4234-9341-6bf010d54edd-back.jpg",
+      "sideA": [
+        {
+          "name": "Hallogallo",
+          "time": "10:07"
+        },
+        {
+          "name": "Sonderangebot",
+          "time": "4:51"
+        },
+        {
+          "name": "Weissensee",
+          "time": "6:47"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Im Glück",
+          "time": "6:53"
+        },
+        {
+          "name": "Negativland",
+          "time": "9:47"
+        },
+        {
+          "name": "Lieber Honig",
+          "time": "7:19"
+        }
+      ]
+    },
+    {
+      "genre": "Krautrock",
+      "artist": "Kraftwerk",
+      "title": "Autobahn",
+      "resolved": true,
+      "mbid": "a34e7f1c-f1a4-440d-8bd8-66bbdfd9f735",
+      "year": 1974,
+      "label": "Vertigo",
+      "cat": "6360 620",
+      "front": "/covers/a34e7f1c-f1a4-440d-8bd8-66bbdfd9f735-front.jpg",
+      "back": "/covers/a34e7f1c-f1a4-440d-8bd8-66bbdfd9f735-back.jpg",
+      "sideA": [
+        {
+          "name": "Autobahn",
+          "time": "22:30"
+        },
+        {
+          "name": "Kometenmelodie 1",
+          "time": "6:20"
+        },
+        {
+          "name": "Kometenmelodie 2",
+          "time": "5:44"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Mitternacht",
+          "time": "4:40"
+        },
+        {
+          "name": "Morgenspaziergang",
+          "time": "4:00"
+        }
+      ]
+    },
+    {
+      "genre": "Krautrock",
+      "artist": "Faust",
+      "title": "Faust IV",
+      "resolved": true,
+      "mbid": "c07effcc-b1ed-4b19-8664-6e142f05c4b4",
+      "year": 1973,
+      "label": "Virgin",
+      "cat": "V 2004",
+      "front": "/covers/c07effcc-b1ed-4b19-8664-6e142f05c4b4-front.jpg",
+      "back": "/covers/c07effcc-b1ed-4b19-8664-6e142f05c4b4-back.jpg",
+      "sideA": [
+        {
+          "name": "Krautrock",
+          "time": "11:48"
+        },
+        {
+          "name": "The Sad Skinhead",
+          "time": "2:43"
+        },
+        {
+          "name": "Jennifer",
+          "time": "7:11"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Just a Second (Starts Like That!)",
+          "time": "3:35"
+        },
+        {
+          "name": "Picnic on a Frozen River / Deuxieme Tableux",
+          "time": "7:46"
+        },
+        {
+          "name": "Giggy Smile",
+          "time": "4:28"
+        },
+        {
+          "name": "Läuft…Heist das es läuft oder es kommt bald…Läuft",
+          "time": "3:41"
+        },
+        {
+          "name": "It’s a Bit of a Pain",
+          "time": "3:08"
+        }
+      ]
+    },
+    {
+      "genre": "Krautrock",
+      "artist": "Amon Düül II",
+      "title": "Yeti",
+      "resolved": true,
+      "mbid": "75d310dc-eb0f-45c5-91d6-edb05396e787",
+      "year": 2009,
+      "label": "Revisited Records",
+      "cat": "SPV 304191 2LP",
+      "front": "/covers/75d310dc-eb0f-45c5-91d6-edb05396e787-front.jpg",
+      "back": "/covers/75d310dc-eb0f-45c5-91d6-edb05396e787-back.jpg",
+      "sideA": [
+        {
+          "name": "Soap Shop Rock, A. Burning Sister, B. Halluzination Guillotine, C. Gulp a Sonata, D. Flesh-Coloured Anti-Aircraft Alarm",
+          "time": "13:46"
+        },
+        {
+          "name": "She Came Through The Chimney",
+          "time": "3:56"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Archangels Thunderbird",
+          "time": "3:30"
+        },
+        {
+          "name": "Cerberus",
+          "time": "4:18"
+        },
+        {
+          "name": "The Return Of Ruebezahl",
+          "time": "1:35"
+        },
+        {
+          "name": "Eye-Shaking King",
+          "time": "6:37"
+        },
+        {
+          "name": "Pale Gallery",
+          "time": "2:11"
+        },
+        {
+          "name": "Yeti Talks To Yogi (Improvisation)",
+          "time": "6:06"
+        },
+        {
+          "name": "Sandoz In The Rain (Improvisation)",
+          "time": "8:55"
+        }
+      ]
+    },
+    {
+      "genre": "Latin",
+      "artist": "Buena Vista Social Club",
+      "title": "Buena Vista Social Club",
+      "resolved": true,
+      "mbid": "87bc3460-639e-3308-9aac-242cade60c07",
+      "year": 1997,
+      "label": "Nonesuch",
+      "cat": "79478-2",
+      "front": "/covers/87bc3460-639e-3308-9aac-242cade60c07-front.jpg",
+      "back": "/covers/87bc3460-639e-3308-9aac-242cade60c07-back.jpg",
+      "sideA": [
+        {
+          "name": "Chan Chan",
+          "time": "4:14"
+        },
+        {
+          "name": "De camino a la vereda",
+          "time": "5:00"
+        },
+        {
+          "name": "El cuarto de Tula",
+          "time": "7:22"
+        },
+        {
+          "name": "Pueblo Nuevo",
+          "time": "6:03"
+        },
+        {
+          "name": "Dos gardenias",
+          "time": "2:59"
+        },
+        {
+          "name": "¿Y tú qué has hecho?",
+          "time": "3:11"
+        },
+        {
+          "name": "Veinte años",
+          "time": "3:27"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "El carretero",
+          "time": "3:26"
+        },
+        {
+          "name": "Candela",
+          "time": "5:25"
+        },
+        {
+          "name": "Amor de loca juventud",
+          "time": "3:18"
+        },
+        {
+          "name": "Orgullecida",
+          "time": "3:16"
+        },
+        {
+          "name": "Murmullo",
+          "time": "3:48"
+        },
+        {
+          "name": "Buena Vista Social Club",
+          "time": "4:48"
+        },
+        {
+          "name": "La Bayamesa",
+          "time": "2:51"
+        }
+      ]
+    },
+    {
+      "genre": "Latin",
+      "artist": "Tito Puente",
+      "title": "Dance Mania",
+      "resolved": true,
+      "mbid": "5d65fd61-14fd-48b0-a4e6-725df2bbd068",
+      "year": null,
+      "label": "RCA Victor",
+      "cat": "LPM 1692",
+      "front": "/covers/5d65fd61-14fd-48b0-a4e6-725df2bbd068-front.jpg",
+      "back": "/covers/5d65fd61-14fd-48b0-a4e6-725df2bbd068-back.jpg",
+      "sideA": [
+        {
+          "name": "El cayuco",
+          "time": "2:36"
+        },
+        {
+          "name": "Complicación",
+          "time": "3:22"
+        },
+        {
+          "name": "3-D Mambo",
+          "time": "2:25"
+        },
+        {
+          "name": "Llegó Miján",
+          "time": "3:13"
+        },
+        {
+          "name": "Cuando te vea",
+          "time": "4:14"
+        },
+        {
+          "name": "Hong Kong Mambo",
+          "time": "3:46"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Mambo gozón",
+          "time": "2:47"
+        },
+        {
+          "name": "Mi chiquita quiere bembé",
+          "time": "3:57"
+        },
+        {
+          "name": "Varsity Drag",
+          "time": "2:52"
+        },
+        {
+          "name": "Estoy siempre junto a ti",
+          "time": "3:12"
+        },
+        {
+          "name": "Agua limpia todo",
+          "time": "2:56"
+        },
+        {
+          "name": "Saca tu mujer",
+          "time": "3:06"
+        }
+      ]
+    },
+    {
+      "genre": "Latin",
+      "artist": "Celia Cruz",
+      "title": "Celia & Johnny",
+      "resolved": true,
+      "mbid": "3f2098af-362e-4bcf-870b-d462cb754642",
+      "year": 1988,
+      "label": "Vaya",
+      "cat": "VS-31",
+      "front": null,
+      "back": null,
+      "sideA": [
+        {
+          "name": "Quimbara",
+          "time": "4:51"
+        },
+        {
+          "name": "Toro mata",
+          "time": "5:43"
+        },
+        {
+          "name": "Vieja luna",
+          "time": "3:16"
+        },
+        {
+          "name": "El paso del mulo",
+          "time": "4:44"
+        },
+        {
+          "name": "Tengo el idde",
+          "time": "5:04"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Lo tuyo es mental",
+          "time": "3:16"
+        },
+        {
+          "name": "Canto a la Habana",
+          "time": "5:33"
+        },
+        {
+          "name": "No Mercedes",
+          "time": "4:19"
+        },
+        {
+          "name": "El tumbao y Celia",
+          "time": "4:54"
+        },
+        {
+          "name": "El pregón del pescador",
+          "time": "5:03"
+        }
+      ]
+    },
+    {
+      "genre": "Latin",
+      "artist": "Willie Colón",
+      "title": "Siembra",
+      "resolved": true,
+      "mbid": "2e9ae9d0-c169-42f4-b021-eeb1cce03f40",
+      "year": 1992,
+      "label": "Musart",
+      "cat": "CDI-678",
+      "front": "/covers/2e9ae9d0-c169-42f4-b021-eeb1cce03f40-front.jpg",
+      "back": "/covers/2e9ae9d0-c169-42f4-b021-eeb1cce03f40-back.jpg",
+      "sideA": [
+        {
+          "name": "Plástico",
+          "time": "6:37"
+        },
+        {
+          "name": "Buscando Güayaba",
+          "time": "5:43"
+        },
+        {
+          "name": "Pedro Navaja",
+          "time": "7:21"
+        },
+        {
+          "name": "Maria Lionza",
+          "time": "5:30"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Ojos",
+          "time": "4:52"
+        },
+        {
+          "name": "Dime",
+          "time": "7:01"
+        },
+        {
+          "name": "Siembra",
+          "time": "5:25"
+        }
+      ]
+    },
+    {
+      "genre": "Latin",
+      "artist": "Santana",
+      "title": "Abraxas",
+      "resolved": true,
+      "mbid": "00bc5be5-1c32-413b-9ce9-6999291616a0",
+      "year": 2009,
+      "label": "Sundazed Music",
+      "cat": "LP 5264",
+      "front": "/covers/00bc5be5-1c32-413b-9ce9-6999291616a0-front.jpg",
+      "back": "/covers/00bc5be5-1c32-413b-9ce9-6999291616a0-back.jpg",
+      "sideA": [
+        {
+          "name": "Singing Winds, Crying Beasts",
+          "time": "4:48"
+        },
+        {
+          "name": "Black Magic Woman / Gypsy Queen",
+          "time": "5:17"
+        },
+        {
+          "name": "Oye como va",
+          "time": "4:17"
+        },
+        {
+          "name": "Incident at Neshabur",
+          "time": "4:58"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Se a Cabo",
+          "time": "2:49"
+        },
+        {
+          "name": "Mother’s Daughter",
+          "time": "4:25"
+        },
+        {
+          "name": "Samba pa ti",
+          "time": "4:46"
+        },
+        {
+          "name": "Hope You’re Feeling Better",
+          "time": "4:10"
+        },
+        {
+          "name": "El Nicoya",
+          "time": "1:29"
+        }
+      ]
+    },
+    {
+      "genre": "Comedy",
+      "artist": "Richard Pryor",
+      "title": "Live on the Sunset Strip",
+      "resolved": true,
+      "mbid": "67b4bdf1-0178-4a1c-ae0a-f6cc8811c72f",
+      "year": 1982,
+      "label": "Warner Bros. Records",
+      "cat": "BSK 3660",
+      "front": "/covers/67b4bdf1-0178-4a1c-ae0a-f6cc8811c72f-front.jpg",
+      "back": "/covers/67b4bdf1-0178-4a1c-ae0a-f6cc8811c72f-back.jpg",
+      "sideA": [
+        {
+          "name": "Women",
+          "time": "11:22"
+        },
+        {
+          "name": "Prison",
+          "time": "6:21"
+        },
+        {
+          "name": "Africa",
+          "time": "10:31"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Mafia Club",
+          "time": "6:00"
+        },
+        {
+          "name": "Mudbone",
+          "time": "7:33"
+        },
+        {
+          "name": "Freebase",
+          "time": "8:15"
+        },
+        {
+          "name": "Hospital",
+          "time": "10:15"
+        }
+      ]
+    },
+    {
+      "genre": "Comedy",
+      "artist": "Steve Martin",
+      "title": "Let's Get Small",
+      "resolved": true,
+      "mbid": "12cac994-3c2f-4b67-ac75-0786a2b58a60",
+      "year": 1977,
+      "label": "Warner Bros. Records",
+      "cat": "BSK 3090",
+      "front": "/covers/12cac994-3c2f-4b67-ac75-0786a2b58a60-front.jpg",
+      "back": "/covers/12cac994-3c2f-4b67-ac75-0786a2b58a60-back.jpg",
+      "sideA": [
+        {
+          "name": "Ramblin’ Man / Theme From Ramblin’ Man",
+          "time": "2:15"
+        },
+        {
+          "name": "Vegas",
+          "time": "3:49"
+        },
+        {
+          "name": "Let’s Get Small",
+          "time": "15:36"
+        },
+        {
+          "name": "Smoking",
+          "time": "2:11"
+        },
+        {
+          "name": "One Way to Leave Your Lover",
+          "time": "1:34"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Mad at My Mother",
+          "time": "0:55"
+        },
+        {
+          "name": "Excuse Me",
+          "time": "3:03"
+        },
+        {
+          "name": "Grandmother’s Song",
+          "time": "3:36"
+        },
+        {
+          "name": "Funny Comedy Gags",
+          "time": "3:07"
+        },
+        {
+          "name": "Closing",
+          "time": "2:04"
+        }
+      ]
+    },
+    {
+      "genre": "Comedy",
+      "artist": "Eddie Murphy",
+      "title": "Eddie Murphy",
+      "resolved": true,
+      "mbid": "481e9732-62c2-4d6a-8786-a0547d039324",
+      "year": 1982,
+      "label": "Columbia",
+      "cat": "CK 38180",
+      "front": "/covers/481e9732-62c2-4d6a-8786-a0547d039324-front.jpg",
+      "back": "/covers/481e9732-62c2-4d6a-8786-a0547d039324-back.jpg",
+      "sideA": [
+        {
+          "name": "Faggots",
+          "time": "2:09"
+        },
+        {
+          "name": "\"Buckwheat\"",
+          "time": "1:57"
+        },
+        {
+          "name": "Black Movie Theatres",
+          "time": "2:33"
+        },
+        {
+          "name": "Talking Cars",
+          "time": "0:59"
+        },
+        {
+          "name": "Doo-Doo/Christmas Gifts",
+          "time": "6:45"
+        },
+        {
+          "name": "Myths/A Little Chinese",
+          "time": "7:59"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Boogie in Your Butt",
+          "time": "4:12"
+        },
+        {
+          "name": "Drinking Fathers",
+          "time": "4:05"
+        },
+        {
+          "name": "Effrom",
+          "time": "1:59"
+        },
+        {
+          "name": "The Pope and Ronald Reagan",
+          "time": "4:39"
+        },
+        {
+          "name": "Hit by a Car",
+          "time": "6:50"
+        },
+        {
+          "name": "Enough Is Enough",
+          "time": "4:17"
+        }
+      ]
+    },
+    {
+      "genre": "Comedy",
+      "artist": "Rodney Dangerfield",
+      "title": "No Respect",
+      "resolved": true,
+      "mbid": "cf027aaa-588a-4009-b5f7-ca8351dd6863",
+      "year": 1980,
+      "label": "Casablanca Records",
+      "cat": "NBLP 7229",
+      "front": "/covers/cf027aaa-588a-4009-b5f7-ca8351dd6863-front.jpg",
+      "back": "/covers/cf027aaa-588a-4009-b5f7-ca8351dd6863-back.jpg",
+      "sideA": [
+        {
+          "name": "No Respect",
+          "time": "19:31"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Son of No Respect",
+          "time": "21:45"
+        }
+      ]
+    },
+    {
+      "genre": "Comedy",
+      "artist": "Cheech & Chong",
+      "title": "Los Cochinos",
+      "resolved": true,
+      "mbid": "2f55b8cc-573a-4cb1-bd41-4ed86e622b5e",
+      "year": null,
+      "label": "Rhino",
+      "cat": "",
+      "front": "/covers/2f55b8cc-573a-4cb1-bd41-4ed86e622b5e-front.jpg",
+      "back": null,
+      "sideA": [
+        {
+          "name": "Sargent Stadanko",
+          "time": "6:34"
+        },
+        {
+          "name": "Peter Rooter",
+          "time": "0:24"
+        },
+        {
+          "name": "Up His Nose",
+          "time": "3:28"
+        },
+        {
+          "name": "Pedro and Man at the Drive‐Inn",
+          "time": "12:45"
+        },
+        {
+          "name": "The Strawberry Revival Festival",
+          "time": "3:24"
+        },
+        {
+          "name": "Don’t Bug Me",
+          "time": "1:30"
+        }
+      ],
+      "sideB": [
+        {
+          "name": "Evelyn Woodhead Speed Reading Course",
+          "time": "0:40"
+        },
+        {
+          "name": "Les Morpions",
+          "time": "5:58"
+        },
+        {
+          "name": "Cheborneck",
+          "time": "1:15"
+        },
+        {
+          "name": "White World of Sports",
+          "time": "2:57"
+        },
+        {
+          "name": "Basketball Jones",
+          "time": "4:05"
+        }
+      ]
+    }
+  ]
+}
