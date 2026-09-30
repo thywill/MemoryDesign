@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Memorify</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Permanent+Marker&family=DM+Sans:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<header>
+  <h1 class="wordmark"><img src="/memorify.png" alt="Memorify"></h1>
+  <div class="menu">
+    <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="menuPanel" aria-label="Menu">
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+    <div class="menu-panel" id="menuPanel" hidden>
+      <button class="pill" type="button" id="shuffle">Shuffle</button>
+    </div>
+  </div>
+</header>
+
+<main><div class="wall" id="wall"></div></main>
+
+<button class="explore" type="button" id="explore">Keep digging <span aria-hidden="true">↓</span></button>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Record viewer">
+  <div class="card-wrap" id="cardWrap">
+    <div class="flipper" id="flipper">
+      <div class="face front" id="faceFront"></div>
+      <div class="face back" id="faceBack"></div>
+    </div>
+  </div>
+  <div class="viewer-controls">
+    <button class="pill" type="button" id="flipBtn">Show back</button>
+    <button class="pill" type="button" id="closeBtn">Put it back</button>
+  </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crate digging: the wall</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Permanent+Marker&family=DM+Sans:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --bg-deep:#ffffff; --ink:#1c1b19; --muted:#7d7a72; --line:#cfcac0;
+  --accent:#2f9c78; --pill:#ffffff;
+  --gap:clamp(18px, 2.6vw, 48px);
+  --ui:"Oswald", "Arial Narrow", sans-serif;
+  --body:"DM Sans", "Helvetica Neue", Arial, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --bg:#171614; --bg-deep:#0f0e0d; --ink:#f2efe8; --muted:#9a968d; --line:#3a3833; --pill:#201f1c; --accent:#4cc39a; }
+}
+:root[data-theme="dark"]{ --bg:#171614; --bg-deep:#0f0e0d; --ink:#f2efe8; --muted:#9a968d; --line:#3a3833; --pill:#201f1c; --accent:#4cc39a; }
+html{ scroll-padding-top:env(safe-area-inset-top,0px); background:var(--bg); }
+*,*::before,*::after{ box-sizing:border-box; }
+body{
+  margin:0; min-height:100vh; color:var(--ink); font-family:var(--body);
+  background:linear-gradient(var(--bg) 0 55%, var(--bg-deep)); background-attachment:fixed;
+}
+
+/* ---------- header ---------- */
+header{
+  position:sticky; top:0; z-index:30;
+  display:grid; grid-template-columns:1fr auto; align-items:center; gap:16px;
+  padding:calc(env(safe-area-inset-top,0px) + 22px) clamp(18px, 3vw, 48px) 22px;
+  background:linear-gradient(var(--bg) 70%, transparent);
+}
+.wordmark{ margin:0; font:600 clamp(1.4rem, 2.2vw, 2rem)/1 var(--ui); letter-spacing:.08em; color:var(--accent); text-transform:uppercase; }
+.wordmark small{ display:block; margin-top:6px; font:400 .8rem/1.2 var(--body); letter-spacing:0; text-transform:none; color:var(--muted); }
+.pills{ display:flex; gap:10px; }
+.pill{
+  font:400 1rem/1 var(--ui); letter-spacing:.04em; text-transform:uppercase; color:var(--ink);
+  background:var(--pill); border:1px solid var(--line); border-radius:999px;
+  padding:.9em 1.5em; cursor:pointer; transition:border-color .2s, background .2s;
+}
+.pill:hover{ border-color:var(--ink); }
+.pill:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+
+/* ---------- the wall ---------- */
+main{ position:relative; z-index:1; isolation:isolate; padding:10px clamp(18px, 5vw, 124px) 160px; }
+.wall{ max-width:2400px; margin:0 auto; }
+/* each row sits behind the one below it; rows further back show less of their covers */
+.wall-row{ position:relative; display:grid; column-gap:var(--gap); }
+
+.stack{
+  --n:5; --edge:.055;          /* each record behind peeks out by 5.5% of the cover size */
+  position:relative; width:100%;
+  aspect-ratio:1 / calc(1 + (var(--n) - 1) * var(--edge));
+}
+.rec{
+  --pos:0;
+  position:absolute; left:0; width:100%; aspect-ratio:1;
+  bottom:calc(var(--pos) * var(--edge) * var(--cw, 200px));
+  z-index:calc(var(--base, 100) + 20 - var(--pos));
+  font-size:calc(var(--cw, 200px) * .07); overflow:hidden; border-radius:calc(var(--cw, 200px) * .03);
+  box-shadow:inset 0 0 0 .5px var(--line, rgba(255,255,255,.3));
+  transform:translateX(calc(var(--cw, 200px) * var(--dx, 0))) rotate(var(--rot, 0deg));
+  transition:filter .25s, box-shadow .25s, transform .3s cubic-bezier(.2,.8,.2,1), bottom .32s cubic-bezier(.2,.8,.2,1);
+  pointer-events:none;
+}
+.rec::before{
+  content:""; position:absolute; inset:.5px; z-index:1; pointer-events:none; border-radius:calc(var(--cw, 200px) * .03 - .5px);
+  background:rgba(0,0,0,calc(var(--pos) * .06));
+}
+.rec.sel::before{ background:transparent; }
+.rec.sel{ z-index:10000; filter:none;
+  transform:translateY(calc(var(--cw, 200px) * -.015)) rotate(var(--ht, 0deg)) scale(1.02);
+  transition:transform .5s cubic-bezier(.34,1.56,.64,1), box-shadow .25s; box-shadow:inset 0 0 0 .5px var(--line, rgba(255,255,255,.3)), 0 18px 34px -14px rgba(0,0,0,.5); }
+.rec.away{ visibility:hidden; }
+.stack:first-of-type .rec{ }
+.tag{
+  position:absolute; z-index:calc(var(--base, 100) + 40); right:calc(var(--cw, 200px) * .06);
+  top:calc((var(--n) - 1 - var(--sp, 0)) * var(--edge) * var(--cw, 200px) + var(--cw, 200px) * .06);
+  font:400 clamp(12px, calc(var(--cw, 200px) * .062), 17px)/1 "Permanent Marker", "Comic Sans MS", cursive; letter-spacing:.01em;
+  padding:.55em .8em; border-radius:4px; white-space:nowrap; max-width:calc(var(--cw, 200px) * .7); overflow:hidden; text-overflow:ellipsis;
+  background:rgba(255,255,255,.14); color:rgba(255,255,255,.85);
+  box-shadow:0 0 0 1px rgba(255,255,255,.2) inset;
+  -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  pointer-events:none; transition:background .2s;
+}
+.tag.light{ background:rgba(0,0,0,.06); color:rgba(0,0,0,.7); box-shadow:0 0 0 1px rgba(0,0,0,.12) inset; }
+.hit{ position:absolute; inset:0; z-index:calc(var(--base, 100) + 50); border:0; padding:0; background:transparent; cursor:pointer; border-radius:4px; }
+.stack.has-behind::before{
+  /* shading cast onto the cover behind: exactly the stack's width, tinted from that cover's own colour */
+  content:""; position:absolute; left:.5px; right:.5px; bottom:100%; pointer-events:none;
+  height:calc(var(--cw, 200px) * .13);
+  z-index:calc(var(--base, 100) + 10);
+  background:linear-gradient(to top, rgba(var(--shade), .4), rgba(var(--shade), .14) 45%, rgba(var(--shade), 0));
+}
+.rec.dragging{
+  z-index:10001 !important; transition:box-shadow .2s !important;
+  transform:translate(var(--ddx, 0px), var(--ddy, 0px)) rotate(var(--ht, 0deg)) scale(1.04);
+  box-shadow:inset 0 0 0 .5px var(--line), 0 26px 44px -14px rgba(0,0,0,.55);
+}
+.rec.dragging::before{ background:transparent; }
+.stack.dragging .tag{ opacity:0; }
+body.dragging, body.dragging .hit{ cursor:grabbing; }
+.stack.active .tag{ z-index:10002;
+  transform:translateY(calc(var(--cw, 200px) * -.015)) rotate(var(--ht, 0deg)) scale(1.02);
+  transition:transform .5s cubic-bezier(.34,1.56,.64,1), background .2s; }
+.stack.active .hit{ z-index:10003; }
+.hit:focus-visible{ outline:2px solid var(--accent); outline-offset:4px; }
+
+/* cover typography */
+.mark{ position:absolute; inset:0; display:grid; place-items:center; text-align:center; padding:10%; }
+.m-serif{ font:400 1.9em/.95 "DM Serif Display", Georgia, serif; text-transform:uppercase; letter-spacing:.02em; }
+.m-heavy{ font:400 1.55em/.95 "Archivo Black", "Arial Black", sans-serif; text-transform:uppercase; font-style:italic; transform:skewX(-6deg); }
+.m-script{ font:italic 400 2.3em/.95 "DM Serif Display", Georgia, serif; }
+.m-initial{ font:400 6.5em/1 "DM Serif Display", Georgia, serif; }
+.m-badge{ border:.14em solid currentColor; padding:.45em .5em; transform:rotate(-8deg);
+  font:400 1.25em/1 "Archivo Black", "Arial Black", sans-serif; text-transform:uppercase; }
+.m-emblem{ display:grid; place-items:center; gap:.5em; }
+.m-emblem i{ width:3.4em; height:3.4em; border-radius:50%; border:.12em solid currentColor; display:grid; place-items:center;
+  font:normal 400 1.7em/1 "DM Serif Display", Georgia, serif; }
+.m-emblem i + span{ font:500 .8em/1 var(--ui); letter-spacing:.14em; text-transform:uppercase; }
+
+/* ---------- floating button ---------- */
+.explore{
+  position:fixed; z-index:40; left:50%; bottom:calc(env(safe-area-inset-bottom,0px) + 28px); transform:translateX(-50%);
+  font:400 1.25rem/1 var(--ui); letter-spacing:.03em; text-transform:uppercase;
+  background:var(--pill); color:var(--ink); border:1px solid var(--line); border-radius:999px;
+  padding:1.05em 1.9em; cursor:pointer; box-shadow:0 10px 30px rgba(0,0,0,.1);
+  display:flex; align-items:center; gap:.6em; white-space:nowrap;
+}
+@media (max-width:600px){ .explore{ font-size:1rem; padding:.9em 1.5em; } .pill{ font-size:.9rem; padding:.8em 1.2em; } }
+.explore:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+
+/* ---------- record viewer ---------- */
+.viewer{
+  position:fixed; inset:0; z-index:100; display:none;
+  align-items:center; justify-content:center; flex-direction:column; gap:22px;
+  padding:calc(env(safe-area-inset-top,0px) + 20px) 20px calc(env(safe-area-inset-bottom,0px) + 20px);
+  background:color-mix(in srgb, var(--bg) 55%, transparent);
+  -webkit-backdrop-filter:blur(16px) saturate(.85); backdrop-filter:blur(16px) saturate(.85);
+  opacity:0; transition:opacity .3s;
+}
+.viewer.show{ display:flex; } .viewer.in{ opacity:1; }
+.card-wrap{ --size:min(72vmin, 480px); width:var(--size); height:var(--size); perspective:1600px; container-type:inline-size; }
+.flipper{ position:relative; width:100%; height:100%; transform-style:preserve-3d; transition:transform .7s cubic-bezier(.3,.7,.2,1); cursor:pointer; }
+.flipper.flipped{ transform:rotateY(180deg); }
+.face{ position:absolute; inset:0; overflow:hidden; border-radius:3cqw; -webkit-backface-visibility:hidden; backface-visibility:hidden;
+  box-shadow:0 30px 60px rgba(0,0,0,.35), 0 0 0 1px rgba(0,0,0,.1); }
+.face.front{ font-size:7cqw; }
+.face.back{
+  transform:rotateY(180deg); background:#f7f4ec; color:#1c1b19;
+  padding:7%; display:grid; grid-template-rows:auto 1fr auto; gap:4%; font-size:3.1cqw;
+}
+.back-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:1em; border-bottom:2px solid var(--b-accent); padding-bottom:.8em; }
+.back-head h3{ margin:0; font:400 2.4em/1 "DM Serif Display", Georgia, serif; }
+.back-head p{ margin:.35em 0 0; font-size:1.1em; }
+.cat{ font:500 1em/1 var(--ui); letter-spacing:.05em; background:var(--b-accent); color:#fff; padding:.45em .7em; border-radius:3px; white-space:nowrap; }
+.sides{ display:grid; grid-template-columns:1fr 1fr; gap:1.6em; align-content:start; }
+.sides h4{ margin:0 0 .5em; font:500 1.05em/1 var(--ui); letter-spacing:.12em; text-transform:uppercase; color:var(--b-accent); }
+.sides ol{ margin:0; padding:0; list-style:none; counter-reset:t; }
+.sides li{ display:flex; justify-content:space-between; gap:.8em; padding:.3em 0; border-bottom:1px solid rgba(0,0,0,.1); }
+.sides li span:first-child::before{ counter-increment:t; content:counter(t) ". "; opacity:.5; }
+.sides li span:last-child{ font-variant-numeric:tabular-nums; opacity:.65; }
+.back-foot{ display:flex; justify-content:space-between; align-items:flex-end; font-size:.9em; opacity:.8; }
+.barcode{ height:2.6em; width:7em; background:repeating-linear-gradient(90deg, #1c1b19 0 2px, transparent 2px 3px, #1c1b19 3px 4px, transparent 4px 7px); }
+.viewer-controls{ display:flex; gap:10px; }
+
+@media (prefers-reduced-motion:reduce){ .rec, .flipper{ transition-duration:.01s; } html{ scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+<header>
+  <h1 class="wordmark">Crate digging<small>No search. Flip through the wall.</small></h1>
+  <div class="pills">
+    <button class="pill" type="button" id="shuffle">Shuffle</button>
+  </div>
+</header>
+
+<main><div class="wall" id="wall"></div></main>
+
+<button class="explore" type="button" id="explore">Keep digging <span aria-hidden="true">↓</span></button>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Record viewer">
+  <div class="card-wrap" id="cardWrap">
+    <div class="flipper" id="flipper">
+      <div class="face front" id="faceFront"></div>
+      <div class="face back" id="faceBack"></div>
+    </div>
+  </div>
+  <div class="viewer-controls">
+    <button class="pill" type="button" id="flipBtn">Show back</button>
+    <button class="pill" type="button" id="closeBtn">Put it back</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  let seed = 11;
+  const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const pick = a => a[Math.floor(rnd() * a.length)];
+  let hseed = 331;
+  const hj = () => (hseed = (hseed * 48271) % 2147483647) / 2147483647 - .5;
+  let jseed = 97;
+  const jit = () => (jseed = (jseed * 48271) % 2147483647) / 2147483647 - .5;   // -0.5 .. 0.5
+
+  const colors = ["#2447f0","#2e6b4f","#d8382a","#1d2f63","#e87a2e","#2a5db8","#1f1e1d","#7a2229","#c9652a","#d4432e",
+                  "#0f5c57","#f2c230","#5a2d82","#e6ddc9","#133b2c","#b8322a","#1b4d8f","#2b2b2b","#e25b7a","#6b7d2f"];
+  const artists = ["The Low Tides","Marigold Static","Odessa Vaughn","Brother Kasimir","The Velvet Porch","Nia & the Nightshift","Cedar Hollow Band","Dub Parliament","Ruby Calloway","Sonny Arcade","The Gravel Saints","Lorna Pike","Midnight Ferry","Tomás Rivera Trio","Deacon Blue Moon","Paloma Reyes","Static Ghosts","Hattie Mae Wilson","King Tubbs Jr.","The Honeycombs"];
+  const titles = ["Sunday Wires","Heat in the Hallway","Paper Moon","Slow Burn","Coastline","Rain on Tin","Late Bus Home","Brass & Honey","Echo Chamber","Night Market","Dust","Porch Light","Second Pressing","Blue Hour","High Street","Wildflower","Lullaby","Northbound","Golden","Back Room"];
+  const words = ["Midnight","Velvet","River","Static","Honey","Ghost","Summer","Neon","Paper","Golden","Lonely","Electric","Sweet","Broken","Silver","Holy","Motel","Satellite","Rain","Highway","Mercy","Radio","Harbor","Engine"];
+  const tails = ["Blues","Stomp","Serenade","Shuffle","Dream","Waltz","Groove","Lullaby","Parade","Train","Prayer","Dance","Song","Skank","Boogie","Hymn","Ride"];
+  const labels = ["Brickyard","Oak Hill","Low Lamp","Sidewalk","Tin Roof","Ninth Ave","Golden Mile"];
+  const genres = ["Soul","Funk","Reggae","Dub","Hip hop","Jazz","Blues","Gospel","Disco","Punk","Post-punk","Folk",
+                  "Country","Afrobeat","Highlife","Bossa nova","Soundtracks","Electronic","Ambient","Rockabilly","Surf","Krautrock","Latin","Comedy"];
+  const N = 5;
+
+  const lum = hex => { const n = parseInt(hex.slice(1), 16); return (.299*(n>>16) + .587*((n>>8)&255) + .114*(n&255)) / 255; };
+  const rgb = hex => { const n = parseInt(hex.slice(1), 16); return [n>>16, (n>>8)&255, n&255]; };
+  const near = (a, b) => { const x = rgb(a), y = rgb(b); return Math.hypot(x[0]-y[0], x[1]-y[1], x[2]-y[2]) < 90; };
+  const mkTracks = n => Array.from({length:n}, () => ({ name:`${pick(words)} ${pick(tails)}`, time:`${2 + Math.floor(rnd()*4)}:${String(Math.floor(rnd()*60)).padStart(2,"0")}` }));
+
+  function makeRecord(genre){
+    const c = { color: pick(colors), style: Math.floor(rnd()*6), title: pick(titles), artist: pick(artists), genre,
+                year: 1958 + Math.floor(rnd()*36), label: pick(labels),
+                cat: `${String.fromCharCode(65+Math.floor(rnd()*26))}${String.fromCharCode(65+Math.floor(rnd()*26))}-${100+Math.floor(rnd()*900)}` };
+    c.sideA = mkTracks(4 + Math.floor(rnd()*3)); c.sideB = mkTracks(4 + Math.floor(rnd()*3));
+    return c;
+  }
+
+  function paintCover(el, c){
+    const ink = lum(c.color) > .62 ? "#1c1b19" : "#fbf8f1";
+    el.style.background = c.color; el.style.color = ink;
+    // one solid outline colour for every cover
+    el.style.setProperty("--line", "var(--bg)");
+    let mark;
+    switch(c.style){
+      case 0: mark = `<div class="m-serif">${c.title}</div>`; break;
+      case 1: mark = `<div class="m-heavy">${c.title}</div>`; break;
+      case 2: mark = `<div class="m-script">${c.title}</div>`; break;
+      case 3: mark = `<div class="m-initial">${c.title.charAt(0)}</div>`; break;
+      case 4: mark = `<div class="m-badge">${c.title.split(" ").join("<br>")}</div>`; break;
+      default: mark = `<div class="m-emblem"><i>${c.artist.replace("The ","").charAt(0)}</i><span>${c.artist}</span></div>`;
+    }
+    el.innerHTML = `<div class="mark">${mark}</div>`;
+  }
+
+  // ---------- build the wall ----------
+  const wall = document.getElementById("wall");
+  const stacks = [];
+  genres.forEach(genre => {
+    const stack = document.createElement("div"); stack.className = "stack"; stack.style.setProperty("--n", N);
+    const recs = [];
+    for (let k = 0; k < N; k++){
+      const c = makeRecord(genre);
+      while (k > 0 && near(c.color, recs[k - 1].c.color)) c.color = pick(colors);
+      const el = document.createElement("div"); el.className = "rec"; el.style.setProperty("--pos", k);
+      jit(); jit();   // tilt and shift switched off for now (values kept so they come back the same)
+      el.dataset.lean = (hj() * 1.6).toFixed(2);   // this record's own lean when lifted, about ±0.8°
+      paintCover(el, c); stack.appendChild(el); recs.push({ el, c });
+    }
+    const tag = document.createElement("span"); tag.className = "tag"; stack.appendChild(tag);
+    const hit = document.createElement("button"); hit.className = "hit";
+    hit.setAttribute("aria-label", `${genre} stack, ${N} records. Use up and down arrows to flip, Enter to look closer.`);
+    stack.appendChild(hit);
+    const st = { stack, recs, tag, genre, sel:-1 };
+    setTag(st, -1);
+    stacks.push(st);
+
+    const pickAt = e => {
+      if (drag && drag.st === st) return;          // while dragging, the drag code is in charge
+      const r = hit.getBoundingClientRect(), w = r.width, edge = w * .055, y = e.clientY;
+      const visibleBottom = r.bottom - (st.overlap || 0);   // below this, the row in front covers the stack
+      if (y > visibleBottom){
+        // just past the stack's own edge: a short grace zone so the lifted cover doesn't flicker at the boundary
+        const grace = edge;             // the same height as one record edge
+        if (st.sel >= 0 && y <= visibleBottom + grace) return;
+        // further down: drop the record back into its stack and hand over to the stack in front
+        select(st, -1); return;
+      }
+      const frontTop = r.bottom - w;
+      let k = y >= frontTop ? 0 : Math.ceil((frontTop - y) / edge);
+      if (k >= N) k = N - 1;
+      select(st, k);
+      tiltTo(st, (e.clientX - r.left) / w - .5);
+    };
+    hit.addEventListener("pointermove", pickAt);
+    hit.addEventListener("pointerdown", e => { pickAt(e); startPress(st, hit, e); });
+    hit.addEventListener("pointerleave", () => select(st, -1));
+    hit.addEventListener("click", () => {
+      if (st.justDragged){ st.justDragged = false; return; }   // a drag is not a click
+      openViewer(st, st.sel < 0 ? 0 : st.sel, hit);
+    });
+    hit.addEventListener("focus", () => { if (!quietFocus && hit.matches(":focus-visible")) select(st, 0); });
+    hit.addEventListener("blur", () => select(st, -1));
+    hit.addEventListener("keydown", e => {
+      if (e.key === "ArrowUp"){ e.preventDefault(); select(st, Math.min(N - 1, st.sel + 1)); tiltTo(st, 0); }
+      if (e.key === "ArrowDown"){ e.preventDefault(); select(st, Math.max(0, st.sel - 1)); tiltTo(st, 0); }
+    });
+  });
+  let order = [...stacks];
+
+  // ---------- rows with perspective ----------
+  // visible share of a row's front cover, by distance from the front row (0 = front, fully visible)
+  // a deeper, slightly richer version of a colour, as "r, g, b" for rgba()
+  function shadeOf(hex){
+    const n = parseInt(hex.slice(1), 16), c = [n>>16, (n>>8)&255, n&255];
+    const k = lum(hex) > .6 ? .55 : .35;       // light covers need a stronger drop to read
+    return c.map(v => Math.round(v * k)).join(", ");
+  }
+  const visible = i => Math.max(.52, 1 / (1 + .3 * i));   // gentler: back rows keep at least half their cover
+  function layout(){
+    const gap = Math.min(48, Math.max(18, innerWidth * .026));   // matches --gap
+    const avail = wall.clientWidth;
+    const minW = innerWidth < 700 ? 140 : 200;
+    const cols = Math.max(innerWidth < 340 ? 1 : 2, Math.min(6, Math.floor((avail + gap) / (minW + gap))));
+    const w = (avail - (cols - 1) * gap) / cols;
+    wall.replaceChildren();
+    const rows = [];
+    for (let i = 0; i < order.length; i += cols) rows.push(order.slice(i, i + cols));
+    rows.forEach((group, r) => {
+      const row = document.createElement("div");
+      row.className = "wall-row";
+      row.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+      const depthAbove = rows.length - r;          // distance of the row above from the front
+      if (r > 0) row.style.marginTop = `${-(1 - visible(depthAbove)) * w}px`;
+      // how much of this row is covered by the row in front of it
+      const overlap = r < rows.length - 1 ? (1 - visible(rows.length - 1 - r)) * w : 0;
+      group.forEach((st, j) => {
+        // the cover this stack casts its shade onto is the front record of the stack directly behind it
+        const behind = r > 0 ? rows[r - 1][j] : null;
+        st.stack.classList.toggle("has-behind", !!behind);
+        if (behind){
+          st.stack.style.setProperty("--shade", shadeOf(behind.recs[0].c.color));
+          const back = st.recs[N - 1];
+          while (near(back.c.color, behind.recs[0].c.color) || near(back.c.color, st.recs[N - 2].c.color)){
+            back.c.color = pick(colors); paintCover(back.el, back.c);
+          }
+        }
+        st.stack.style.setProperty("--cw", `${w}px`);
+        st.stack.style.setProperty("--base", (r + 1) * 100);
+        st.overlap = overlap;
+        row.appendChild(st.stack);
+      });
+      wall.appendChild(row);
+    });
+  }
+  layout();
+  let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(layout, 80); });
+
+  let quietFocus = false;
+
+  // ---------- drag a record to a new place in its stack ----------
+  let drag = null;
+  function setPositions(st){
+    st.recs.forEach((r, i) => r.el.style.setProperty("--pos", i));
+  }
+  function slotAt(st, y){
+    const r = st.stack.getBoundingClientRect(), w = r.width, edge = w * .055, frontTop = r.bottom - w;
+    if (y >= frontTop) return 0;
+    return Math.min(N - 1, Math.ceil((frontTop - y) / edge));
+  }
+  function startPress(st, hit, e){
+    if (e.button !== 0 || e.pointerType === "touch" || st.sel < 0) return;   // touch keeps tap and scroll
+    drag = { st, hit, id:e.pointerId, x0:e.clientX, y0:e.clientY, from:st.sel, rec:st.recs[st.sel], live:false };
+  }
+  addEventListener("pointermove", e => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const { st } = drag, w = st.stack.offsetWidth, edge = w * .055;
+    const dx = e.clientX - drag.x0, dy = e.clientY - drag.y0;
+    if (!drag.live){
+      if (Math.hypot(dx, dy) < 6) return;
+      drag.live = true;
+      try { drag.hit.setPointerCapture(drag.id); } catch(_){}
+      drag.rec.el.classList.remove("sel");
+      drag.rec.el.classList.add("dragging");
+      st.stack.classList.remove("active"); st.stack.classList.add("dragging");
+      document.body.classList.add("dragging");
+      st.sel = -1;
+    }
+    // live reorder: the others slide to open a gap where the record would land
+    const to = slotAt(st, e.clientY);
+    const cur = st.recs.indexOf(drag.rec);
+    if (to !== cur){
+      st.recs.splice(cur, 1); st.recs.splice(to, 0, drag.rec);
+      setPositions(st);
+    }
+    // keep the dragged record under the pointer even as its own slot moves
+    const now = st.recs.indexOf(drag.rec);
+    drag.rec.el.style.setProperty("--ddx", `${dx}px`);
+    drag.rec.el.style.setProperty("--ddy", `${dy + (now - drag.from) * edge}px`);
+    st.stack.style.setProperty("--ht", `${Math.max(-6, Math.min(6, dx * .04)).toFixed(2)}deg`);
+  });
+  const endDrag = e => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const d = drag; drag = null;
+    if (!d.live) return;
+    const { st, rec } = d;
+    const before = rec.el.getBoundingClientRect();
+    rec.el.classList.remove("dragging");
+    rec.el.style.removeProperty("--ddx"); rec.el.style.removeProperty("--ddy");
+    st.stack.classList.remove("dragging");
+    document.body.classList.remove("dragging");
+    st.justDragged = true; setTimeout(() => { st.justDragged = false; }, 0);
+    // spring from where it was dropped into its new slot
+    const after = rec.el.getBoundingClientRect();
+    if (!reduce) rec.el.animate([
+      { transform:`translate(${before.left - after.left}px, ${before.top - after.top}px) scale(1.04)` },
+      { transform:"none" }
+    ], { duration:480, easing:"cubic-bezier(.34,1.4,.64,1)" });
+    st.stack.style.setProperty("--ht", "0deg");
+    setTag(st, -1);
+  };
+  addEventListener("pointerup", endDrag);
+  addEventListener("pointercancel", endDrag);
+  // safety net: a lifted record only stays up while the pointer is over its own stack
+  document.addEventListener("pointermove", e => {
+    if (drag) return;
+    stacks.forEach(st => { if (st.sel >= 0 && !st.stack.contains(e.target)) select(st, -1); });
+  }, { passive:true });
+
+  // tilt the lifted record (and its tag with it) by pointer position plus its own lean
+  function tiltTo(st, px){
+    if (st.sel < 0) return;
+    const el = st.recs[st.sel].el;
+    // follows the cursor only: pointer on the left dips the left side, on the right dips the right (about ±2.5°)
+    const deg = px * 5;
+    st.stack.style.setProperty("--ht", `${deg.toFixed(2)}deg`);
+    // rotate the tag around the cover's centre so the two move as one piece
+    const w = st.stack.offsetWidth, h = st.stack.offsetHeight, edge = w * .055;
+    const cy = h - st.sel * edge - w / 2;
+    st.tag.style.transformOrigin = `${w/2 - st.tag.offsetLeft}px ${cy - st.tag.offsetTop}px`;
+  }
+
+  function setTag(st, idx){
+    const c = st.recs[idx < 0 ? 0 : idx].c;
+    st.tag.textContent = idx < 0 ? st.genre : c.title;
+    st.tag.classList.toggle("light", lum(c.color) > .62);
+  }
+  function select(st, idx){
+    if (st.sel === idx) return;
+    if (st.sel >= 0) st.recs[st.sel].el.classList.remove("sel");
+    st.sel = idx;
+    if (idx >= 0) st.recs[idx].el.classList.add("sel");
+    st.stack.classList.toggle("active", idx >= 0);
+    st.stack.style.setProperty("--sp", Math.max(0, idx));   // the tag follows the lifted cover
+    setTag(st, idx);
+  }
+
+  // ---------- shuffle and keep digging ----------
+  document.getElementById("shuffle").addEventListener("click", () => {
+    const before = new Map(stacks.map(s => [s, s.stack.getBoundingClientRect()]));
+    order = [...stacks].sort(() => rnd() - .5);
+    layout();
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    order.forEach(s => {
+      const a = before.get(s), b = s.stack.getBoundingClientRect();
+      s.stack.animate([{ transform:`translate(${a.left-b.left}px, ${a.top-b.top}px)` }, { transform:"none" }], { duration:600, easing:"cubic-bezier(.2,.8,.2,1)" });
+    });
+  });
+  const explore = document.getElementById("explore");
+  explore.addEventListener("click", () => {
+    const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 10;
+    scrollTo({ top: atEnd ? 0 : scrollY + innerHeight * .8, behavior:"smooth" });
+  });
+  addEventListener("scroll", () => {
+    const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 10;
+    explore.firstChild.textContent = atEnd ? "Back to the top " : "Keep digging ";
+    explore.lastElementChild.textContent = atEnd ? "↑" : "↓";
+  }, { passive:true });
+
+  // ---------- close-up viewer ----------
+  const viewer = document.getElementById("viewer"), cardWrap = document.getElementById("cardWrap");
+  const flipper = document.getElementById("flipper"), faceFront = document.getElementById("faceFront"), faceBack = document.getElementById("faceBack");
+  const flipBtn = document.getElementById("flipBtn"), closeBtn = document.getElementById("closeBtn");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let current = null;
+
+  const fromRect = r => { const c = cardWrap.getBoundingClientRect();
+    return `translate(${(r.left + r.width/2) - (c.left + c.width/2)}px, ${(r.top + r.height/2) - (c.top + c.height/2)}px) scale(${r.width / c.width})`; };
+
+  function openViewer(st, idx, returnFocus){
+    const { el, c } = st.recs[idx];
+    select(st, -1);
+    paintCover(faceFront, c);
+    faceBack.style.setProperty("--b-accent", lum(c.color) > .62 ? "#1c1b19" : c.color);
+    const li = t => `<li><span>${t.name}</span><span>${t.time}</span></li>`;
+    faceBack.innerHTML = `
+      <div class="back-head"><div><h3>${c.title}</h3><p>${c.artist}</p></div><span class="cat">${c.cat}</span></div>
+      <div class="sides"><div><h4>Side A</h4><ol>${c.sideA.map(li).join("")}</ol></div><div><h4>Side B</h4><ol>${c.sideB.map(li).join("")}</ol></div></div>
+      <div class="back-foot"><span>${c.label} Records, ${c.year}<br>${c.genre}, stereo, 33⅓ RPM</span><span class="barcode" aria-hidden="true"></span></div>`;
+    flipper.classList.remove("flipped"); flipBtn.textContent = "Show back";
+    const from = el.getBoundingClientRect();
+    viewer.classList.add("show"); el.classList.add("away");
+    current = { el, returnFocus };
+    requestAnimationFrame(() => {
+      viewer.classList.add("in");
+      if (!reduce) cardWrap.animate([{ transform: fromRect(from) }, { transform:"none" }], { duration:520, easing:"cubic-bezier(.2,.8,.2,1)" });
+      flipBtn.focus({ preventScroll:true });
+    });
+  }
+  function closeViewer(){
+    if (!current) return;
+    const { el, returnFocus } = current; current = null;
+    const done = () => {
+      viewer.classList.remove("show", "in"); el.classList.remove("away");
+      quietFocus = true; returnFocus && returnFocus.focus({ preventScroll:true }); quietFocus = false;
+    };
+    viewer.classList.remove("in");
+    if (reduce){ done(); return; }
+    flipper.classList.remove("flipped");
+    const anim = cardWrap.animate([{ transform:"none" }, { transform: fromRect(el.getBoundingClientRect()) }], { duration:420, easing:"cubic-bezier(.5,0,.3,1)", fill:"forwards" });
+    anim.onfinish = () => { anim.cancel(); done(); };
+  }
+  const toggleFlip = () => { const f = flipper.classList.toggle("flipped"); flipBtn.textContent = f ? "Show front" : "Show back"; };
+  flipper.addEventListener("click", toggleFlip);
+  flipBtn.addEventListener("click", toggleFlip);
+  closeBtn.addEventListener("click", closeViewer);
+  viewer.addEventListener("click", e => { if (e.target === viewer) closeViewer(); });
+  document.addEventListener("keydown", e => {
+    if (!current) return;
+    if (e.key === "Escape") closeViewer();
+    if (e.key === "Tab"){ e.preventDefault(); (document.activeElement === flipBtn ? closeBtn : flipBtn).focus(); }
+  });
+})();
+</script>
+</body>
+</html>
