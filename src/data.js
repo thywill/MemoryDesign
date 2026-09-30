@@ -49,6 +49,12 @@ function cleanTracks(list) {
     .map((track) => ({ name: String(track.name), time: track.time ? String(track.time) : "" }));
 }
 
+function publicUrl(path) {
+  if (!path) return null;
+  if (/^https?:\/\//.test(path)) return path;
+  return `${import.meta.env.BASE_URL}${String(path).replace(/^\//, "")}`;
+}
+
 function toRecord(album, extra) {
   const rnd = makeRng(hashSeed(albumKey(album)));
   const sideA = cleanTracks(extra?.sideA);
@@ -61,8 +67,8 @@ function toRecord(album, extra) {
     label: extra?.label || LABELS[Math.floor(rnd() * LABELS.length)],
     cat: extra?.cat || fakeCat(rnd),
     mbid: extra?.mbid || null,
-    front: extra?.front || null,
-    back: extra?.back || null,
+    front: publicUrl(extra?.front),
+    back: publicUrl(extra?.back),
     sideA,
     sideB,
   };
@@ -75,7 +81,7 @@ function toRecord(album, extra) {
 
 async function readCatalog() {
   try {
-    const response = await fetch("/catalog.json", { cache: "no-cache" });
+    const response = await fetch(`${import.meta.env.BASE_URL}catalog.json`, { cache: "no-cache" });
     if (!response.ok) return [];
     const json = await response.json();
     return Array.isArray(json.albums) ? json.albums : [];

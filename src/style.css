@@ -2,6 +2,7 @@
   --bg:#ffffff; --bg-deep:#ffffff; --ink:#1c1b19; --muted:#7d7a72; --line:#cfcac0;
   --accent:#2f9c78; --pill:#ffffff;
   --gap:clamp(12px, 1.8vw, 32px);
+  --dim:blur(1px); --veil:rgb(255 255 255 / .5);
   --ui:"Oswald", "Arial Narrow", sans-serif;
   --body:"DM Sans", "Helvetica Neue", Arial, sans-serif;
   box-sizing:border-box;
@@ -9,9 +10,9 @@
   padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){ --bg:#171614; --bg-deep:#0f0e0d; --ink:#f2efe8; --muted:#9a968d; --line:#3a3833; --pill:#201f1c; --accent:#4cc39a; }
+  :root:not([data-theme="light"]){ --bg:#171614; --bg-deep:#0f0e0d; --ink:#f2efe8; --muted:#9a968d; --line:#3a3833; --pill:#201f1c; --accent:#4cc39a; --dim:brightness(.5) blur(1px); --veil:transparent; }
 }
-:root[data-theme="dark"]{ --bg:#171614; --bg-deep:#0f0e0d; --ink:#f2efe8; --muted:#9a968d; --line:#3a3833; --pill:#201f1c; --accent:#4cc39a; }
+:root[data-theme="dark"]{ --bg:#171614; --bg-deep:#0f0e0d; --ink:#f2efe8; --muted:#9a968d; --line:#3a3833; --pill:#201f1c; --accent:#4cc39a; --dim:brightness(.5) blur(1px); --veil:transparent; }
 html{ scroll-padding-top:env(safe-area-inset-top,0px); background:var(--bg); }
 *,*::before,*::after{ box-sizing:border-box; }
 body{
@@ -69,6 +70,16 @@ main{ position:relative; z-index:1; isolation:isolate; padding:10px clamp(18px, 
   position:relative; width:100%;
   aspect-ratio:1 / calc(1 + (var(--n) - 1) * var(--edge));
 }
+body:has(.stack:hover) header,
+body:has(.stack:hover) .explore,
+body:has(.stack:hover) .stack:not(:hover){ filter:var(--dim); }
+body:has(.stack:hover) .stack:not(:hover)::after{
+  content:""; position:absolute; inset:0; z-index:5000; pointer-events:none; background:var(--veil);
+}
+body:has(.stack:hover) header::after,
+body:has(.stack:hover) .explore::after{
+  content:""; position:absolute; inset:0; z-index:5; border-radius:inherit; pointer-events:none; background:var(--veil);
+}
 .rec{
   --pos:0;
   position:absolute; left:0; width:100%; aspect-ratio:1;
@@ -76,7 +87,7 @@ main{ position:relative; z-index:1; isolation:isolate; padding:10px clamp(18px, 
   z-index:calc(var(--base, 100) + 20 - var(--pos));
   font-size:calc(var(--cw, 200px) * .07); overflow:hidden; border-radius:calc(var(--cw, 200px) * .03);
   transform:translateX(calc(var(--cw, 200px) * var(--dx, 0))) rotate(var(--rot, 0deg));
-  transition:filter .25s, box-shadow .25s, transform .3s cubic-bezier(.2,.8,.2,1), bottom .32s cubic-bezier(.2,.8,.2,1);
+  transition:filter .25s, box-shadow .25s, bottom .32s cubic-bezier(.2,.8,.2,1);
   pointer-events:none;
 }
 .rec::before{
@@ -91,7 +102,7 @@ main{ position:relative; z-index:1; isolation:isolate; padding:10px clamp(18px, 
 .rec.sel::before{ background:transparent; }
 .rec.sel{ z-index:10000; filter:none;
   transform:translateY(calc(var(--cw, 200px) * -.015)) rotate(var(--ht, 0deg)) scale(1.02);
-  transition:transform .5s cubic-bezier(.34,1.56,.64,1), box-shadow .25s; box-shadow:0 18px 34px -14px rgba(0,0,0,.5); }
+  transition:none; box-shadow:0 18px 34px -14px rgba(0,0,0,.5); }
 .rec.away{ visibility:hidden; }
 .stack:first-of-type .rec{ }
 .tag{
@@ -123,7 +134,7 @@ main{ position:relative; z-index:1; isolation:isolate; padding:10px clamp(18px, 
 body.dragging, body.dragging .hit{ cursor:grabbing; }
 .stack.active .tag{ z-index:10002;
   transform:translateY(calc(var(--cw, 200px) * -.015)) rotate(var(--ht, 0deg)) scale(1.02);
-  transition:transform .5s cubic-bezier(.34,1.56,.64,1), background .2s; }
+  transition:background .2s; }
 .stack.active .hit{ z-index:10003; }
 .hit:focus-visible{ outline:2px solid var(--accent); outline-offset:4px; }
 
@@ -192,4 +203,4 @@ body.dragging, body.dragging .hit{ cursor:grabbing; }
 .barcode{ height:2.6em; width:7em; background:repeating-linear-gradient(90deg, #1c1b19 0 2px, transparent 2px 3px, #1c1b19 3px 4px, transparent 4px 7px); }
 .viewer-controls{ display:flex; gap:10px; }
 
-@media (prefers-reduced-motion:reduce){ .rec, .flipper{ transition-duration:.01s; } html{ scroll-behavior:auto; } }
+@media (prefers-reduced-motion:reduce){ .rec, .rec.sel, .stack.active .tag, .flipper{ transition-duration:.01s; } html{ scroll-behavior:auto; } }
