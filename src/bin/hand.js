@@ -24,7 +24,7 @@ let racks = [];
 let col = 0;
 let tier = 0;
 let cursor = 0;
-let acrossCarry = 0;
+let rackPos = 0;
 let flowAt = 0;
 let driftAt = 0;
 let driving = false;
@@ -175,14 +175,30 @@ function stepRack(dir) {
     leave(from);
     tier = 0;
     if (!store.get().inspect && !store.get().placing) activate(crateAt(), heights.get(crateAt()?.id) ?? 0);
+    rackPos = col;
     return;
   }
   const next = col + (dir < 0 ? -1 : 1);
   if (next < 0 || next >= racks.length) return;
   leave(from);
   col = next;
+  rackPos = next;
   tier = 0;
   if (!store.get().inspect && !store.get().placing) activate(crateAt(), heights.get(crateAt()?.id) ?? 0);
+  glide();
+}
+
+function goRack(next) {
+  next = Math.max(0, Math.min(racks.length - 1, next));
+  if (next === col) return;
+  const depth = Math.round(cursor);
+  leave(crateAt());
+  col = next;
+  rackPos = next;
+  tier = 0;
+  const seq = sequence();
+  cursor = Math.max(0, Math.min(Math.max(0, seq.length - 1), depth));
+  showSpot(seq[Math.round(cursor)]);
   glide();
 }
 
@@ -208,7 +224,8 @@ function showSpot(spot) {
   activate(spot.crate, spot.h);
 }
 
-// Screen-up: forward motion walks the sleeves, sideways steps to the next rack in the frame.
+// How far the hand travels is how far the shop travels. A short slide stays close.
+// A longer one crosses many racks, and it stops where the hand stops.
 function flowMove(along, across) {
   if (store.get().inspect || store.get().placing) return;
   const now = performance.now();
@@ -216,41 +233,34 @@ function flowMove(along, across) {
   flowAt = now;
   const seq = sequence();
   if (!seq.length) return;
-  cursor = Math.max(0, Math.min(seq.length - 1, cursor + along * 2.6 * dt));
+  cursor = Math.max(0, Math.min(seq.length - 1, cursor + along * 8 * dt));
   showSpot(seq[Math.round(cursor)]);
-  acrossCarry += across * dt;
-  const step = acrossCarry > 0.48 ? 1 : acrossCarry < -0.48 ? -1 : 0;
-  if (!step) return;
-  acrossCarry = 0;
-  const before = col;
-  stepRack(step);
-  if (col === before) return;
-  const seq2 = sequence();
-  cursor = step > 0 ? 0 : Math.max(0, seq2.length - 1);
-  showSpot(seq2[Math.round(cursor)]);
+  rackPos = Math.max(0, Math.min(racks.length - 1, rackPos + across * 32 * dt));
+  goRack(Math.round(rackPos));
 }
 
-// On its edge: slide with the phone and the camera follows that same direction.
+// On its edge: the camera runs with the phone, far enough that one sweep can cross the bins.
 function driftMove(v) {
   if (store.get().inspect || store.get().placing) return;
   const now = performance.now();
   const dt = Math.min(0.09, driftAt ? (now - driftAt) / 1000 : 0.05);
   driftAt = now;
-  travel.target = clampTravel(travel.target + v * 1.25 * dt);
+  travel.target = clampTravel(travel.target + v * 10 * dt);
   if (!store.get().moved) store.set({ moved: true });
   const near = columnNear(travel.target);
   if (near === col) return;
   leave(crateAt());
   col = near;
+  rackPos = near;
   tier = 0;
-  const seq = sequence();
   cursor = 0;
-  showSpot(seq[0]);
+  showSpot(sequence()[0]);
 }
 
 function greet() {
   if (!store.get().inspect && !store.get().placing && racks.length) {
     col = columnNear(camX.v || travel.target);
+    rackPos = col;
     tier = 0;
     cursor = heights.get(crateAt()?.id) ?? 0;
     activate(crateAt(), cursor);

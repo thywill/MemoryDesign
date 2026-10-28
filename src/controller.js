@@ -175,9 +175,9 @@ function boot(channel) {
   }
 
   function nudge(v) {
-    const dead = 0.42;
+    const dead = 0.28;
     if (Math.abs(v) < dead) return 0;
-    return Math.max(-1, Math.min(1, Math.sign(v) * (Math.abs(v) - dead) / 1.5));
+    return Math.max(-1, Math.min(1, Math.sign(v) * (Math.abs(v) - dead) / 1.15));
   }
 
   // Loose poses. A hand never holds a perfect angle, so the gaps keep the last one.
