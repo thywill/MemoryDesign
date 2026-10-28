@@ -7,11 +7,45 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Oswald:wght@500;600&family=Permanent+Marker&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/src/style.css">
+<link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
+<div id="welcome">
+<main class="stage">
+  <div class="deck" aria-hidden="true">
+    <div class="plinth"></div>
+    <div class="platter">
+      <div class="disc">
+        <i class="gap" style="--g:12%"></i><i class="gap" style="--g:18%"></i><i class="gap" style="--g:24%"></i>
+        <div class="label"><span class="t">Low Lamp<br>Records</span></div>
+      </div>
+      <div class="sheen"></div>
+    </div>
+    <div class="arm"></div>
+    <div class="speed">33⅓ · <b>ON</b></div>
+  </div>
+
+  <section class="note" aria-labelledby="welcome-title">
+    <h1 id="welcome-title">Welcome in.</h1>
+    <p class="lead">No search. Just dig.</p>
+    <p class="ask">What are you after?</p>
+    <form id="form">
+      <fieldset class="slips">
+        <legend>Choose a request</legend>
+        <label class="slip" style="--r:-1.2deg"><input type="radio" name="req" id="req-sunday" value="A rainy Sunday"><span>A rainy Sunday</span></label>
+        <label class="slip" style="--r:.8deg"><input type="radio" name="req" id="req-drive" value="A late-night drive"><span>A late-night drive</span></label>
+        <label class="slip" style="--r:-.6deg"><input type="radio" name="req" id="req-summer" value="Summer"><span>Summer</span></label>
+        <label class="slip surprise" style="--r:.5deg"><input type="radio" name="req" id="req-any" value="surprise"><span>Surprise me</span></label>
+      </fieldset>
+      <div class="go">
+        <button type="submit" id="enter" disabled>Step inside</button>
+      </div>
+    </form>
+  </section>
+</main>
+</div>
 <div class="loading">Opening the shop…</div>
 <div id="root"></div>
-<script type="module" src="/src/main.js"></script>
+<script type="module" src="./src/main.js"></script>
 </body>
 </html>

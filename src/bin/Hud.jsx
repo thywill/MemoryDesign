@@ -1,6 +1,7 @@
 import React from "react";
 import { store, useStore } from "./store.js";
 import { sfx, ensureAudio } from "./sound.js";
+import { putBack } from "./actions.js";
 
 // HTML on top of the scene.
 export function Hud() {
@@ -11,8 +12,15 @@ export function Hud() {
   const moved = useStore((s) => s.moved);
   const progress = useStore((s) => s.progress);
   const sound = useStore((s) => s.sound);
+  const request = useStore((s) => s.request);
   return (
     <>
+      {request && (
+        <div className="request-card">
+          <b>The request</b>
+          <p>{request}</p>
+        </div>
+      )}
       {!insp && (
         <>
           <div className={"hint" + (moved || hover ? " gone" : "")}>Scroll to move along the bin. Point at an edge to flip through, click to pull one out.</div>
@@ -26,7 +34,7 @@ export function Hud() {
         <div className="controls">
           <button onClick={() => { sfx("slide"); store.set({ flipped: !flipped }); }}>{flipped ? "Show front" : "Flip it over"}</button>
           <button onClick={() => { sfx("slide"); store.set({ out: !out }); }}>{out ? "Slide it back in" : "Slide the record out"}</button>
-          <button onClick={() => store.set({ closing: true })}>Put it back</button>
+          <button onClick={() => putBack()}>Put it back</button>
         </div>
       )}
       <button className="sound" aria-pressed={sound} aria-label={sound ? "Sound on" : "Sound off"}

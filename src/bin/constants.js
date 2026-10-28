@@ -16,17 +16,21 @@ export const zFor = (k) => z0 - k * GAP;
 export const PICK_H = S * Math.cos(LEAN) + 0.02;
 export const zTop0 = z0 - S * Math.sin(LEAN);
 
-// Layout of the bin
+// Layout of the bin. Two tiers, one long cabinet.
 export const SIDE_T = 0.008;
 export const PITCH = W_IN + SIDE_T + 0.004;
 export const EDGE_PAD = 0.07;
-export const TIER_Y = [0.74, 0.94, 1.14];
-export const TIER_Z = [0.38, 0.0, -0.38];
+export const TIER_Y = [0.74, 0.95];
+export const TIER_Z = [0.2, -0.2];
 export const colX = (i) => i * PITCH;
 
-// The shop wall behind the bin: one texture tile is WALL_TILE wide, repeating along the wall.
-export const WALL_Z = TIER_Z[2] - 0.7;
-export const WALL_H = 2.4, WALL_TILE = 4.8, WALL_MARGIN = 3;
+// The player sits PLAYER_GAP past the cabinet's right edge. Travel reaches past it.
+export const PLAYER_GAP = 0.85;
+export const PLAYER_W = 0.95;
+export const PLAYER_REACH = 0.25;
+export const cabinetEnd = (n) => (n - 0.5) * PITCH + EDGE_PAD;
+export const playerXFor = (n) => cabinetEnd(n) + PLAYER_GAP;
 
-// Camera
-export const CAM = { y: 1.88, z: 1.9, lookY: 0.9, lookZ: -0.14 };
+// Camera, pulled back so the cabinet, the brick and the room are in view.
+export const CAM = { y: 1.72, z: 3.35, lookY: 1.18, lookZ: -0.6 };
+export const WALL_C = "#2a1d17";

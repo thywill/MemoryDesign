@@ -21,7 +21,7 @@ const labels = ["Brickyard","Oak Hill","Low Lamp","Sidewalk","Tin Roof","Ninth A
 const mkTracks = (n) => Array.from({ length: n }, () => ({ name: `${pick(words)} ${pick(tails)}`, time: `${2 + Math.floor(rnd()*4)}:${String(Math.floor(rnd()*60)).padStart(2, "0")}` }));
 
 // Placeholder record for slots the real catalogue doesn't fill.
-function makeRecord(genre, prev) {
+export function makeRecord(genre, prev) {
   let color = pick(colors);
   while (prev && near(color, prev)) color = pick(colors);
   const c = { color, style: Math.floor(rnd() * 6), title: pick(titles), artist: pick(artists), genre,
@@ -44,47 +44,48 @@ function realRecord(album, prev) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Curation: one genre per column, three dividers front to back       */
+/*  Curation: one column, two dividers, front tier then back tier      */
 /* ------------------------------------------------------------------ */
-// laid out the way most US record stores are: new arrivals by the door, then rock, soul, hip hop and so on
+// laid out the way most US record stores are: new arrivals by the door, then rock, soul, funk, reggae and so on
 export const PICKERS = [
-  { name: "New arrivals", plate: "New arrivals", themes: ["New arrivals", "Staff picks", "Just in – used"] },
-  { name: "Rock", plate: "Rock LPs", themes: ["Rock A–M", "Rock N–Z", "Classic rock"] },
-  { name: "Soul / R&B", plate: "Soul / R&B LPs", themes: ["Soul / R&B", "Motown", "Funk"] },
-  { name: "Hip hop", plate: "Hip hop LPs", themes: ["Hip hop / rap", "East coast", "West coast"] },
-  { name: "Jazz", plate: "Jazz LPs", themes: ["Jazz", "Blue Note era", "Jazz vocals"] },
-  { name: "Blues", plate: "Blues LPs", themes: ["Blues", "Delta blues", "Chicago blues"] },
-  { name: "Country", plate: "Country LPs", themes: ["Country", "Outlaw country", "Bluegrass"] },
-  { name: "Folk", plate: "Folk LPs", themes: ["Folk / singer-songwriter", "Americana", "Protest songs"] },
-  { name: "Pop", plate: "Pop LPs", themes: ["Pop", "Girl groups", "80s pop"] },
-  { name: "Punk & indie", plate: "Punk & indie", themes: ["Punk", "Indie rock", "Grunge"] },
-  { name: "Electronic", plate: "Electronic", themes: ["Electronic", "Disco / dance", "House"] },
-  { name: "Soundtracks", plate: "Soundtracks", themes: ["Soundtracks", "Comedy", "Dollar bin"] },
+  { name: "New arrivals", plate: "New arrivals", themes: ["New arrivals", "Staff picks"] },
+  { name: "Rock", plate: "Rock LPs", themes: ["Rock A–M", "Rock N–Z"] },
+  { name: "Classic rock", plate: "Classic rock", themes: ["Classic rock", "Prog & psych"] },
+  { name: "Soul / R&B", plate: "Soul / R&B LPs", themes: ["Soul / R&B", "Motown"] },
+  { name: "Funk", plate: "Funk LPs", themes: ["Funk", "Disco"] },
+  { name: "Reggae & world", plate: "Reggae & world", themes: ["Reggae / dub", "Afrobeat / highlife"] },
+  { name: "Hip hop", plate: "Hip hop LPs", themes: ["East coast", "West coast"] },
+  { name: "Jazz", plate: "Jazz LPs", themes: ["Jazz", "Jazz vocals"] },
+  { name: "Blues", plate: "Blues LPs", themes: ["Delta blues", "Chicago blues"] },
+  { name: "Country", plate: "Country LPs", themes: ["Country", "Outlaw country"] },
+  { name: "Folk", plate: "Folk LPs", themes: ["Singer-songwriter", "Americana"] },
+  { name: "Punk & indie", plate: "Punk & indie", themes: ["Punk", "Indie rock"] },
+  { name: "Electronic", plate: "Electronic", themes: ["Electronic / ambient", "House"] },
+  { name: "Soundtracks", plate: "Soundtracks", themes: ["Soundtracks", "Dollar bin"] },
 ];
 
-// Where the catalogue's genres are filed. The bin has no reggae or world section,
-// so those go to the front of the store with the new arrivals and staff picks.
+// Where the catalogue's genres are filed. New arrivals and staff picks are not in this map:
+// they only take records the catalogue marks as such, never overflow from another genre.
 const FILED_UNDER = {
-  "New arrivals": ["Reggae", "Dub"],
-  "Staff picks": ["Ambient", "Highlife"],
-  "Just in – used": ["Afrobeat", "Latin"],
   "Rock A–M": ["Krautrock"],
   "Rock N–Z": ["Surf"],
   "Classic rock": ["Rockabilly"],
   "Soul / R&B": ["Soul", "Gospel"],
   "Funk": ["Funk"],
-  "Hip hop / rap": ["Hip hop"],
+  "Disco": ["Disco"],
+  "Reggae / dub": ["Reggae", "Dub"],
+  "Afrobeat / highlife": ["Afrobeat", "Highlife", "Latin"],
+  "East coast": ["Hip hop"],
   "Jazz": ["Jazz"],
   "Jazz vocals": ["Bossa nova"],
-  "Blues": ["Blues"],
+  "Delta blues": ["Blues"],
   "Country": ["Country"],
-  "Folk / singer-songwriter": ["Folk"],
+  "Singer-songwriter": ["Folk"],
   "Punk": ["Punk"],
   "Indie rock": ["Post-punk"],
-  "Electronic": ["Electronic"],
-  "Disco / dance": ["Disco"],
+  "Electronic / ambient": ["Electronic", "Ambient"],
   "Soundtracks": ["Soundtracks"],
-  "Comedy": ["Comedy"],
+  "Dollar bin": ["Comedy"],
 };
 
 const PRICES = ["$8", "$10", "$12", "$12", "$15", "$18", "$20", "$25", "$6", "$35", "3 for $10"];
@@ -93,10 +94,15 @@ let uid = 0;
 // `shelf` is the catalogue as loaded by src/data.js: [{ genre, records }].
 export function buildPicks(shelf) {
   const byGenre = new Map(shelf.map((s) => [s.genre, s.records]));
+  const all = shelf.flatMap((s) => s.records);
+  const marked = {
+    "New arrivals": all.filter((r) => r.genre === "New arrivals" || r.newArrival),
+    "Staff picks": all.filter((r) => r.genre === "Staff picks" || r.staffPick),
+  };
   return PICKERS.map((p, col) => ({
     ...p, col,
     crates: p.themes.map((theme, t) => {
-      const real = (FILED_UNDER[theme] || []).flatMap((g) => byGenre.get(g) || []);
+      const real = marked[theme] || (FILED_UNDER[theme] || []).flatMap((g) => byGenre.get(g) || []);
       const recs = [];
       for (let k = 0; k < N; k++) {
         const prev = recs[k - 1]?.c.color;

@@ -1,16 +1,20 @@
 import React, { useRef, useMemo, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
-import { S } from "./constants.js";
+import { S, playerXFor } from "./constants.js";
+import { PICKERS } from "./data.js";
 import { useThemeBg } from "./theme.js";
 import { store, useStore, registry, pointerN } from "./store.js";
 import { drawWornCover, drawBack, drawDisc, imageTexture, recGeo, wornEdge } from "./textures.js";
 import { sfx } from "./sound.js";
+import { putBack } from "./actions.js";
+import { player } from "./player.js";
 
 const v1 = new THREE.Vector3(), v2 = new THREE.Vector3(), v3 = new THREE.Vector3(), up = new THREE.Vector3();
 const dir = new THREE.Vector3(), q1 = new THREE.Quaternion();
 const easeIO = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 const easeO = (t) => 1 - Math.pow(1 - t, 3);
+const platterAt = new THREE.Vector3(playerXFor(PICKERS.length) - 0.04, 0.86, 0.05);
 
 // In your hands: lift it out, bring it close, tilt it, flip it (F), slide the vinyl out (S), put it back (Esc).
 export function Inspect() {
@@ -20,6 +24,7 @@ export function Inspect() {
   const backdrop = dark ? 0.9 : 0.86;
   const grp = useRef(), inner = useRef(), disc = useRef(), bd = useRef();
   const t = useRef(0), flip = useRef(0), tilt = useRef({ x: 0, y: 0 }), slide = useRef(0);
+  const placeFrom = useRef(null), placeT = useRef(0), placed = useRef(false);
   const mats = useMemo(() => {
     if (!insp) return null;
     const c = insp.rec.c;
@@ -42,11 +47,24 @@ export function Inspect() {
     const face = new THREE.MeshPhysicalMaterial({ map: drawDisc(insp.rec.c), roughness: 0.38, clearcoat: 1, clearcoatRoughness: 0.12, envMapIntensity: 1.1 });
     return [new THREE.MeshStandardMaterial({ color: "#111" }), face, face];
   }, [insp]);
-  useEffect(() => { t.current = 0; flip.current = 0; slide.current = 0; tilt.current = { x: 0, y: 0 }; }, [insp]);
+  useEffect(() => {
+    t.current = 0; flip.current = 0; slide.current = 0; tilt.current = { x: 0, y: 0 };
+    placeFrom.current = null; placeT.current = 0; placed.current = false;
+  }, [insp]);
 
   useFrame((state, dt) => {
     if (!insp || !grp.current) return;
     const s = store.get(), d = Math.min(dt, 0.05);
+    if (s.placing && !s.closing && t.current >= 0.5) {
+      if (!placeFrom.current) { placeFrom.current = grp.current.position.clone(); placeT.current = 0; placed.current = false; }
+      placeT.current = Math.min(1, placeT.current + d * 0.85);
+      const k = easeIO(placeT.current);
+      grp.current.position.lerpVectors(placeFrom.current, platterAt, k);
+      if (bd.current) bd.current.material.opacity = (1 - k) * backdrop;
+      if (placeT.current >= 1 && !placed.current) { placed.current = true; player.play(insp.rec); }
+      return;
+    }
+    placeFrom.current = null;
     // close the sleeve first, then put it back
     const wantOut = s.out && !s.closing;
     slide.current = THREE.MathUtils.damp(slide.current, wantOut ? 1 : 0, 6, d);
@@ -94,7 +112,7 @@ export function Inspect() {
           </mesh>
         </group>
       </group>
-      <mesh ref={bd} renderOrder={5} onClick={(e) => { e.stopPropagation(); store.set({ closing: true }); }}>
+      <mesh ref={bd} renderOrder={5} onClick={(e) => { e.stopPropagation(); putBack(); }}>
         <planeGeometry args={[10, 10]} />
         <meshBasicMaterial color={bg} transparent opacity={0} depthWrite={false} toneMapped={false} />
       </mesh>

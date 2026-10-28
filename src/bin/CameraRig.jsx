@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
-import { PITCH, EDGE_PAD, TIER_Z, CAM } from "./constants.js";
+import { PITCH, EDGE_PAD, TIER_Z, CAM, playerXFor, PLAYER_W, PLAYER_REACH } from "./constants.js";
 import { PICKERS } from "./data.js";
 import { store, clock, dragging, camX, travel, started, pointerN } from "./store.js";
 
 const look = new THREE.Vector3();
 
-// Close on the records, sliding along; travel is clamped so the bin's ends never show.
+// Sliding along the bin. The left end stays out of frame; the right end reaches the record player.
 export function CameraRig() {
   const { camera, scene, events } = useThree();
   const light = useRef();
@@ -19,7 +19,7 @@ export function CameraRig() {
     const px = insp ? 0 : pointerN.x, py = insp ? 0 : pointerN.y;
     const hHalf = Math.atan(Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.aspect);
     const halfW = Math.tan(hHalf) * (CAM.z - TIER_Z[0]);
-    const lo = -PITCH / 2 - EDGE_PAD + halfW, hi = (PICKERS.length - 0.5) * PITCH + EDGE_PAD - halfW;
+    const lo = -PITCH / 2 - EDGE_PAD + halfW, hi = playerXFor(PICKERS.length) + PLAYER_W + PLAYER_REACH - halfW;
     travel.min = lo <= hi ? lo : (lo + hi) / 2; travel.max = lo <= hi ? hi : (lo + hi) / 2;
     if (!started.v) { travel.target = travel.min; camera.position.x = travel.min; started.v = true; }
     travel.target = Math.max(travel.min, Math.min(travel.max, travel.target));
@@ -30,16 +30,16 @@ export function CameraRig() {
     camX.v = camera.position.x;
     look.set(camera.position.x, CAM.lookY - py * 0.02, CAM.lookZ);
     camera.lookAt(look);
-    light.current.position.set(camera.position.x - 1.1, 3.4, 2.2);
+    light.current.position.set(camera.position.x - 0.9, 3.6, 2.6);
     light.current.target.position.set(camera.position.x, 0.95, 0);
     if (Math.abs(before - camera.position.x) > 1e-5 && !insp && !dragging.v) events.update?.();
     const p = travel.max > travel.min ? (camera.position.x - travel.min) / (travel.max - travel.min) : 0;
     if (Math.abs(p - last.current) > 0.004) { last.current = p; store.set({ progress: Math.max(0, Math.min(1, p)) }); }
   });
   return (
-    <directionalLight ref={light} intensity={1.75} color="#ffe9cc" castShadow
+    <directionalLight ref={light} intensity={1.15} color="#ffdcae" castShadow
       shadow-mapSize={[2048, 2048]} shadow-bias={-0.0003} shadow-normalBias={0.015} shadow-radius={4}
-      shadow-camera-left={-2.4} shadow-camera-right={2.4} shadow-camera-top={1.8} shadow-camera-bottom={-1.8}
+      shadow-camera-left={-3.4} shadow-camera-right={3.4} shadow-camera-top={2.4} shadow-camera-bottom={-2.4}
       shadow-camera-near={0.5} shadow-camera-far={8} />
   );
 }

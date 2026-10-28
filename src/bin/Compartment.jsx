@@ -1,10 +1,11 @@
-import React, { useRef, useMemo } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { S, N, GAP, LEAN, W_IN, D_IN, WT, FRONT_H, SIDE_H, SIDE_T, PITCH, PICK_H, TIER_Y, TIER_Z, zFor, zTop0 } from "./constants.js";
 import { store, noRay, dragging, camX } from "./store.js";
 import { woodMat, drawCardDivider } from "./textures.js";
-import { sfx } from "./sound.js";
+import { openRecord } from "./actions.js";
+import { phoneCrateId, registerCrate } from "./hand.js";
 import { Record } from "./Record.jsx";
 
 // A stack plus its divider, and an invisible picking box that maps the pointer to a record:
@@ -21,13 +22,14 @@ export function Compartment({ crate, x }) {
     if (h >= 0) store.set({ hover: crate.recs[h].c, hoverCrate: crate.id });
     else if (store.get().hoverCrate === crate.id) store.set({ hover: null, hoverCrate: null });
   };
+  useEffect(() => registerCrate(crate.id, setH));
   useFrame(() => {
     // only stacks near the camera render
-    const near = Math.abs(x - camX.v) < 3.2;
+    const near = Math.abs(x - camX.v) < 4.6;
     outer.current.visible = near;
     const on = near && !store.get().inspect && !dragging.v;
     pickRef.current.raycast = on ? THREE.Mesh.prototype.raycast : noRay;
-    if (!on && state.current.h >= 0) setH(-1, 0);
+    if (!on && state.current.h >= 0 && phoneCrateId() !== crate.id) setH(-1, 0);
   });
   const onMove = (e) => {
     if (store.get().inspect || dragging.v) return;
@@ -42,8 +44,7 @@ export function Compartment({ crate, x }) {
     if (e.delta > 6 || store.get().inspect || dragging.v) return;
     onMove(e);
     const h = state.current.h; if (h < 0) return;
-    sfx("slide");
-    store.set({ inspect: { rec: crate.recs[h] }, flipped: false, closing: false, out: false, hover: null });
+    openRecord(crate.recs[h]);
   };
   return (
     <group ref={outer} position={[x, TIER_Y[crate.tier] + WT, TIER_Z[crate.tier]]}>

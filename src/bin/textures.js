@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { S, T, WALL_H } from "./constants.js";
+import { S, T } from "./constants.js";
 import { rnd, rgb, lum } from "./data.js";
 
 export const tex = (cv) => { const t = new THREE.CanvasTexture(cv); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
@@ -41,6 +41,15 @@ export function coverImage(c) {
     }
     return img;
   });
+}
+// Decode catalogue fronts while the welcome screen is up, so the bin does not fetch them on the way in.
+export function preloadCovers(shelf) {
+  const seen = new Set();
+  for (const stack of shelf) for (const rec of stack.records) {
+    if (!rec.front || seen.has(rec.front)) continue;
+    seen.add(rec.front);
+    coverImage({ front: rec.front }).catch(() => {});
+  }
 }
 function loadImage(src) {
   return new Promise((resolve, reject) => {
@@ -248,105 +257,34 @@ export function drawDisc(c) {
   return tex(cv);
 }
 
-/* ------------------------------------------------------------------ */
-/*  The shop behind the bin, out of focus                              */
-/* ------------------------------------------------------------------ */
-// One tile of wall, WALL_TILE metres wide and WALL_H tall, repeating horizontally: face-out records
-// on three racks, a hand-lettered sign and two gig posters, blurred and washed into the wall colour.
-// Everything is drawn wrapped around the tile edges so the repeat has no seam.
-export function drawShopWall(images, theme) {
-  const W = 2048, H = 1024, lo = 2, P = 48;                 // sharp pass at half resolution, padded for the blur
-  const w = W / lo, h = H / lo, m = h / WALL_H;             // m: low-res pixels per metre
-  const y = (metres) => (WALL_H - metres) * m;
-  const sharp = mkCanvas(w + 2 * P, h), g = sharp.getContext("2d");
-  let sd = 7; const r = () => (sd = (sd * 16807) % 2147483647) / 2147483647;
-  const wrapped = (draw) => { for (const dx of [-w, 0, w]) { g.save(); g.translate(P + dx, 0); draw(); g.restore(); } };
-
-  g.fillStyle = theme.wall; g.fillRect(0, 0, sharp.width, h);
-  const swatches = ["#c8553d", "#2f5d62", "#e0b04a", "#6b4e71", "#1f3a5f", "#d9cbb0", "#3d3d3d", "#8c2f39", "#4f7a4a"];
-  const slots = 13, pitch = w / slots, rec = 0.31 * m;
-  const racks = [0.55, 0.98, 1.41];
-  const items = [];
-  racks.forEach((base, row) => {
-    for (let i = 0; i < slots; i++) {
-      if (row === 2 && i >= 2 && i <= 4) continue;            // the sign hangs here
-      if ((row === 1 || row === 2) && i === 8) continue;       // a tall poster
-      if (row === 0 && i === 11) continue;                     // a short poster
-      if (r() < 0.12) continue;                                // a gap where something sold
-      const x = i * pitch + (pitch - rec) / 2 + (r() - 0.5) * 4;
-      const img = images.length && r() < 0.65 ? images[Math.floor(r() * images.length)] : null;
-      items.push({ x, y: y(base) - rec, img, color: swatches[Math.floor(r() * swatches.length)] });
-    }
-  });
-  wrapped(() => {
-    g.fillStyle = theme.dark ? "#2a2219" : "#b9a888";
-    racks.forEach((base) => g.fillRect(0, y(base) - 1, w, 0.025 * m));
-    items.forEach((it) => {
-      if (it.img) g.drawImage(it.img, it.x, it.y, rec, rec);
-      else { g.fillStyle = it.color; g.fillRect(it.x, it.y, rec, rec); }
-    });
-    g.fillStyle = "#f1e6cf"; g.fillRect(2 * pitch + 10, y(1.70), 3 * pitch - 20, 0.26 * m);
-    g.fillStyle = "#b8322a"; g.font = `${0.15 * m}px "Permanent Marker"`; g.textAlign = "center"; g.textBaseline = "middle";
-    g.fillText("USED VINYL", 3.5 * pitch, y(1.57));
-    const poster = (x, top, bottom, bg, ink) => {
-      g.fillStyle = bg; g.fillRect(x, y(top), pitch - 16, (top - bottom) * m);
-      g.fillStyle = ink; g.fillRect(x + 8, y(top) + 10, pitch - 32, 0.12 * m);
-      g.fillRect(x + 8, y(bottom) - 0.1 * m, pitch - 40, 0.05 * m);
-    };
-    poster(8 * pitch + 8, 1.74, 0.98, "#e3c24a", "#1b1a18");
-    poster(11 * pitch + 8, 0.88, 0.5, "#2f5d62", "#f1e6cf");
-  });
-
-  // defocus: blur the low-res pass, then scale it up to the full tile
-  const soft = mkCanvas(w + 2 * P, h), sg = soft.getContext("2d");
-  sg.filter = "blur(9px)"; sg.drawImage(sharp, 0, 0);
-  const cv = mkCanvas(W, H), o = cv.getContext("2d");
-  o.imageSmoothingQuality = "high";
-  o.drawImage(soft, P, 0, w, h, 0, 0, W, H);
-
-  // wash it back into the wall so the covers only show through faintly
-  o.globalAlpha = theme.overlay; o.fillStyle = theme.wall; o.fillRect(0, 0, W, H); o.globalAlpha = 1;
-
-  // light, periodic across the tile: diagonal window light by day, lamp pools after hours
-  const lamp = (x, yy, rad, a) => {
-    for (const dx of [-W, 0, W]) {
-      const gr = o.createRadialGradient(x + dx, yy, 0, x + dx, yy, rad);
-      gr.addColorStop(0, theme.light.replace(/[\d.]+\)$/, `${a})`)); gr.addColorStop(1, "rgba(0,0,0,0)");
-      o.fillStyle = gr; o.fillRect(x + dx - rad, yy - rad, rad * 2, rad * 2);
-    }
-  };
-  if (theme.dark) {
-    lamp(W * 0.22, H * 0.2, 600, 0.2); lamp(W * 0.72, H * 0.24, 540, 0.16);   // just above the frame, so the glow falls into view
-    const fall = o.createLinearGradient(0, 0, 0, H); fall.addColorStop(0, "rgba(0,0,0,0)"); fall.addColorStop(1, "rgba(0,0,0,.35)");
-    o.fillStyle = fall; o.fillRect(0, 0, W, H);
-  } else {
-    const L = mkCanvas(W / 4, H / 4), lg = L.getContext("2d");
-    lg.filter = "blur(18px)"; lg.fillStyle = theme.light;
-    for (const dx of [-W / 4, 0, W / 4]) for (const x0 of [0.08, 0.42]) {
-      const x = dx + x0 * (W / 4);
-      lg.beginPath(); lg.moveTo(x, -20); lg.lineTo(x + 90, -20); lg.lineTo(x + 230, H / 4 + 20); lg.lineTo(x + 140, H / 4 + 20); lg.fill();
-    }
-    o.drawImage(L, 0, 0, W, H);
-    const top = o.createLinearGradient(0, 0, 0, H * 0.6); top.addColorStop(0, "rgba(255,250,240,.35)"); top.addColorStop(1, "rgba(255,250,240,0)");
-    o.fillStyle = top; o.fillRect(0, 0, W, H * 0.6);
-  }
-  // the wall darkens into exactly the floor's back-edge colour, so the corner has no seam
-  const skirt = o.createLinearGradient(0, H * 0.8, 0, H); skirt.addColorStop(0, `${theme.floor}00`); skirt.addColorStop(1, theme.floor);
-  o.fillStyle = skirt; o.fillRect(0, H * 0.8, W, H * 0.2);
-
-  const t = tex(cv); t.wrapS = THREE.RepeatWrapping; t.anisotropy = 4; return t;
+// perforated masonite on the cabinet front
+export function perforated() {
+  const w = 512, h = 256, cv = mkCanvas(w, h), g = cv.getContext("2d");
+  g.fillStyle = "#c79a5c"; g.fillRect(0, 0, w, h);
+  g.globalCompositeOperation = "overlay"; g.globalAlpha = 0.3; g.fillStyle = g.createPattern(grain(), "repeat"); g.fillRect(0, 0, w, h);
+  g.globalCompositeOperation = "source-over"; g.globalAlpha = 1; g.fillStyle = "#2b1c10";
+  for (let y = 8; y < h; y += 14) for (let x = (y / 14) % 2 ? 15 : 8; x < w; x += 14) { g.beginPath(); g.arc(x, y, 2.6, 0, Math.PI * 2); g.fill(); }
+  const t = tex(cv); t.wrapS = t.wrapT = THREE.RepeatWrapping; return t;
 }
 
-// The floor: nearly the wall colour, a touch darker in a soft pool under the cabinet.
-export function drawShopFloor(theme) {
-  const cv = mkCanvas(512, 256), g = cv.getContext("2d");
-  g.fillStyle = theme.wall; g.fillRect(0, 0, 512, 256);
-  g.save(); g.scale(1, 0.5);
-  const gr = g.createRadialGradient(256, 200, 0, 256, 200, 300);
-  gr.addColorStop(0, theme.floor); gr.addColorStop(1, theme.wall);
-  g.fillStyle = gr; g.fillRect(0, 0, 512, 512); g.restore();
-  const back = g.createLinearGradient(0, 0, 0, 60); back.addColorStop(0, theme.floor); back.addColorStop(1, `${theme.floor}00`);
-  g.fillStyle = back; g.fillRect(0, 0, 512, 60);
+export function brickTexture() {
+  const w = 512, h = 256, cv = mkCanvas(w, h), g = cv.getContext("2d");
+  g.fillStyle = "#6a4a3c"; g.fillRect(0, 0, w, h);
+  const bw = 64, bh = 24;
+  for (let r = 0; r * bh < h; r++) for (let c = -1; c * bw < w; c++) {
+    const x = c * bw + (r % 2 ? bw / 2 : 0), y = r * bh;
+    g.fillStyle = `hsl(${10 + Math.random() * 10}, ${38 + Math.random() * 14}%, ${30 + Math.random() * 10}%)`;
+    g.fillRect(x + 2, y + 2, bw - 4, bh - 4);
+  }
+  g.globalCompositeOperation = "overlay"; g.globalAlpha = 0.35; g.fillStyle = g.createPattern(grain(), "repeat"); g.fillRect(0, 0, w, h);
+  const t = tex(cv); t.wrapS = t.wrapT = THREE.RepeatWrapping; return t;
+}
+
+export function neonText(text) {
+  const w = 1024, h = 220, cv = mkCanvas(w, h), g = cv.getContext("2d");
+  g.textAlign = "center"; g.textBaseline = "middle"; g.font = `italic 120px "DM Serif Display"`;
+  g.shadowColor = "#ff5a3a"; g.shadowBlur = 40; g.fillStyle = "#ffb19a"; g.fillText(text, w / 2, h / 2);
+  g.shadowBlur = 12; g.fillStyle = "#fff1ea"; g.fillText(text, w / 2, h / 2);
   return tex(cv);
 }
 

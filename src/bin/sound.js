@@ -13,6 +13,26 @@ export function ensureAudio() {
   } catch (e) { /* no audio available */ }
 }
 
+// Needle drop for the welcome screen: a soft thump, then crackle.
+export function crackle() {
+  ensureAudio();
+  const ctx = audio.ctx;
+  if (!ctx || ctx.state !== "running" || !store.get().sound) return;
+  const len = ctx.sampleRate * 1.6, buf = ctx.createBuffer(1, len, ctx.sampleRate), d = buf.getChannelData(0);
+  for (let i = 0; i < len; i++) {
+    const pop = Math.random() < 0.0012 ? (Math.random() * 2 - 1) * 0.9 : 0;
+    d[i] = (Math.random() * 2 - 1) * 0.035 + pop;
+  }
+  const src = ctx.createBufferSource(); src.buffer = buf;
+  const f = ctx.createBiquadFilter(); f.type = "bandpass"; f.frequency.value = 2400; f.Q.value = 0.6;
+  const g = ctx.createGain(); const t = ctx.currentTime;
+  g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.9, t + 0.05); g.gain.exponentialRampToValueAtTime(0.0001, t + 1.5);
+  src.connect(f); f.connect(g); g.connect(ctx.destination); src.start();
+  const o = ctx.createOscillator(), og = ctx.createGain(); o.frequency.value = 70;
+  og.gain.setValueAtTime(0.25, t); og.gain.exponentialRampToValueAtTime(0.0001, t + 0.15);
+  o.connect(og); og.connect(ctx.destination); o.start(t); o.stop(t + 0.2);
+}
+
 export function sfx(kind) {
   const ctx = audio.ctx; if (!ctx || ctx.state !== "running" || !store.get().sound) return;
   const now = ctx.currentTime;

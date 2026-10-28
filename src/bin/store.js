@@ -2,7 +2,7 @@ import { useSyncExternalStore } from "react";
 
 // A tiny store for what the HUD needs to know about.
 export const store = (() => {
-  let s = { hover: null, hoverCrate: null, inspect: null, flipped: false, closing: false, moved: false, progress: 0, out: false, sound: true };
+  let s = { hover: null, hoverCrate: null, inspect: null, flipped: false, closing: false, moved: false, progress: 0, out: false, sound: true, request: null, taken: [], onPlayer: null, placing: false };
   const ls = new Set();
   return {
     get: () => s,

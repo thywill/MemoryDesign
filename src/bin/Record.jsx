@@ -48,7 +48,8 @@ export function Record({ rec, k, crateState }) {
     c.rz = THREE.MathUtils.damp(c.rz, rz, 10, dt);
     g.current.rotation.set(c.a, 0, c.rz);
     g.current.position.y = c.y;
-    m.current.visible = store.get().inspect?.rec.id !== rec.id;
+    const s = store.get();
+    m.current.visible = s.inspect?.rec.id !== rec.id && s.onPlayer?.id !== rec.id;
   });
   return (
     <group ref={g} position={[w.dx, 0, zFor(k)]}>

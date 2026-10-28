@@ -72,6 +72,9 @@ function toRecord(album, extra) {
     sideA,
     sideB,
   };
+  // Explicit marks only. A genre of its own is not a new arrival or a staff pick.
+  if (album.newArrival || album.new || extra?.newArrival || extra?.new) record.newArrival = true;
+  if (album.staffPick || extra?.staffPick) record.staffPick = true;
   if (!record.sideA.length) {
     record.sideA = generatedTracks(rnd, 4 + Math.floor(rnd() * 3));
     record.sideB = generatedTracks(rnd, 4 + Math.floor(rnd() * 3));

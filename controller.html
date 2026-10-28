@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#22170f">
+<title>Your hand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display:ital@0;1&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./src/controller.css">
+</head>
+<body>
+<main id="app">
+  <p id="link">Connecting…</p>
+  <p id="insecure" hidden>Tilt and lift are off because this page is not secure. On the laptop, open the shop with https and scan again.</p>
+  <button type="button" id="start">Hold your phone like a record sleeve, then tap to start</button>
+  <div id="live" hidden>
+    <p id="hint"></p>
+    <p id="denied" hidden>Allow motion to use the phone as your hand. The buttons below still work.</p>
+    <button type="button" id="sleeve" hidden>
+      <img alt="" hidden>
+      <b></b>
+      <span></span>
+    </button>
+    <div id="disc" hidden><div class="label" id="label"></div></div>
+    <button type="button" id="recal" class="text">Recalibrate</button>
+    <div class="fallbacks">
+      <button type="button" id="pull">Pull out</button>
+      <button type="button" id="play">Play</button>
+    </div>
+  </div>
+</main>
+<script type="module" src="./src/controller.js"></script>
+</body>
+</html>
