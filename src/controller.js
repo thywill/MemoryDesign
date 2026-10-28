@@ -11,9 +11,9 @@ const discEl = document.getElementById("disc");
 const labelEl = document.getElementById("label");
 
 const HINT = {
-  DIGGING: "Reach forward for the next sleeve, then pause. Lift to pull it out.",
-  HOLDING: "Turn your phone to see the back. Reach forward to put it back.",
-  ON_PLAYER: "Pick me up to stop",
+  DIGGING: "Screen up, slide forward through the sleeves.",
+  HOLDING: "Turn it over for the back. Lay it flat to play.",
+  ON_PLAYER: "Pick it up to stop",
 };
 
 if (!room || !key) {
@@ -38,25 +38,29 @@ function boot(channel) {
   let shownBack = false;
   const { client, topics } = openRelay(channel);
 
-  const latest = { alpha: 0, beta: 0, gamma: 0, rotA: 0, rotB: 0, rotG: 0, accY: 0 };
+  const latest = { alpha: 0, beta: 0, gamma: 0, rotA: 0, rotB: 0, rotG: 0, accX: 0, accY: 0, accZ: 0 };
   const neutral = { alpha: 0, beta: 0, gamma: 0 };
+  const smooth = { x: 0, y: 0, z: 0 };
   let gotOri = false;
   let sensorsReady = false;
   let armed = true;
   let raising = 0;
-  let lastFlip = 0;
   let lastPull = 0;
-  let neutralSince = 0;
   let flatSince = 0;
   let holdUntil = 0;
   let playerUntil = 0;
+  let pose = "flat";
+  let pendingPose = "flat";
+  let poseSince = 0;
+  let flowAt = 0;
+  let poseHint = HINT.DIGGING;
 
   function send(msg) {
     if (linked && client.connected) client.publish(topics.toShop, JSON.stringify(msg));
   }
 
   function show() {
-    hintEl.textContent = HINT[mode] || "";
+    hintEl.textContent = mode === "ON_PLAYER" ? HINT.ON_PLAYER : poseHint;
     const holding = mode === "HOLDING";
     sleeveEl.hidden = !holding;
     discEl.hidden = mode !== "ON_PLAYER";
@@ -146,11 +150,23 @@ function boot(channel) {
       latest.rotB = r.beta || 0;
       latest.rotG = r.gamma || 0;
     }
-    if (e.acceleration && e.acceleration.y != null) latest.accY = e.acceleration.y;
-    if (!gotOri || mode !== "DIGGING") return;
-    const now = performance.now();
-    if (latest.accY > 6 && now - lastPull > 700) pullOut(now);
+    const a = e.acceleration;
+    const g = e.accelerationIncludingGravity;
+    if (a && a.x != null) {
+      latest.accX = a.x;
+      latest.accY = a.y || 0;
+      latest.accZ = a.z || 0;
+    } else if (g) {
+      latest.accX = (g.x || 0) - grav.x;
+      latest.accY = (g.y || 0) - grav.y;
+      latest.accZ = (g.z || 0) - grav.z;
+      grav.x += ((g.x || 0) - grav.x) * 0.08;
+      grav.y += ((g.y || 0) - grav.y) * 0.08;
+      grav.z += ((g.z || 0) - grav.z) * 0.08;
+    }
   }
+
+  const grav = { x: 0, y: 0, z: 0 };
 
   function pullOut(now) {
     lastPull = now;
@@ -158,26 +174,39 @@ function boot(channel) {
     enterHolding(now);
   }
 
-  // Reaching into the bin tips the top of the phone away and lowers beta.
-  // One reach, then back toward upright, then the next sleeve. The camera stays put.
-  function dig(now) {
-    const rel = latest.beta - neutral.beta;
-    if (rel > -10) armed = true;
-    if (armed && rel < -18 && now - lastFlip > 280) {
-      armed = false;
-      lastFlip = now;
-      send({ type: "flip", dir: 1 });
-      buzz(12);
-    }
-    if (rel > 34) {
-      if (!raising) raising = now;
-      if (now - raising > 240 && now - lastPull > 700) pullOut(now);
-    } else if (rel < 26) raising = 0;
+  function nudge(v) {
+    const dead = 0.42;
+    if (Math.abs(v) < dead) return 0;
+    return Math.max(-1, Math.min(1, Math.sign(v) * (Math.abs(v) - dead) / 1.5));
   }
 
-  function turnSleeve() {
-    const roll = wrap(latest.gamma - neutral.gamma);
-    const back = Math.abs(roll) > 50 ? true : Math.abs(roll) < 18 ? false : shownBack;
+  // Loose poses. A hand never holds a perfect angle, so the gaps keep the last one.
+  function rawPose() {
+    const b = latest.beta;
+    const g = Math.abs(latest.gamma);
+    const absB = Math.abs(b);
+    if (absB > 145) return "down";
+    if (g > 50) return "side";
+    if (b > 48 && b < 130 && g < 42) return "face";
+    if (absB < 34 && g < 40) return "flat";
+    return pose;
+  }
+
+  function settlePose(now) {
+    const next = rawPose();
+    if (next !== pendingPose) { pendingPose = next; poseSince = now; }
+    const wait = next === "face" ? 240 : 150;
+    if (next !== pose && now - poseSince > wait) pose = next;
+    return pose;
+  }
+
+  function note(text) {
+    if (poseHint === text) return;
+    poseHint = text;
+    hintEl.textContent = text;
+  }
+
+  function setBack(back) {
     if (back === shownBack) return;
     shownBack = back;
     send({ type: "turn", back });
@@ -186,41 +215,67 @@ function boot(channel) {
 
   function gestures(now) {
     if (!gotOri || !sensorsReady) return;
-    if (mode === "DIGGING") dig(now);
-    if (mode === "HOLDING") turnSleeve();
-    if (mode === "HOLDING" && now > holdUntil) {
-      const rel = latest.beta - neutral.beta;
-      if (rel < -18) {
-        if (!neutralSince) neutralSince = now;
-        if (now - neutralSince > 450) {
-          neutralSince = 0;
-          shownBack = false;
-          send({ type: "putback" });
-          mode = "DIGGING";
-          show();
+    smooth.x += (latest.accX - smooth.x) * 0.35;
+    smooth.y += (latest.accY - smooth.y) * 0.35;
+    smooth.z += (latest.accZ - smooth.z) * 0.35;
+    const here = settlePose(now);
+    const rate = Math.hypot(latest.rotA, latest.rotB, latest.rotG);
+    const still = rate < 20 && nudge(smooth.x) === 0 && nudge(smooth.y) === 0;
+
+    if (mode === "DIGGING") {
+      if (here === "face" && now - lastPull > 700) {
+        note("That sleeve is coming up.");
+        pullOut(now);
+      } else if (here === "side") {
+        note("On its side. Slide and the view follows the phone.");
+        if (now - flowAt > 50) {
+          flowAt = now;
+          const v = nudge(smooth.z) * (latest.gamma < 0 ? 1 : -1);
+          if (v) send({ type: "drift", v });
         }
-      } else neutralSince = 0;
-      const rate = Math.hypot(latest.rotA, latest.rotB, latest.rotG);
-      const flat = Math.abs(latest.beta) < 12 && Math.abs(latest.gamma) < 12 && rate < 15;
-      if (mode === "HOLDING" && flat) {
-        if (!flatSince) flatSince = now;
-        if (now - flatSince > 700) {
-          flatSince = 0;
-          send({ type: "place" });
-          mode = "ON_PLAYER";
-          playerUntil = now + 800;
-          buzz(40);
-          show();
+      } else {
+        note("Screen up. Slide forward through the sleeves, sideways for the next rack.");
+        if (here === "flat" && now - flowAt > 50) {
+          flowAt = now;
+          const along = nudge(smooth.y);
+          const across = nudge(smooth.x);
+          if (along || across) send({ type: "flow", along, across });
         }
-      } else flatSince = 0;
-    }
-    if (mode === "ON_PLAYER" && now > playerUntil) {
-      const rate = Math.hypot(latest.rotA, latest.rotB, latest.rotG);
-      const flat = Math.abs(latest.beta) < 12 && Math.abs(latest.gamma) < 12;
-      if (!flat || rate > 120) {
-        send({ type: "lift" });
-        enterHolding(now);
       }
+      return;
+    }
+
+    if (mode === "HOLDING") {
+      if (here === "down") {
+        note("The back of the sleeve.");
+        setBack(true);
+      } else if (here === "face") {
+        note("Turn it over for the back. Lay it flat on the table to play.");
+        setBack(false);
+      } else if (here === "flat") {
+        note("Hold it still on the table and it plays.");
+        setBack(false);
+        if (now > holdUntil && still) {
+          if (!flatSince) flatSince = now;
+          if (now - flatSince > 700) {
+            flatSince = 0;
+            send({ type: "place" });
+            mode = "ON_PLAYER";
+            playerUntil = now + 800;
+            buzz(40);
+            show();
+          }
+        } else flatSince = 0;
+      } else {
+        note("Bring the screen up to look, or lay it flat to play.");
+        flatSince = 0;
+      }
+      return;
+    }
+
+    if (mode === "ON_PLAYER" && now > playerUntil && (here === "face" || here === "side")) {
+      send({ type: "lift" });
+      enterHolding(now);
     }
   }
 

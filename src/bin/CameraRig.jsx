@@ -19,7 +19,7 @@ export function CameraRig() {
     const d = Math.min(dt, 0.05), insp = !!store.get().inspect;
     const px = insp ? 0 : pointerN.x, py = insp ? 0 : pointerN.y;
     const hHalf = Math.atan(Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.aspect);
-    const zoom = phoneZoomed() && !insp ? 0.85 : 0;
+    const zoom = phoneZoomed() && !insp ? 1.55 : 0;
     const z = CAM.z - zoom;
     const halfW = Math.tan(hHalf) * (z - TIER_Z[0]);
     const lo = -PITCH / 2 - EDGE_PAD + halfW, hi = playerXFor(PICKERS.length) + PLAYER_W + PLAYER_REACH - halfW;
@@ -28,10 +28,10 @@ export function CameraRig() {
     travel.target = Math.max(travel.min, Math.min(travel.max, travel.target));
     const before = camera.position.x;
     camera.position.x = THREE.MathUtils.damp(camera.position.x, travel.target + px * 0.03, 4.5, d);
-    camera.position.y = THREE.MathUtils.damp(camera.position.y, CAM.y - py * 0.03 - (zoom ? 0.08 : 0), 4, d);
+    camera.position.y = THREE.MathUtils.damp(camera.position.y, CAM.y - py * 0.03 - (zoom ? 0.16 : 0), 4, d);
     camera.position.z = THREE.MathUtils.damp(camera.position.z, z, 2.4, d);
     camX.v = camera.position.x;
-    look.set(camera.position.x, CAM.lookY - py * 0.02 - (zoom ? 0.14 : 0), CAM.lookZ);
+    look.set(camera.position.x, CAM.lookY - py * 0.02 - (zoom ? 0.28 : 0), CAM.lookZ);
     camera.lookAt(look);
     light.current.position.set(camera.position.x - 0.9, 3.6, 2.6);
     light.current.target.position.set(camera.position.x, 0.95, 0);
