@@ -1,6 +1,8 @@
-import Peer from "peerjs";
+import { openRelay, readMessage } from "./relay.js";
 
-const room = new URLSearchParams(location.search).get("room");
+const params = new URLSearchParams(location.search);
+const room = params.get("room");
+const key = params.get("k");
 const linkEl = document.getElementById("link");
 const hintEl = document.getElementById("hint");
 const liveEl = document.getElementById("live");
@@ -14,10 +16,10 @@ const HINT = {
   ON_PLAYER: "Pick me up to stop",
 };
 
-if (!room) {
+if (!room || !key) {
   document.querySelector("main").innerHTML = "<p class=\"miss\">Open this page by scanning the code on the shop screen.</p>";
 } else {
-  boot(room.toLowerCase());
+  boot(key);
 }
 
 function wrap(d) {
@@ -28,14 +30,12 @@ function buzz(ms) {
   try { navigator.vibrate?.(ms); } catch { /* iOS has no vibrate */ }
 }
 
-function boot(code) {
+function boot(channel) {
   if (!window.isSecureContext) document.getElementById("insecure").hidden = false;
-  let conn = null;
   let mode = "WAIT";
   let held = null;
-  let retryUntil = 0;
-  let connecting = false;
-  const peer = new Peer();
+  let linked = false;
+  const { client, topics } = openRelay(channel);
 
   const latest = { alpha: 0, beta: 0, gamma: 0, rotA: 0, rotB: 0, rotG: 0, accY: 0 };
   const neutral = { alpha: 0, beta: 0 };
@@ -53,7 +53,7 @@ function boot(code) {
   let axesAt = 0;
 
   function send(msg) {
-    if (conn?.open) conn.send(msg);
+    if (linked && client.connected) client.publish(topics.toShop, JSON.stringify(msg));
   }
 
   function show() {
@@ -82,44 +82,37 @@ function boot(code) {
     show();
   }
 
-  function connect() {
-    if (connecting || !peer.open) return;
-    connecting = true;
-    const c = peer.connect("lowlamp-" + code, { reliable: true });
-    conn = c;
-    const giveUp = setTimeout(() => {
-      if (!c.open) {
-        connecting = false;
-        linkEl.textContent = "Couldn't reach the shop screen.";
-      }
-    }, 8000);
-    c.on("open", () => {
+  const hello = setInterval(() => {
+    if (!linked && client.connected) client.publish(topics.toShop, JSON.stringify({ type: "hello" }));
+  }, 1000);
+  const giveUp = setTimeout(() => {
+    if (!linked) linkEl.textContent = "Couldn't reach the shop screen.";
+  }, 8000);
+  client.on("connect", () => {
+    client.subscribe(topics.toPhone, () => {
+      client.publish(topics.toShop, JSON.stringify({ type: "hello" }));
+    });
+  });
+  client.on("message", (_topic, payload) => {
+    const msg = readMessage(payload);
+    if (!msg) return;
+    if (msg.type === "ack") {
+      linked = true;
       clearTimeout(giveUp);
-      connecting = false;
-      retryUntil = 0;
       linkEl.textContent = "Connected to the shop";
-    });
-    c.on("data", (data) => {
-      const msg = typeof data === "string" ? JSON.parse(data) : data;
-      if (msg?.type === "held") { held = msg; if (mode === "HOLDING" || mode === "ON_PLAYER") show(); }
-    });
-    c.on("close", () => {
-      connecting = false;
-      if (conn === c) conn = null;
-      linkEl.textContent = "Phone disconnected";
-      const now = Date.now();
-      if (!retryUntil) retryUntil = now + 10000;
-      if (now < retryUntil) setTimeout(connect, 400);
-    });
-    c.on("error", () => {
-      clearTimeout(giveUp);
-      connecting = false;
-      linkEl.textContent = "Couldn't reach the shop screen.";
-    });
-  }
-
-  peer.on("open", connect);
-  peer.on("error", () => { linkEl.textContent = "Couldn't reach the shop screen."; });
+      return;
+    }
+    if (msg.type === "held") { held = msg; if (mode === "HOLDING" || mode === "ON_PLAYER") show(); }
+  });
+  client.on("close", () => {
+    if (!linked) return;
+    linked = false;
+    linkEl.textContent = "Phone disconnected";
+  });
+  client.on("error", () => {
+    if (!linked) linkEl.textContent = "Couldn't reach the shop screen.";
+  });
+  addEventListener("pagehide", () => { clearInterval(hello); client.end(true); });
 
   function yawOf(e) {
     if (e.alpha != null) return e.alpha;

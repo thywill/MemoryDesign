@@ -3,17 +3,17 @@ import { store, travel } from "./store.js";
 import { openRecord, putBack, takeRecord, pointerRecent } from "./actions.js";
 import { player } from "./player.js";
 
-// The laptop is the bin. A phone connects with PeerJS (public broker, no server of our own)
-// and sends small JSON messages. This module turns those into the same actions the mouse uses.
+// The laptop is the bin. A phone sends small JSON messages through a public relay.
+// This module turns those into the same actions the mouse uses.
 const KEY = "lowlamp-screen-delay";
 const HOTSPOT = "Couldn't reach the phone. Try a phone hotspot.";
 
 const listeners = new Set();
 let snap = { phase: "idle", code: "", url: "", status: "", delay: readDelay() };
 
-let peer = null;
-let conn = null;
-let generation = 0;
+let client = null;
+let topics = null;
+let phoneHere = false;
 let failTimer = 0;
 let wantClose = false;
 
@@ -69,8 +69,22 @@ function roomCode() {
   return s;
 }
 
-function controllerUrl(code) {
-  return new URL(`${import.meta.env.BASE_URL}controller.html?room=${code}`, location.origin).href;
+function secretKey() {
+  const bytes = new Uint8Array(9);
+  crypto.getRandomValues(bytes);
+  return [...bytes].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function controllerUrl(code, key) {
+  const url = new URL(`${import.meta.env.BASE_URL}controller.html`, location.origin);
+  url.searchParams.set("room", code);
+  url.searchParams.set("k", key);
+  return url.href;
+}
+
+function publishPhone(msg) {
+  if (!client?.connected || !topics) return;
+  client.publish(topics.toPhone, JSON.stringify(msg));
 }
 
 function clampTravel(v) {
@@ -101,9 +115,9 @@ function columnNear(x) {
 }
 
 function sendHeld(rec) {
-  if (!conn?.open || !rec) return;
+  if (!rec) return;
   const c = rec.c;
-  conn.send({
+  publishPhone({
     type: "held",
     id: rec.id,
     title: c.title,
@@ -192,75 +206,64 @@ function accept(data) {
   else setTimeout(() => apply(msg), wait);
 }
 
-function watchConnection(c) {
-  if (conn && conn !== c) conn.close();
-  conn = c;
-  c.on("open", () => {
+function attachRelay(relay) {
+  client = relay.client;
+  topics = relay.topics;
+  phoneHere = false;
+  clearTimeout(failTimer);
+  failTimer = setTimeout(() => {
+    if (!client?.connected && snap.phase !== "connected") publish({ phase: "error", status: HOTSPOT });
+  }, 8000);
+  client.on("connect", () => {
     clearTimeout(failTimer);
-    publish({ phase: "connected", status: "Phone connected" });
+    client.subscribe(topics.toShop);
+    if (!phoneHere) publish({ phase: "waiting", status: "Waiting for phone…" });
   });
-  c.on("data", accept);
-  c.on("close", () => {
-    if (conn === c) conn = null;
+  client.on("message", (_topic, payload) => {
+    const msg = readMessage(payload);
+    if (!msg) return;
+    if (msg.type === "hello") {
+      phoneHere = true;
+      publishPhone({ type: "ack" });
+      publish({ phase: "connected", status: "Phone connected" });
+      return;
+    }
+    accept(msg);
+  });
+  client.on("error", () => {
+    if (!phoneHere) publish({ phase: "error", status: HOTSPOT });
+  });
+  client.on("close", () => {
     if (wantClose) return;
-    publish({ phase: "disconnected", status: "Phone disconnected" });
-  });
-  c.on("error", () => {
-    if (snap.phase === "connected") publish({ phase: "disconnected", status: "Phone disconnected" });
-    else publish({ phase: "error", status: HOTSPOT });
+    if (phoneHere) {
+      phoneHere = false;
+      publish({ phase: "disconnected", status: "Phone disconnected" });
+    }
   });
 }
 
-function openPeer(Peer, code) {
-  const gen = ++generation;
-  wantClose = false;
-  clearTimeout(failTimer);
-  if (peer && !peer.destroyed) peer.destroy();
-  peer = new Peer("lowlamp-" + code.toLowerCase());
-  failTimer = setTimeout(() => {
-    if (gen !== generation) return;
-    if (!peer?.open && snap.phase !== "connected") publish({ phase: "error", status: HOTSPOT });
-  }, 8000);
-  peer.on("open", () => {
-    if (gen !== generation) return;
-    clearTimeout(failTimer);
-    if (!conn?.open) publish({ phase: "waiting", status: "Waiting for phone…" });
-  });
-  peer.on("connection", (c) => { if (gen === generation) watchConnection(c); });
-  peer.on("disconnected", () => {
-    if (gen !== generation || wantClose) return;
-    if (snap.phase === "connected") publish({ phase: "disconnected", status: "Phone disconnected" });
-    try { peer.reconnect(); } catch { /* broker already coming back */ }
-  });
-  peer.on("error", (err) => {
-    if (gen !== generation) return;
-    if (err?.type === "unavailable-id") {
-      const next = roomCode();
-      publish({ code: next, url: controllerUrl(next), phase: "waiting", status: "Waiting for phone…" });
-      openPeer(Peer, next);
-      return;
-    }
-    if (snap.phase === "connected" || conn?.open) publish({ phase: "disconnected", status: "Phone disconnected" });
-    else publish({ phase: "error", status: HOTSPOT });
-  });
+function readMessage(payload) {
+  const text = typeof payload === "string" ? payload : new TextDecoder().decode(payload);
+  try { return JSON.parse(text); } catch { return null; }
 }
 
 export async function startPhone() {
-  if (peer && !peer.destroyed) return;
-  const { default: Peer } = await import("peerjs");
+  if (client) return;
+  wantClose = false;
+  const { openRelay } = await import("../relay.js");
   const code = roomCode();
-  publish({ phase: "waiting", code, url: controllerUrl(code), status: "Waiting for phone…", delay: readDelay() });
-  openPeer(Peer, code);
+  const key = secretKey();
+  publish({ phase: "waiting", code, url: controllerUrl(code, key), status: "Waiting for phone…", delay: readDelay() });
+  attachRelay(openRelay(key));
 }
 
 export function disconnectPhone() {
   wantClose = true;
-  generation += 1;
   clearTimeout(failTimer);
-  try { conn?.close(); } catch { /* already gone */ }
-  try { peer?.destroy(); } catch { /* already gone */ }
-  conn = null;
-  peer = null;
+  try { client?.end(true); } catch { /* already gone */ }
+  client = null;
+  topics = null;
+  phoneHere = false;
   driving = false;
   publish({ phase: "idle", code: "", url: "", status: "" });
 }
