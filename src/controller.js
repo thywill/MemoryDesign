@@ -11,8 +11,8 @@ const discEl = document.getElementById("disc");
 const labelEl = document.getElementById("label");
 
 const HINT = {
-  DIGGING: "Move to browse · tip to flip · lift to pull out",
-  HOLDING: "Carry it · lay me flat to play · tap to keep",
+  DIGGING: "Reach forward for the next sleeve, then pause. Lift to pull it out.",
+  HOLDING: "Turn your phone to see the back. Reach forward to put it back.",
   ON_PLAYER: "Pick me up to stop",
 };
 
@@ -35,22 +35,21 @@ function boot(channel) {
   let mode = "WAIT";
   let held = null;
   let linked = false;
+  let shownBack = false;
   const { client, topics } = openRelay(channel);
 
   const latest = { alpha: 0, beta: 0, gamma: 0, rotA: 0, rotB: 0, rotG: 0, accY: 0 };
-  const neutral = { alpha: 0, beta: 0 };
+  const neutral = { alpha: 0, beta: 0, gamma: 0 };
   let gotOri = false;
   let sensorsReady = false;
   let armed = true;
+  let raising = 0;
   let lastFlip = 0;
-  let lastFlick = 0;
-  let lastSweep = 0;
   let lastPull = 0;
   let neutralSince = 0;
   let flatSince = 0;
   let holdUntil = 0;
   let playerUntil = 0;
-  let axesAt = 0;
 
   function send(msg) {
     if (linked && client.connected) client.publish(topics.toShop, JSON.stringify(msg));
@@ -61,6 +60,9 @@ function boot(channel) {
     const holding = mode === "HOLDING";
     sleeveEl.hidden = !holding;
     discEl.hidden = mode !== "ON_PLAYER";
+    document.getElementById("racks").hidden = mode !== "DIGGING";
+    document.getElementById("pull").hidden = mode !== "DIGGING";
+    document.getElementById("return").hidden = !holding;
     if (holding && held) paintHeld();
     if (mode === "ON_PLAYER" && held) labelEl.textContent = held.title || "";
   }
@@ -68,14 +70,16 @@ function boot(channel) {
   function paintHeld() {
     sleeveEl.style.background = held.color || "#c4492f";
     sleeveEl.querySelector("b").textContent = held.title || "";
-    sleeveEl.querySelector("span").textContent = held.artist || "";
+    sleeveEl.querySelector("span").textContent = shownBack ? "Back" : (held.artist || "");
     const img = sleeveEl.querySelector("img");
-    if (held.front) { img.hidden = false; img.src = held.front; img.alt = ""; }
+    const src = shownBack && held.back ? held.back : held.front;
+    if (src) { img.hidden = false; img.src = src; img.alt = ""; }
     else { img.hidden = true; img.removeAttribute("src"); }
   }
 
   function enterHolding(now) {
     mode = "HOLDING";
+    shownBack = false;
     holdUntil = now + 700;
     neutralSince = 0;
     flatSince = 0;
@@ -125,25 +129,13 @@ function boot(channel) {
     if (yaw == null && e.beta == null) return;
     if (yaw != null) latest.alpha = yaw;
     if (e.beta != null) latest.beta = e.beta;
-    latest.gamma = e.gamma || 0;
+    if (e.gamma != null) latest.gamma = e.gamma;
     gotOri = true;
     if (mode !== "WAIT" && !sensorsReady) {
       neutral.alpha = latest.alpha;
       neutral.beta = latest.beta;
+      neutral.gamma = latest.gamma;
       sensorsReady = true;
-    }
-    if (mode !== "DIGGING" || e.beta == null) return;
-    const rel = e.beta - neutral.beta;
-    if (Math.abs(rel) < 8) armed = true;
-    const now = performance.now();
-    let dir = 0;
-    if (rel > 18) dir = 1;
-    else if (rel < -18) dir = -1;
-    if (dir && (armed || now - lastFlip > 220)) {
-      armed = false;
-      lastFlip = now;
-      send({ type: "flip", dir });
-      buzz(12);
     }
   }
 
@@ -157,32 +149,52 @@ function boot(channel) {
     if (e.acceleration && e.acceleration.y != null) latest.accY = e.acceleration.y;
     if (!gotOri || mode !== "DIGGING") return;
     const now = performance.now();
-    if (Math.abs(latest.rotA) > 180 && now - lastSweep > 400) {
-      lastSweep = now;
-      send({ type: "sweep", dir: latest.rotA > 0 ? 1 : -1 });
-      buzz(25);
-    }
-    if (Math.abs(latest.rotB) > 220 && now - lastFlick > 220) {
-      lastFlick = now;
-      lastFlip = now;
+    if (latest.accY > 6 && now - lastPull > 700) pullOut(now);
+  }
+
+  function pullOut(now) {
+    lastPull = now;
+    send({ type: "inspect" });
+    enterHolding(now);
+  }
+
+  // Reaching into the bin tips the top of the phone away and lowers beta.
+  // One reach, then back toward upright, then the next sleeve. The camera stays put.
+  function dig(now) {
+    const rel = latest.beta - neutral.beta;
+    if (rel > -10) armed = true;
+    if (armed && rel < -18 && now - lastFlip > 280) {
       armed = false;
-      send({ type: "flip", dir: latest.rotB > 0 ? 1 : -1 });
+      lastFlip = now;
+      send({ type: "flip", dir: 1 });
       buzz(12);
     }
-    if (latest.accY > 6 && now - lastPull > 600) {
-      lastPull = now;
-      send({ type: "inspect" });
-      enterHolding(now);
-    }
+    if (rel > 34) {
+      if (!raising) raising = now;
+      if (now - raising > 240 && now - lastPull > 700) pullOut(now);
+    } else if (rel < 26) raising = 0;
+  }
+
+  function turnSleeve() {
+    const roll = wrap(latest.gamma - neutral.gamma);
+    const back = Math.abs(roll) > 50 ? true : Math.abs(roll) < 18 ? false : shownBack;
+    if (back === shownBack) return;
+    shownBack = back;
+    send({ type: "turn", back });
+    show();
   }
 
   function gestures(now) {
-    if (!gotOri) return;
+    if (!gotOri || !sensorsReady) return;
+    if (mode === "DIGGING") dig(now);
+    if (mode === "HOLDING") turnSleeve();
     if (mode === "HOLDING" && now > holdUntil) {
-      if (Math.abs(latest.beta - neutral.beta) < 8) {
+      const rel = latest.beta - neutral.beta;
+      if (rel < -18) {
         if (!neutralSince) neutralSince = now;
-        if (now - neutralSince > 400) {
+        if (now - neutralSince > 450) {
           neutralSince = 0;
+          shownBack = false;
           send({ type: "putback" });
           mode = "DIGGING";
           show();
@@ -212,24 +224,12 @@ function boot(channel) {
     }
   }
 
-  function sendAxes(now) {
-    if (!sensorsReady || (mode !== "DIGGING" && mode !== "HOLDING")) return;
-    if (now - axesAt < 33) return;
-    axesAt = now;
-    const x = Math.max(-1, Math.min(1, wrap(latest.alpha - neutral.alpha) / 35));
-    send({ type: "pan", x });
-    if (mode === "DIGGING") {
-      const v = Math.max(-1, Math.min(1, (latest.beta - neutral.beta) / 35));
-      send({ type: "lean", v });
-    }
-  }
-
   let listening = false;
   function listen() {
     if (listening) return;
     listening = true;
-    addEventListener("deviceorientation", (e) => { onOrientation(e); const now = performance.now(); gestures(now); sendAxes(now); });
-    addEventListener("devicemotion", (e) => { onMotion(e); const now = performance.now(); gestures(now); sendAxes(now); });
+    addEventListener("deviceorientation", (e) => { onOrientation(e); gestures(performance.now()); });
+    addEventListener("devicemotion", (e) => { onMotion(e); gestures(performance.now()); });
   }
 
   async function keepAwake() {
@@ -262,11 +262,19 @@ function boot(channel) {
   document.getElementById("recal").addEventListener("click", () => {
     neutral.alpha = latest.alpha;
     neutral.beta = latest.beta;
+    neutral.gamma = latest.gamma;
     armed = true;
+    raising = 0;
   });
-  document.getElementById("pull").addEventListener("click", () => {
-    send({ type: "inspect" });
-    enterHolding(performance.now());
+  document.getElementById("prev").addEventListener("click", () => { send({ type: "rack", dir: -1 }); buzz(12); });
+  document.getElementById("next").addEventListener("click", () => { send({ type: "rack", dir: 1 }); buzz(12); });
+  document.getElementById("pull").addEventListener("click", () => pullOut(performance.now()));
+  document.getElementById("return").addEventListener("click", () => {
+    if (mode !== "HOLDING") return;
+    shownBack = false;
+    send({ type: "putback" });
+    mode = "DIGGING";
+    show();
   });
   document.getElementById("play").addEventListener("click", () => {
     send({ type: "place" });

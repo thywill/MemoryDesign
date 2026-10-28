@@ -6,12 +6,13 @@ A record bin you dig through in the browser. The shop stays on the laptop or TV.
 
 Open the shop on the laptop or TV: https://memory-design.vercel.app. Click **Use your phone**, then scan the QR code. On the phone, hold it like a record sleeve and tap the button.
 
-- Move the phone left and right and the camera follows along the bin.
-- Tip it to flip through the column under your hand. A fast wrist flick jumps one column.
-- Lift it to pull a record out.
-- Tap the record on the phone to keep it (up to three).
-- Tip back to the sleeve angle and hold to put it back.
+- Previous rack and Next rack move the camera. Tilting the phone does not.
+- Reach the phone forward, then bring it back upright, to move one sleeve deeper. Past the front row, that continues into the back row.
+- Pause on a sleeve and lift the phone to pull it out. It shows on the phone.
+- Turn the phone to see the back of that sleeve.
+- Reach forward again, or tap Put it back, to return it.
 - Lay the phone flat, screen up, to set the record on the player. Pick it up to take it off.
+- Set upright remembers which way you are holding the phone. It does not move the camera.
 
 The mouse and keyboard on the laptop keep working. The phone is an extra input.
 

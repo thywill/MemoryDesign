@@ -18,15 +18,21 @@
   <div id="live" hidden>
     <p id="hint"></p>
     <p id="denied" hidden>Allow motion to use the phone as your hand. The buttons below still work.</p>
+    <div class="racks" id="racks">
+      <button type="button" id="prev">Previous rack</button>
+      <button type="button" id="next">Next rack</button>
+    </div>
     <button type="button" id="sleeve" hidden>
       <img alt="" hidden>
       <b></b>
       <span></span>
     </button>
     <div id="disc" hidden><div class="label" id="label"></div></div>
-    <button type="button" id="recal" class="text">Recalibrate</button>
+    <button type="button" id="recal" class="text">Set upright</button>
+    <p id="upright">This sets which way is upright. It does not move the camera.</p>
     <div class="fallbacks">
       <button type="button" id="pull">Pull out</button>
+      <button type="button" id="return" hidden>Put it back</button>
       <button type="button" id="play">Play</button>
     </div>
   </div>

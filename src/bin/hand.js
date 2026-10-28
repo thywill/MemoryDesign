@@ -1,7 +1,8 @@
 import { N, colX } from "./constants.js";
-import { store, travel } from "./store.js";
-import { openRecord, putBack, takeRecord, pointerRecent } from "./actions.js";
+import { store, travel, camX } from "./store.js";
+import { openRecord, putBack, takeRecord } from "./actions.js";
 import { player } from "./player.js";
+import { sfx } from "./sound.js";
 
 // The laptop is the bin. A phone sends small JSON messages through a public relay.
 // This module turns those into the same actions the mouse uses.
@@ -19,13 +20,17 @@ let wantClose = false;
 
 const controls = new Map();
 const heights = new Map();
-let columns = [];
+let racks = [];
 let col = 0;
-let lean = 0;
+let tier = 0;
 let driving = false;
 
+export function phoneZoomed() {
+  return phoneHere;
+}
+
 export function phoneCrateId() {
-  return driving ? columns[col]?.id ?? null : null;
+  return driving ? crateAt()?.id ?? null : null;
 }
 
 function readDelay() {
@@ -57,7 +62,20 @@ export function registerCrate(id, setH) {
 }
 
 export function bindWall(wall) {
-  columns = wall.map((p) => p.crates.find((c) => c.tier === 0) || p.crates[0]);
+  racks = wall.map((p) => ({
+    front: p.crates.find((c) => c.tier === 0) || p.crates[0],
+    back: p.crates.find((c) => c.tier === 1) || null,
+  }));
+}
+
+function crateAt() {
+  const rack = racks[col];
+  if (!rack) return null;
+  return tier === 1 && rack.back ? rack.back : rack.front;
+}
+
+function pile(crate) {
+  return Math.min(N, crate?.recs?.length || 0);
 }
 
 function roomCode() {
@@ -91,27 +109,85 @@ function clampTravel(v) {
   return Math.max(travel.min, Math.min(travel.max, v));
 }
 
-function focus(i) {
-  if (!columns.length) return;
-  driving = true;
-  i = Math.max(0, Math.min(columns.length - 1, i));
-  if (i !== col) {
-    const prev = columns[col];
-    if (prev) controls.get(prev.id)?.(-1, 0);
-    col = i;
-  }
-  const crate = columns[col];
-  controls.get(crate.id)?.(heights.get(crate.id) ?? 0, lean);
-}
-
 function columnNear(x) {
   let best = 0;
   let bestD = Infinity;
-  for (let i = 0; i < columns.length; i++) {
+  for (let i = 0; i < racks.length; i++) {
     const d = Math.abs(colX(i) - x);
     if (d < bestD) { bestD = d; best = i; }
   }
   return best;
+}
+
+function leave(crate) {
+  if (crate) controls.get(crate.id)?.(-1, 0);
+}
+
+function activate(crate, h) {
+  if (!crate) return;
+  driving = true;
+  heights.set(crate.id, h);
+  controls.get(crate.id)?.(h, 0);
+}
+
+function glide() {
+  travel.target = clampTravel(colX(col));
+  if (!store.get().moved) store.set({ moved: true });
+}
+
+// One sleeve deeper, then the back row, then the next rack. Backing up reverses that.
+function stepSleeve(dir) {
+  if (store.get().inspect || store.get().placing) return;
+  const from = crateAt();
+  if (!from) return;
+  const len = pile(from);
+  if (!len) return;
+  const h = heights.get(from.id) ?? 0;
+  const deeper = dir > 0;
+  if (deeper && h < len - 1) { activate(from, h + 1); return; }
+  if (!deeper && h > 0) { activate(from, h - 1); return; }
+  let nextCol = col;
+  let nextTier = tier;
+  if (deeper) {
+    if (tier === 0 && racks[col]?.back) nextTier = 1;
+    else if (col < racks.length - 1) { nextCol = col + 1; nextTier = 0; }
+    else return;
+  } else if (tier === 1) nextTier = 0;
+  else if (col > 0) { nextCol = col - 1; nextTier = racks[col - 1]?.back ? 1 : 0; }
+  else return;
+  leave(from);
+  col = nextCol;
+  tier = nextTier;
+  const landed = crateAt();
+  const n = pile(landed);
+  activate(landed, deeper ? 0 : Math.max(0, n - 1));
+  glide();
+}
+
+function stepRack(dir) {
+  if (!racks.length) return;
+  const from = crateAt();
+  if (dir < 0 && tier === 1) {
+    leave(from);
+    tier = 0;
+    if (!store.get().inspect && !store.get().placing) activate(crateAt(), heights.get(crateAt()?.id) ?? 0);
+    return;
+  }
+  const next = col + (dir < 0 ? -1 : 1);
+  if (next < 0 || next >= racks.length) return;
+  leave(from);
+  col = next;
+  tier = 0;
+  if (!store.get().inspect && !store.get().placing) activate(crateAt(), heights.get(crateAt()?.id) ?? 0);
+  glide();
+}
+
+function greet() {
+  if (!store.get().inspect && !store.get().placing && racks.length) {
+    col = columnNear(camX.v || travel.target);
+    tier = 0;
+    activate(crateAt(), heights.get(crateAt()?.id) ?? 0);
+  }
 }
 
 function sendHeld(rec) {
@@ -124,50 +200,26 @@ function sendHeld(rec) {
     artist: c.artist,
     color: c.color,
     front: typeof c.front === "string" ? c.front : null,
+    back: typeof c.back === "string" ? c.back : null,
   });
 }
 
 function apply(msg) {
   if (!msg || typeof msg !== "object") return;
-  if (msg.type === "pan") {
-    if (pointerRecent()) return;
-    const x = Math.max(-1, Math.min(1, Number(msg.x) || 0));
-    travel.target = clampTravel(travel.min + ((x + 1) / 2) * (travel.max - travel.min));
-    if (!store.get().moved) store.set({ moved: true });
-    if (!store.get().inspect && !store.get().placing) focus(columnNear(travel.target));
-    return;
-  }
-  if (msg.type === "sweep") {
-    const next = Math.max(0, Math.min(columns.length - 1, col + (Number(msg.dir) < 0 ? -1 : 1)));
-    if (!pointerRecent()) {
-      travel.target = clampTravel(colX(next));
-      if (!store.get().moved) store.set({ moved: true });
-    }
-    if (!store.get().inspect) focus(next);
-    else col = next;
-    return;
-  }
-  if (msg.type === "flip") {
-    if (store.get().inspect) return;
-    driving = true;
-    const crate = columns[col];
-    if (!crate) return;
-    const h = Math.max(0, Math.min(N - 1, (heights.get(crate.id) ?? 0) + (Number(msg.dir) < 0 ? -1 : 1)));
-    heights.set(crate.id, h);
-    controls.get(crate.id)?.(h, lean);
-    return;
-  }
-  if (msg.type === "lean") {
-    driving = true;
-    lean = Math.max(-1, Math.min(1, Number(msg.v) || 0));
-    if (store.get().inspect) return;
-    const crate = columns[col];
-    if (!crate) return;
-    controls.get(crate.id)?.(heights.get(crate.id) ?? 0, lean);
+  // Wrist angle used to drag the camera. Rack changes are explicit, so a tilt can dig without sliding the shop.
+  if (msg.type === "pan" || msg.type === "lean") return;
+  if (msg.type === "sweep" || msg.type === "rack") { stepRack(Number(msg.dir) < 0 ? -1 : 1); return; }
+  if (msg.type === "flip") { stepSleeve(Number(msg.dir) < 0 ? -1 : 1); return; }
+  if (msg.type === "turn") {
+    if (!store.get().inspect) return;
+    const back = !!msg.back;
+    if (!!store.get().flipped === back) return;
+    sfx("slide");
+    store.set({ flipped: back });
     return;
   }
   if (msg.type === "inspect") {
-    const crate = columns[col];
+    const crate = crateAt();
     const rec = crate?.recs[heights.get(crate.id) ?? 0];
     openRecord(rec);
     sendHeld(rec);
@@ -178,7 +230,7 @@ function apply(msg) {
   if (msg.type === "place") {
     let rec = store.get().inspect?.rec;
     if (!rec) {
-      const crate = columns[col];
+      const crate = crateAt();
       rec = crate?.recs[heights.get(crate.id) ?? 0];
       if (rec) openRecord(rec);
     }
@@ -224,6 +276,7 @@ function attachRelay(relay) {
     if (!msg) return;
     if (msg.type === "hello") {
       phoneHere = true;
+      greet();
       publishPhone({ type: "ack" });
       publish({ phase: "connected", status: "Phone connected" });
       return;
